@@ -208,7 +208,12 @@ export default function ExploreEras() {
               { time: '145 Ma', label: 'CRETÁCICO', color: '#fbbf24', left: '66%' },
               { time: '66 Ma', label: 'HOY', color: '#ffffff', left: '100%' },
             ].map((point, i) => (
-              <div className="timeline-point" style={{ left: point.left }} key={point.label}>
+              <motion.div 
+                className="timeline-point" 
+                style={{ left: point.left, cursor: 'pointer' }} 
+                key={point.label}
+                whileHover="hover"
+              >
                 <motion.span 
                   className="point-time"
                   initial={{ opacity: 0, y: -10 }}
@@ -224,9 +229,9 @@ export default function ExploreEras() {
                   style={{ backgroundColor: point.color }}
                   initial={{ scale: 0 }}
                   whileInView={{ scale: 1 }}
-                  whileHover={{ scale: 1.5 }}
                   viewport={{ once: true }}
                   transition={{ type: "spring", stiffness: 300, delay: 0.8 + i * 0.3 }}
+                  variants={{ hover: { scale: 2.2 } }}
                 />
                 
                 <motion.span 
@@ -235,10 +240,11 @@ export default function ExploreEras() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 1.1 + i * 0.3 }}
+                  variants={{ hover: { scale: 1.25, color: '#fbbf24' } }}
                 >
                   {point.label}
                 </motion.span>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
