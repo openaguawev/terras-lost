@@ -179,8 +179,23 @@ export default function EarthHistory() {
         </div>
       </motion.div>
 
-      <div className="eh-bottom-scale">
-        <div className="eh-scale-line"></div>
+      <motion.div 
+        className="eh-bottom-scale"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-50px" }}
+        variants={{
+          visible: { transition: { staggerChildren: 0.1 } },
+          hidden: {}
+        }}
+      >
+        <motion.div 
+          className="eh-scale-line"
+          variants={{
+            hidden: { scaleX: 0, y: "-50%", transformOrigin: "left" },
+            visible: { scaleX: 1, y: "-50%", transition: { duration: 1.5, ease: "easeInOut" } }
+          }}
+        ></motion.div>
         {[
           { label: '252 Ma', color: '#ef4444', left: '0%' },
           { label: '200 Ma', color: '#4ade80', left: '25%' },
@@ -189,12 +204,22 @@ export default function EarthHistory() {
           { label: '50 Ma', color: '#a855f7', left: '85%' },
           { label: 'Hoy', color: '#6b7280', left: '100%' }
         ].map((mark, i) => (
-          <div key={i} className="eh-scale-mark" style={{ left: mark.left }}>
-            <span className="eh-mark-label">{mark.label}</span>
-            <div className="eh-mark-dot" style={{ backgroundColor: mark.color }}></div>
-          </div>
+          <motion.div 
+            key={i} 
+            className="eh-scale-mark" 
+            style={{ left: mark.left }}
+            variants={{
+              hidden: { opacity: 0, scale: 0, x: "-50%", y: "-30%" },
+              visible: { opacity: 1, scale: 1, x: "-50%", y: "-50%", transition: { type: "spring", stiffness: 300, damping: 15 } }
+            }}
+            whileHover={{ scale: 1.2, x: "-50%", y: "-50%" }}
+          >
+            <span className="eh-mark-label" style={{ color: mark.color !== '#6b7280' ? mark.color : '#a3a3a3' }}>{mark.label}</span>
+            <div className="eh-mark-dot" style={{ backgroundColor: mark.color, boxShadow: `0 0 12px ${mark.color}90` }}></div>
+            <div className="eh-mark-pulse" style={{ borderColor: mark.color }}></div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
 
       <motion.button 
         className="eh-explore-btn"
