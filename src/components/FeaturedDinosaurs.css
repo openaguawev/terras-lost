@@ -1,5 +1,11 @@
 .featured-dinos-section {
-  background: #0a0a0a;
+  background-color: #0a0a0a;
+  background-image: 
+    linear-gradient(to bottom, #000000 0%, rgba(10,10,10,0.85) 15%, rgba(10,10,10,0.85) 100%), 
+    url('/dinos/jungle_bg.png');
+  background-size: cover;
+  background-position: center top;
+  background-attachment: fixed;
   min-height: 100vh;
   padding: 100px 60px;
   display: flex;
