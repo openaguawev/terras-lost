@@ -84,6 +84,50 @@ export default function Hero() {
         }}>66M — PRESENTE</span>
       </motion.nav>
 
+      {/* FEATURES TOP BAND */}
+      <motion.div
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.3, duration: 0.8 }}
+        style={{
+          position: 'relative', zIndex: 10,
+          display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)',
+          borderBottom: '1px solid rgba(201,168,76,0.15)',
+          flexShrink: 0,
+        }}
+      >
+        {[
+          { icon: '🦴', title: 'ESPECIES INCREÍBLES', desc: 'Conoce los dinosaurios más fascinantes que jamás existieron.' },
+          { icon: '🌿', title: 'HÁBITATS REALISTAS', desc: 'Descubre los ecosistemas donde vivieron y cómo era su entorno.' },
+          { icon: '📖', title: 'HISTORIA EVOLUTIVA', desc: 'Desde su origen hasta su extinción. La historia completa.' },
+          { icon: '🔬', title: 'FÓSILES Y DESCUBRIMIENTOS', desc: 'Los últimos hallazgos y cómo se reconstruye el pasado.' },
+        ].map((item, i) => (
+          <div key={i} style={{
+            padding: '14px 24px',
+            background: 'rgba(0,0,0,0.55)',
+            backdropFilter: 'blur(12px)',
+            borderRight: i < 3 ? '1px solid rgba(201,168,76,0.1)' : 'none',
+            display: 'flex',
+            alignItems: 'center',
+            gap: 12,
+          }}>
+            <span style={{ fontSize: 24, flexShrink: 0 }}>{item.icon}</span>
+            <div>
+              <div style={{
+                fontFamily: 'Bebas Neue, sans-serif',
+                fontSize: 14, letterSpacing: 2,
+                color: '#fff', marginBottom: 3,
+              }}>{item.title}</div>
+              <div style={{
+                fontFamily: 'Crimson Pro, serif',
+                fontSize: 13, color: 'rgba(255,255,255,0.45)',
+                lineHeight: 1.4,
+              }}>{item.desc}</div>
+            </div>
+          </div>
+        ))}
+      </motion.div>
+
       {/* CONTENIDO — ocupa el espacio restante */}
       <div style={{
         position: 'relative', zIndex: 10,
@@ -165,45 +209,6 @@ export default function Hero() {
           }}>▶ VER VIDEO</button>
         </motion.div>
       </div>
-
-      {/* FEATURES BAND — pegada al fondo */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 2, duration: 0.8 }}
-        style={{
-          position: 'relative', zIndex: 10,
-          display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)',
-          flexShrink: 0,
-        }}
-      >
-        {[
-          { icon: '🦴', title: 'ESPECIES INCREÍBLES', desc: 'Conoce los dinosaurios más fascinantes que jamás existieron.' },
-          { icon: '🌿', title: 'HÁBITATS REALISTAS', desc: 'Descubre los ecosistemas donde vivieron y cómo era su entorno.' },
-          { icon: '📖', title: 'HISTORIA EVOLUTIVA', desc: 'Desde su origen hasta su extinción. La historia completa.' },
-          { icon: '🔬', title: 'FÓSILES Y DESCUBRIMIENTOS', desc: 'Los últimos hallazgos y cómo se reconstruye el pasado.' },
-        ].map((item, i) => (
-          <div key={i} style={{
-            padding: '16px 24px',
-            background: 'rgba(0,0,0,0.75)',
-            backdropFilter: 'blur(12px)',
-            borderTop: '1px solid rgba(201,168,76,0.15)',
-            borderRight: i < 3 ? '1px solid rgba(201,168,76,0.1)' : 'none',
-          }}>
-            <div style={{ fontSize: 26, marginBottom: 8 }}>{item.icon}</div>
-            <div style={{
-              fontFamily: 'Bebas Neue, sans-serif',
-              fontSize: 13, letterSpacing: 2,
-              color: '#fff', marginBottom: 6,
-            }}>{item.title}</div>
-            <div style={{
-              fontFamily: 'Crimson Pro, serif',
-              fontSize: 13, color: 'rgba(255,255,255,0.45)',
-              lineHeight: 1.5,
-            }}>{item.desc}</div>
-          </div>
-        ))}
-      </motion.div>
 
       {/* SCROLL INDICATOR */}
       <motion.div
