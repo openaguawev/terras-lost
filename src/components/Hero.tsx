@@ -111,7 +111,8 @@ export default function Hero() {
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'flex-end',
-        padding: '0 60px 80px',
+        paddingBottom: '160px',
+        padding: '120px 60px 80px',
       }}>
 
         <motion.p
