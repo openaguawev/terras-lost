@@ -33,7 +33,7 @@ export default function Hero() {
           style={{
             width: '100%', height: '100%',
             objectFit: 'cover',
-            filter: 'brightness(0.7) contrast(1.1) saturate(1.2)',
+            filter: 'brightness(1.0) contrast(1.05) saturate(1.2)',
           }}
         >
           <source src="/hero.mp4" type="video/mp4" />
@@ -43,15 +43,15 @@ export default function Hero() {
       {/* OVERLAY CAPAS */}
       <div style={{
         position: 'absolute', inset: 0,
-        background: 'rgba(0,0,0,0.25)',
+        background: 'rgba(0,0,0,0.05)',
       }} />
       <div style={{
         position: 'absolute', inset: 0,
-        background: 'linear-gradient(to top, rgba(0,0,0,0.95) 0%, transparent 40%, rgba(0,0,0,0.2) 100%)',
+        background: 'linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 35%, rgba(0,0,0,0.1) 100%)',
       }} />
       <div style={{
         position: 'absolute', inset: 0,
-        background: 'linear-gradient(to right, rgba(0,0,0,0.6) 0%, transparent 60%)',
+        background: 'linear-gradient(to right, rgba(0,0,0,0.4) 0%, transparent 50%)',
       }} />
 
       {/* NAVBAR */}
