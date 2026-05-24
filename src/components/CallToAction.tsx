@@ -9,10 +9,10 @@ import {
   Globe, 
   Clock, 
   Leaf,
-  Facebook,
-  Instagram,
-  Youtube,
-  Twitter
+  Users,
+  Camera,
+  Play,
+  MessageCircle
 } from 'lucide-react';
 import BlurText from './BlurText';
 import './CallToAction.css';
@@ -208,10 +208,10 @@ export default function CallToAction() {
           <div className="footer-right">
             <h4>SÍGUENOS</h4>
             <div className="footer-social">
-              <a href="#"><Facebook size={18} /></a>
-              <a href="#"><Instagram size={18} /></a>
-              <a href="#"><Youtube size={18} /></a>
-              <a href="#"><Twitter size={18} /></a>
+              <a href="#"><Users size={18} /></a>
+              <a href="#"><Camera size={18} /></a>
+              <a href="#"><Play size={18} /></a>
+              <a href="#"><MessageCircle size={18} /></a>
             </div>
             <p className="footer-copyright">© 2024 Dinomundo. Todos los derechos reservados.</p>
           </div>
