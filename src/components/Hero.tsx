@@ -76,17 +76,38 @@ export default function Hero() {
         position: 'relative', zIndex: 10, flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center',
         padding: '0 60px', maxWidth: 710
       }}>
-        <motion.p initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}
-          style={{ fontFamily: 'Bebas Neue, sans-serif', fontSize: 16, letterSpacing: 4, color: '#e6c875', marginBottom: 12 }}>
+        <motion.p initial={{ opacity: 0, letterSpacing: '0px' }} animate={{ opacity: 1, letterSpacing: '4px' }} transition={{ delay: 0.2, duration: 1.2, ease: "easeOut" }}
+          style={{ fontFamily: 'Bebas Neue, sans-serif', fontSize: 16, color: '#e6c875', marginBottom: 12 }}>
           VIAJA MILLONES DE AÑOS ATRÁS
         </motion.p>
 
-        <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4, duration: 0.8 }}
+        <motion.h1 initial="hidden" animate="visible"
+          variants={{
+            hidden: {},
+            visible: { transition: { staggerChildren: 0.08, delayChildren: 0.4 } }
+          }}
           style={{
             fontFamily: 'Bebas Neue, sans-serif', fontSize: 'clamp(40px, 7vw, 80px)',
             lineHeight: 0.95, letterSpacing: 1, color: '#fff', textShadow: '0 4px 20px rgba(0,0,0,0.5)', margin: 0
           }}>
-          DESCUBRE EL<br />MUNDO DE LOS DINOSAURIOS
+          <div style={{ overflow: 'hidden', paddingBottom: 4 }}>
+            {["DESCUBRE", "EL"].map((word, i) => (
+              <motion.span key={i} style={{ display: 'inline-block', marginRight: '0.22em' }}
+                variants={{
+                  hidden: { y: "110%", opacity: 0, rotateZ: 5 },
+                  visible: { y: 0, opacity: 1, rotateZ: 0, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } }
+                }}>{word}</motion.span>
+            ))}
+          </div>
+          <div style={{ overflow: 'hidden', paddingBottom: 4 }}>
+            {["MUNDO", "DE", "LOS", "DINOSAURIOS"].map((word, i) => (
+              <motion.span key={i} style={{ display: 'inline-block', marginRight: '0.22em' }}
+                variants={{
+                  hidden: { y: "110%", opacity: 0, rotateZ: 5 },
+                  visible: { y: 0, opacity: 1, rotateZ: 0, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } }
+                }}>{word}</motion.span>
+            ))}
+          </div>
         </motion.h1>
 
         <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.8, duration: 1 }}
