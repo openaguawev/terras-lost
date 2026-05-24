@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
-import { Search, PlayCircle, Mouse } from 'lucide-react'
+import { Search, PlayCircle, Mouse, Bone, Trees, History, Map } from 'lucide-react'
 
 export default function Hero() {
   const parallaxRef = useRef<HTMLDivElement>(null)
@@ -125,13 +125,13 @@ export default function Hero() {
           backdropFilter: 'blur(16px)', borderRadius: 12, overflow: 'hidden'
         }}>
         {[
-          { icon: '🦴', title: 'ESPECIES INCREÍBLES', desc: 'Conoce los dinosaurios más fascinantes que jamás existieron.' },
-          { icon: '🌿', title: 'HÁBITATS REALISTAS', desc: 'Descubre los ecosistemas donde vivieron y cómo era su entorno.' },
-          { icon: '📖', title: 'HISTORIA EVOLUTIVA', desc: 'Desde su origen hasta su extinción. La historia completa.' },
-          { icon: '🔬', title: 'FÓSILES Y DESCUBRIMIENTOS', desc: 'Los últimos hallazgos y cómo se reconstruye el pasado.' },
+          { icon: <Bone size={28} color="#e6c875" strokeWidth={1.5} />, title: 'ESPECIES INCREÍBLES', desc: 'Conoce los dinosaurios más fascinantes que jamás existieron.' },
+          { icon: <Trees size={28} color="#e6c875" strokeWidth={1.5} />, title: 'HÁBITATS REALISTAS', desc: 'Descubre los ecosistemas donde vivieron y cómo era su entorno.' },
+          { icon: <History size={28} color="#e6c875" strokeWidth={1.5} />, title: 'HISTORIA EVOLUTIVA', desc: 'Desde su origen hasta su extinción. La historia completa.' },
+          { icon: <Map size={28} color="#e6c875" strokeWidth={1.5} />, title: 'FÓSILES Y DESCUBRIMIENTOS', desc: 'Los últimos hallazgos y cómo se reconstruye el pasado.' },
         ].map((item, i) => (
           <div key={i} style={{ padding: '24px 28px', background: 'rgba(0,0,0,0.4)', borderRight: i < 3 ? '1px solid rgba(255,255,255,0.05)' : 'none' }}>
-            <div style={{ fontSize: 24, marginBottom: 12, filter: 'drop-shadow(0 0 8px rgba(230,200,117,0.4))' }}>{item.icon}</div>
+            <div style={{ marginBottom: 12, display: 'flex', filter: 'drop-shadow(0 0 8px rgba(230,200,117,0.4))' }}>{item.icon}</div>
             <div style={{ fontFamily: 'Inter, sans-serif', fontWeight: 600, fontSize: 13, color: '#fff', marginBottom: 6 }}>{item.title}</div>
             <div style={{ fontFamily: 'Inter, sans-serif', fontSize: 12, color: 'rgba(255,255,255,0.5)', lineHeight: 1.5 }}>{item.desc}</div>
           </div>
