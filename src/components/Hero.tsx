@@ -106,13 +106,16 @@ export default function Hero() {
 
       {/* CONTENIDO HERO */}
       <div style={{
-        position: 'relative', zIndex: 10,
+        position: 'relative',
+        zIndex: 10,
         height: '100%',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'flex-end',
-        paddingBottom: '160px',
-        padding: '120px 60px 80px',
+        paddingLeft: '60px',
+        paddingRight: '60px',
+        paddingBottom: '80px',
+        paddingTop: '0px',
       }}>
 
         <motion.p
