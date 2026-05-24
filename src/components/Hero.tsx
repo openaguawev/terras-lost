@@ -95,8 +95,9 @@ export default function Hero() {
 
       {/* MAIN CONTENT (LEFT SIDE) */}
       <div style={{
-        position: 'relative', zIndex: 10, flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center',
-        padding: isMobile ? '0 20px' : '0 60px', maxWidth: 710
+        position: 'relative', zIndex: 10, flex: 1, display: 'flex', flexDirection: 'column', 
+        justifyContent: isMobile ? 'flex-end' : 'center',
+        padding: isMobile ? '0 20px 15vh 20px' : '0 60px', maxWidth: 710
       }}>
         <motion.p initial={{ opacity: 0, letterSpacing: '0px' }} animate={{ opacity: 1, letterSpacing: '4px' }} transition={{ delay: 0.2, duration: 1.2, ease: "easeOut" }}
           style={{ fontFamily: 'Bebas Neue, sans-serif', fontSize: 16, color: '#e6c875', marginBottom: 12 }}>
