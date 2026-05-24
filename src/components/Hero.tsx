@@ -114,21 +114,21 @@ export default function Hero() {
       {/* FEATURES BAND (BOTTOM) */}
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.2, duration: 0.8 }}
         style={{
-          position: 'relative', zIndex: 10, margin: '0 60px 24px 60px', flexShrink: 0,
+          position: 'relative', zIndex: 10, margin: '0 60px 16px 60px', flexShrink: 0,
           display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 1,
           background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)',
           backdropFilter: 'blur(16px)', borderRadius: 12, overflow: 'hidden'
         }}>
         {[
-          { icon: <Bone size={28} color="#e6c875" strokeWidth={1.5} />, title: 'ESPECIES INCREÍBLES', desc: 'Conoce los dinosaurios más fascinantes que jamás existieron.' },
-          { icon: <Trees size={28} color="#e6c875" strokeWidth={1.5} />, title: 'HÁBITATS REALISTAS', desc: 'Descubre los ecosistemas donde vivieron y cómo era su entorno.' },
-          { icon: <History size={28} color="#e6c875" strokeWidth={1.5} />, title: 'HISTORIA EVOLUTIVA', desc: 'Desde su origen hasta su extinción. La historia completa.' },
-          { icon: <Map size={28} color="#e6c875" strokeWidth={1.5} />, title: 'FÓSILES Y DESCUBRIMIENTOS', desc: 'Los últimos hallazgos y cómo se reconstruye el pasado.' },
+          { icon: <Bone size={22} color="#e6c875" strokeWidth={1.5} />, title: 'ESPECIES INCREÍBLES', desc: 'Conoce los dinosaurios más fascinantes que jamás existieron.' },
+          { icon: <Trees size={22} color="#e6c875" strokeWidth={1.5} />, title: 'HÁBITATS REALISTAS', desc: 'Descubre los ecosistemas donde vivieron y cómo era su entorno.' },
+          { icon: <History size={22} color="#e6c875" strokeWidth={1.5} />, title: 'HISTORIA EVOLUTIVA', desc: 'Desde su origen hasta su extinción. La historia completa.' },
+          { icon: <Map size={22} color="#e6c875" strokeWidth={1.5} />, title: 'FÓSILES Y DESCUBRIMIENTOS', desc: 'Los últimos hallazgos y cómo se reconstruye el pasado.' },
         ].map((item, i) => (
-          <div key={i} style={{ padding: '24px 28px', background: 'rgba(0,0,0,0.4)', borderRight: i < 3 ? '1px solid rgba(255,255,255,0.05)' : 'none' }}>
-            <div style={{ marginBottom: 12, display: 'flex', filter: 'drop-shadow(0 0 8px rgba(230,200,117,0.4))' }}>{item.icon}</div>
-            <div style={{ fontFamily: 'Inter, sans-serif', fontWeight: 600, fontSize: 13, color: '#fff', marginBottom: 6 }}>{item.title}</div>
-            <div style={{ fontFamily: 'Inter, sans-serif', fontSize: 12, color: 'rgba(255,255,255,0.5)', lineHeight: 1.5 }}>{item.desc}</div>
+          <div key={i} style={{ padding: '16px 20px', background: 'rgba(0,0,0,0.4)', borderRight: i < 3 ? '1px solid rgba(255,255,255,0.05)' : 'none' }}>
+            <div style={{ marginBottom: 8, display: 'flex', filter: 'drop-shadow(0 0 8px rgba(230,200,117,0.4))' }}>{item.icon}</div>
+            <div style={{ fontFamily: 'Inter, sans-serif', fontWeight: 600, fontSize: 12, color: '#fff', marginBottom: 4 }}>{item.title}</div>
+            <div style={{ fontFamily: 'Inter, sans-serif', fontSize: 11, color: 'rgba(255,255,255,0.5)', lineHeight: 1.4 }}>{item.desc}</div>
           </div>
         ))}
       </motion.div>
@@ -136,11 +136,11 @@ export default function Hero() {
       {/* SCROLL INDICATOR */}
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.8 }}
         style={{
-          position: 'relative', margin: '0 auto 24px auto', zIndex: 10, flexShrink: 0,
-          display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 6
+          position: 'relative', margin: '0 auto 16px auto', zIndex: 10, flexShrink: 0,
+          display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 4
         }}>
         <span style={{ fontFamily: 'Inter, sans-serif', fontWeight: 600, fontSize: 9, letterSpacing: 2, color: 'rgba(255,255,255,0.5)' }}>DESLIZA PARA EXPLORAR</span>
-        <Mouse size={18} color="rgba(255,255,255,0.5)" />
+        <Mouse size={16} color="rgba(255,255,255,0.5)" />
       </motion.div>
     </section>
   )
