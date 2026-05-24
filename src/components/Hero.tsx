@@ -69,16 +69,26 @@ export default function Hero() {
             { label: 'CONTACTO' },
           ].map(link => (
             <div key={link.label} style={{ position: 'relative', paddingBottom: 4 }}>
-              <a href="#" style={{
-                fontFamily: 'Inter, sans-serif', fontSize: 12, fontWeight: 500,
-                color: link.active ? '#fff' : 'rgba(255,255,255,0.7)', textDecoration: 'none',
-                transition: 'color 0.2s',
-              }}>{link.label}</a>
+              <motion.a 
+                href="#" 
+                initial={{ color: link.active ? '#fff' : 'rgba(255,255,255,0.7)' }}
+                whileHover={{ scale: 1.1, color: '#e6c875' }}
+                transition={{ duration: 0.2 }}
+                style={{
+                  display: 'block',
+                  fontFamily: 'Inter, sans-serif', fontSize: 12, fontWeight: 500,
+                  textDecoration: 'none', originX: 0.5, originY: 0.5
+                }}
+              >
+                {link.label}
+              </motion.a>
               {link.active && <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: 2, background: '#e6c875' }} />}
             </div>
           ))}
           </div>
-          <Search size={18} color="#fff" style={{ cursor: 'pointer', marginLeft: isMobile ? 0 : 16 }} />
+          <motion.div initial={{ color: '#fff' }} whileHover={{ scale: 1.15, color: '#e6c875', rotate: 5 }} transition={{ type: 'spring', stiffness: 300 }}>
+            <Search size={18} color="currentColor" style={{ cursor: 'pointer', marginLeft: isMobile ? 0 : 16 }} />
+          </motion.div>
         </div>
       </nav>
 
