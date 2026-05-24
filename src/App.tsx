@@ -4,6 +4,7 @@ import FeaturedDinosaurs from './components/FeaturedDinosaurs'
 import ExploreEras from './components/ExploreEras'
 import ExploreHabitats from './components/ExploreHabitats'
 import EarthHistory from './components/EarthHistory'
+import CallToAction from './components/CallToAction'
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <ExploreEras />
       <ExploreHabitats />
       <EarthHistory />
+      <CallToAction />
     </div>
   )
 }
