@@ -84,46 +84,41 @@ export default function Hero() {
         }}>66M — PRESENTE</span>
       </motion.nav>
 
-      {/* FEATURES TOP BAND */}
+      {/* ICONS TOP BAR */}
       <motion.div
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3, duration: 0.8 }}
         style={{
-          position: 'relative', zIndex: 10,
-          display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)',
-          borderBottom: '1px solid rgba(201,168,76,0.15)',
-          flexShrink: 0,
+          position: 'absolute',
+          top: 90, left: 0, right: 0,
+          zIndex: 20,
+          display: 'flex',
+          justifyContent: 'center',
+          gap: 60,
+          padding: '12px 0',
+          borderTop: '1px solid rgba(201,168,76,0.1)',
+          borderBottom: '1px solid rgba(201,168,76,0.1)',
+          background: 'rgba(0,0,0,0.2)',
+          backdropFilter: 'blur(8px)',
         }}
       >
         {[
-          { icon: '🦴', title: 'ESPECIES INCREÍBLES', desc: 'Conoce los dinosaurios más fascinantes que jamás existieron.' },
-          { icon: '🌿', title: 'HÁBITATS REALISTAS', desc: 'Descubre los ecosistemas donde vivieron y cómo era su entorno.' },
-          { icon: '📖', title: 'HISTORIA EVOLUTIVA', desc: 'Desde su origen hasta su extinción. La historia completa.' },
-          { icon: '🔬', title: 'FÓSILES Y DESCUBRIMIENTOS', desc: 'Los últimos hallazgos y cómo se reconstruye el pasado.' },
+          { icon: '🦴', title: 'ESPECIES' },
+          { icon: '🌿', title: 'HÁBITATS' },
+          { icon: '📖', title: 'HISTORIA' },
+          { icon: '🔬', title: 'FÓSILES' },
         ].map((item, i) => (
           <div key={i} style={{
-            padding: '14px 24px',
-            background: 'rgba(0,0,0,0.55)',
-            backdropFilter: 'blur(12px)',
-            borderRight: i < 3 ? '1px solid rgba(201,168,76,0.1)' : 'none',
-            display: 'flex',
-            alignItems: 'center',
-            gap: 12,
+            display: 'flex', flexDirection: 'column',
+            alignItems: 'center', gap: 4, cursor: 'pointer',
           }}>
-            <span style={{ fontSize: 24, flexShrink: 0 }}>{item.icon}</span>
-            <div>
-              <div style={{
-                fontFamily: 'Bebas Neue, sans-serif',
-                fontSize: 14, letterSpacing: 2,
-                color: '#fff', marginBottom: 3,
-              }}>{item.title}</div>
-              <div style={{
-                fontFamily: 'Crimson Pro, serif',
-                fontSize: 13, color: 'rgba(255,255,255,0.45)',
-                lineHeight: 1.4,
-              }}>{item.desc}</div>
-            </div>
+            <span style={{ fontSize: 28 }}>{item.icon}</span>
+            <span style={{
+              fontFamily: 'Bebas Neue, sans-serif',
+              fontSize: 10, letterSpacing: 4,
+              color: 'rgba(255,255,255,0.5)',
+            }}>{item.title}</span>
           </div>
         ))}
       </motion.div>
