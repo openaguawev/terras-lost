@@ -98,7 +98,7 @@ export default function ExploreEras() {
             className="era-card"
             style={{ 
               backgroundImage: `url(${era.image})`,
-              backgroundPosition: era.id === 'jurassic' ? 'center 15%' : 'center',
+              backgroundPosition: era.id === 'jurassic' ? '80% 15%' : 'center',
               borderColor: `${era.color}40`,
               boxShadow: `0 0 30px ${era.color}10`
             }}
