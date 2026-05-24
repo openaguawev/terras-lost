@@ -1,15 +1,30 @@
 import { motion } from 'framer-motion';
 import { useEffect, useRef, useState, useMemo } from 'react';
 
-const buildKeyframes = (from, steps) => {
+const buildKeyframes = (from: any, steps: any[]) => {
   const keys = new Set([...Object.keys(from), ...steps.flatMap(s => Object.keys(s))]);
 
-  const keyframes = {};
+  const keyframes: any = {};
   keys.forEach(k => {
-    keyframes[k] = [from[k], ...steps.map(s => s[k])];
+    keyframes[k as string] = [from[k as string], ...steps.map(s => s[k as string])];
   });
   return keyframes;
 };
+
+interface BlurTextProps {
+  text?: string;
+  delay?: number;
+  className?: string;
+  animateBy?: 'words' | 'letters' | string;
+  direction?: 'top' | 'bottom' | string;
+  threshold?: number;
+  rootMargin?: string;
+  animationFrom?: any;
+  animationTo?: any[];
+  easing?: (t: number) => number;
+  onAnimationComplete?: () => void;
+  stepDuration?: number;
+}
 
 const BlurText = ({
   text = '',
@@ -21,13 +36,13 @@ const BlurText = ({
   rootMargin = '0px',
   animationFrom,
   animationTo,
-  easing = t => t,
+  easing = (t: number) => t,
   onAnimationComplete,
   stepDuration = 0.35
-}) => {
+}: BlurTextProps) => {
   const elements = animateBy === 'words' ? text.split(' ') : text.split('');
   const [inView, setInView] = useState(false);
-  const ref = useRef(null);
+  const ref = useRef<HTMLParagraphElement>(null);
 
   useEffect(() => {
     if (!ref.current) return;
@@ -35,7 +50,9 @@ const BlurText = ({
       ([entry]) => {
         if (entry.isIntersecting) {
           setInView(true);
-          observer.unobserve(ref.current);
+          if (ref.current) {
+            observer.unobserve(ref.current);
+          }
         }
       },
       { threshold, rootMargin }
@@ -44,13 +61,13 @@ const BlurText = ({
     return () => observer.disconnect();
   }, [threshold, rootMargin]);
 
-  const defaultFrom = useMemo(
+  const defaultFrom: any = useMemo(
     () =>
       direction === 'top' ? { filter: 'blur(10px)', opacity: 0, y: -50 } : { filter: 'blur(10px)', opacity: 0, y: 50 },
     [direction]
   );
 
-  const defaultTo = useMemo(
+  const defaultTo: any[] = useMemo(
     () => [
       {
         filter: 'blur(5px)',
@@ -74,12 +91,12 @@ const BlurText = ({
       {elements.map((segment, index) => {
         const animateKeyframes = buildKeyframes(fromSnapshot, toSnapshots);
 
-        const spanTransition = {
+        const spanTransition: any = {
           duration: totalDuration,
           times,
-          delay: (index * delay) / 1000
+          delay: (index * delay) / 1000,
+          ease: easing
         };
-        spanTransition.ease = easing;
 
         return (
           <motion.span
