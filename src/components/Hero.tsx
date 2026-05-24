@@ -95,23 +95,18 @@ export default function Hero() {
         </motion.p>
 
         <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1 }}
-          style={{ display: 'flex', gap: 16, marginTop: 36 }}>
+          style={{ display: 'flex', marginTop: 40 }}>
           <button style={{
-            background: '#e6c875', color: '#000', border: 'none', borderRadius: 6,
-            padding: '14px 28px', fontFamily: 'Inter, sans-serif', fontWeight: 600, fontSize: 13,
-            cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 10,
-          }}>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 4C8.686 4 6 6.686 6 10v4.536l-1.562 1.562A2 2 0 005 19.5V20h14v-.5a2 2 0 00-.586-1.414L16.85 16.526V10c0-3.314-2.686-6-6-6zM9 13h.01M15 13h.01M9 17h6" /></svg>
+            background: '#e6c875', color: '#000', border: 'none', borderRadius: 40,
+            padding: '18px 40px', fontFamily: 'Inter, sans-serif', fontWeight: 700, fontSize: 14,
+            cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 12,
+            boxShadow: '0 8px 30px rgba(230,200,117,0.3)', transition: 'transform 0.2s',
+          }}
+          onMouseEnter={e => e.currentTarget.style.transform = 'translateY(-2px)'}
+          onMouseLeave={e => e.currentTarget.style.transform = 'translateY(0)'}
+          >
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 4C8.686 4 6 6.686 6 10v4.536l-1.562 1.562A2 2 0 005 19.5V20h14v-.5a2 2 0 00-.586-1.414L16.85 16.526V10c0-3.314-2.686-6-6-6zM9 13h.01M15 13h.01M9 17h6" /></svg>
             EXPLORAR DINOSAURIOS
-          </button>
-
-          <button style={{
-            background: 'transparent', color: '#fff', border: '1px solid rgba(255,255,255,0.5)', borderRadius: 6,
-            padding: '14px 28px', fontFamily: 'Inter, sans-serif', fontWeight: 600, fontSize: 13,
-            cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 10, backdropFilter: 'blur(4px)'
-          }}>
-            <PlayCircle size={20} />
-            VER VIDEO
           </button>
         </motion.div>
       </div>
