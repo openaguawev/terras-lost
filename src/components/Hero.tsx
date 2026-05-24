@@ -90,7 +90,8 @@ export default function Hero() {
         flex: 1,
         display: 'flex',
         flexDirection: 'column',
-        justifyContent: 'center',
+        justifyContent: 'flex-end',
+        paddingBottom: '20px',
         padding: '0 60px',
       }}>
 
@@ -113,7 +114,7 @@ export default function Hero() {
           transition={{ delay: 0.8, duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
           style={{
             fontFamily: 'Cinzel, serif',
-            fontSize: 'clamp(36px, 6vw, 80px)',
+            fontSize: 'clamp(32px, 4.5vw, 62px)',
             fontWeight: 900, lineHeight: 1.05,
             letterSpacing: -1, color: '#fff',
             textShadow: '0 4px 30px rgba(0,0,0,0.8)',
@@ -183,8 +184,8 @@ export default function Hero() {
           { icon: '🔬', title: 'FÓSILES Y DESCUBRIMIENTOS', desc: 'Los últimos hallazgos y cómo se reconstruye el pasado.' },
         ].map((item, i) => (
           <div key={i} style={{
-            padding: '20px 24px',
-            background: 'rgba(0,0,0,0.6)',
+            padding: '16px 24px',
+            background: 'rgba(0,0,0,0.75)',
             backdropFilter: 'blur(12px)',
             borderTop: '1px solid rgba(201,168,76,0.15)',
             borderRight: i < 3 ? '1px solid rgba(201,168,76,0.1)' : 'none',
