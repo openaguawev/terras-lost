@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://dinorex.org/sitemap.xml
+Sitemap: https://www.dinorex.org/sitemap.xml

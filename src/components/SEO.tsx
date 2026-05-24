@@ -12,8 +12,8 @@ export default function SEO({
   title = 'DinoRex — Descubre el Mundo de los Dinosaurios',
   description = 'Explora los dinosaurios más fascinantes que jamás existieron. T-Rex, Velociraptor, Brachiosaurus y más. Historia, hábitats y datos increíbles.',
   keywords = 'dinosaurios, tyrannosaurus rex, velociraptor, brachiosaurus, dinosaurios carnivoros, dinosaurios herbivoros, criaturas prehistoricas, animales extintos',
-  image = 'https://dinorex.org/og-image.jpg',
-  url = 'https://dinorex.org',
+  image = 'https://www.dinorex.org/og-image.jpg',
+  url = 'https://www.dinorex.org',
 }: SEOProps) {
   return (
     <Helmet>
@@ -46,12 +46,12 @@ export default function SEO({
           "@context": "https://schema.org",
           "@type": "WebSite",
           "name": "DinoRex",
-          "url": "https://dinorex.org",
+          "url": "https://www.dinorex.org",
           "description": description,
           "inLanguage": "es",
           "potentialAction": {
             "@type": "SearchAction",
-            "target": "https://dinorex.org/buscar?q={search_term_string}",
+            "target": "https://www.dinorex.org/buscar?q={search_term_string}",
             "query-input": "required name=search_term_string"
           }
         })}
