@@ -4,7 +4,7 @@ import './DinosaurSpotlight.css';
 export default function DinosaurSpotlight() {
   return (
     <section className="dino-spotlight-section">
-      <div className="spotlight-bg" style={{ backgroundImage: `url('/dinos/trex_spotlight.png')` }}></div>
+      <div className="spotlight-bg" style={{ backgroundImage: `url('/dinos/trex_spotlight_full.png')` }}></div>
       <div className="spotlight-overlay"></div>
 
       <div className="spotlight-content">
@@ -95,7 +95,7 @@ export default function DinosaurSpotlight() {
               </div>
               <div className="sl-skulls">
                 {[...Array(10)].map((_, i) => (
-                  <Skull key={i} size={14} color={i < 10 ? "#e6c875" : "rgba(255,255,255,0.1)"} fill={i < 10 ? "#e6c875" : "none"} className={i < 10 ? "skull-active" : ""} />
+                  <Skull key={i} size={18} color={i < 10 ? "#e6c875" : "rgba(255,255,255,0.1)"} fill={i < 10 ? "#e6c875" : "none"} className={i < 10 ? "skull-active" : ""} />
                 ))}
               </div>
             </div>
@@ -131,10 +131,10 @@ export default function DinosaurSpotlight() {
       <div className="sl-bottom-panel">
         <div className="sl-bot-col map-col">
           <Globe2 size={18} color="#e6c875"/>
-          <div>
+          <div className="fc-text">
             <h4>UBICACIÓN</h4>
             <p className="highlight">América del Norte</p>
-            <div className="map-placeholder"></div>
+            <div className="map-img" style={{ backgroundImage: `url('/dinos/mapa_norteamerica.png')` }}></div>
           </div>
         </div>
         
@@ -143,16 +143,17 @@ export default function DinosaurSpotlight() {
           <div>
             <h4>CLIMA</h4>
             <p className="highlight">Cálido y húmedo</p>
-            <p>Temperaturas entre<br/>25°C y 35°C</p>
+            <p className="sl-temp-big">25°C y 35°C</p>
           </div>
         </div>
 
-        <div className="sl-bot-col">
+        <div className="sl-bot-col feature-col">
           <Leaf size={18} color="#e6c875"/>
-          <div>
+          <div className="fc-text">
             <h4>VEGETACIÓN</h4>
             <p>Bosques densos,<br/>helechos gigantes,<br/>coníferas y cicadáceas.</p>
           </div>
+          <div className="feature-img" style={{ backgroundImage: `url('/dinos/vegetacion_dino.png')` }}></div>
         </div>
 
         <div className="sl-bot-col feature-col">
