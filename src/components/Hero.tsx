@@ -16,7 +16,7 @@ export default function Hero() {
   }, [])
 
   return (
-    <section style={{ height: '100vh', position: 'relative', overflow: 'hidden', background: '#000', display: 'flex', flexDirection: 'column' }}>
+    <section style={{ minHeight: '100vh', position: 'relative', overflow: 'hidden', background: '#000', display: 'flex', flexDirection: 'column' }}>
       {/* BACKGROUND VIDEO */}
       <div ref={parallaxRef} style={{ position: 'absolute', inset: 0, transform: 'scale(1.1)' }}>
         <video autoPlay muted loop playsInline style={{
@@ -119,7 +119,7 @@ export default function Hero() {
       {/* FEATURES BAND (BOTTOM) */}
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.2, duration: 0.8 }}
         style={{
-          position: 'relative', zIndex: 10, margin: '0 60px 50px 60px', flexShrink: 0,
+          position: 'relative', zIndex: 10, margin: '0 60px 24px 60px', flexShrink: 0,
           display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 1,
           background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)',
           backdropFilter: 'blur(16px)', borderRadius: 12, overflow: 'hidden'
@@ -141,8 +141,8 @@ export default function Hero() {
       {/* SCROLL INDICATOR */}
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.8 }}
         style={{
-          position: 'absolute', bottom: 20, left: '50%', transform: 'translateX(-50%)',
-          display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 6, zIndex: 10
+          position: 'relative', margin: '0 auto 24px auto', zIndex: 10, flexShrink: 0,
+          display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 6
         }}>
         <span style={{ fontFamily: 'Inter, sans-serif', fontWeight: 600, fontSize: 9, letterSpacing: 2, color: 'rgba(255,255,255,0.5)' }}>DESLIZA PARA EXPLORAR</span>
         <Mouse size={18} color="rgba(255,255,255,0.5)" />
