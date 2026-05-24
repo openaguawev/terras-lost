@@ -16,7 +16,7 @@ export default function Hero() {
   }, [])
 
   return (
-    <section style={{ height: '100vh', position: 'relative', overflow: 'hidden', background: '#000' }}>
+    <section style={{ height: '100vh', position: 'relative', overflow: 'hidden', background: '#000', display: 'flex', flexDirection: 'column' }}>
       {/* BACKGROUND VIDEO */}
       <div ref={parallaxRef} style={{ position: 'absolute', inset: 0, transform: 'scale(1.1)' }}>
         <video autoPlay muted loop playsInline style={{
@@ -34,7 +34,7 @@ export default function Hero() {
 
       {/* NAVBAR */}
       <nav style={{
-        position: 'absolute', top: 0, left: 0, right: 0, zIndex: 50,
+        position: 'relative', zIndex: 50, flexShrink: 0,
         padding: '24px 60px', display: 'flex', alignItems: 'center', justifyContent: 'space-between'
       }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
@@ -73,8 +73,8 @@ export default function Hero() {
 
       {/* MAIN CONTENT (LEFT SIDE) */}
       <div style={{
-        position: 'absolute', top: '45%', transform: 'translateY(-50%)',
-        left: 60, zIndex: 10, maxWidth: 650
+        position: 'relative', zIndex: 10, flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center',
+        padding: '0 60px', maxWidth: 710
       }}>
         <motion.p initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}
           style={{ fontFamily: 'Bebas Neue, sans-serif', fontSize: 16, letterSpacing: 4, color: '#e6c875', marginBottom: 12 }}>
@@ -119,7 +119,7 @@ export default function Hero() {
       {/* FEATURES BAND (BOTTOM) */}
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.2, duration: 0.8 }}
         style={{
-          position: 'absolute', bottom: 60, left: 60, right: 60, zIndex: 10,
+          position: 'relative', zIndex: 10, margin: '0 60px 50px 60px', flexShrink: 0,
           display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 1,
           background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)',
           backdropFilter: 'blur(16px)', borderRadius: 12, overflow: 'hidden'
