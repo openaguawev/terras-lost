@@ -1,9 +1,17 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import { Search, PlayCircle, Mouse, Bone, Trees, History, Map } from 'lucide-react'
 
 export default function Hero() {
   const parallaxRef = useRef<HTMLDivElement>(null)
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768)
+    handleResize()
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,6 +29,7 @@ export default function Hero() {
       <div ref={parallaxRef} style={{ position: 'absolute', inset: 0, transform: 'scale(1.1)' }}>
         <video autoPlay muted loop playsInline style={{
           width: '100%', height: '100%', objectFit: 'cover',
+          objectPosition: isMobile ? '80% center' : 'center center',
           filter: 'brightness(0.9) contrast(1.1) saturate(1.2)',
         }}>
           <source src="/hero.mp4" type="video/mp4" />
@@ -35,7 +44,7 @@ export default function Hero() {
       {/* NAVBAR */}
       <nav style={{
         position: 'relative', zIndex: 50, flexShrink: 0,
-        padding: '16px 60px', display: 'flex', alignItems: 'center', justifyContent: 'space-between'
+        padding: isMobile ? '16px 20px' : '16px 60px', display: 'flex', alignItems: 'center', justifyContent: 'space-between'
       }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
           {/* Skull Logo SVG Placeholder */}
@@ -49,9 +58,10 @@ export default function Hero() {
         </div>
 
         <div style={{ display: 'flex', alignItems: 'center', gap: 32 }}>
-          {[
-            { label: 'INICIO', active: true },
-            { label: 'DINOSAURIOS ⌄' },
+          <div style={{ display: isMobile ? 'none' : 'flex', alignItems: 'center', gap: 32 }}>
+            {[
+              { label: 'INICIO', active: true },
+              { label: 'DINOSAURIOS ⌄' },
             { label: 'HÁBITAT' },
             { label: 'HISTORIA' },
             { label: 'FÓSILES' },
@@ -67,14 +77,15 @@ export default function Hero() {
               {link.active && <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: 2, background: '#e6c875' }} />}
             </div>
           ))}
-          <Search size={18} color="#fff" style={{ cursor: 'pointer', marginLeft: 16 }} />
+          </div>
+          <Search size={18} color="#fff" style={{ cursor: 'pointer', marginLeft: isMobile ? 0 : 16 }} />
         </div>
       </nav>
 
       {/* MAIN CONTENT (LEFT SIDE) */}
       <div style={{
         position: 'relative', zIndex: 10, flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center',
-        padding: '0 60px', maxWidth: 710
+        padding: isMobile ? '0 20px' : '0 60px', maxWidth: 710
       }}>
         <motion.p initial={{ opacity: 0, letterSpacing: '0px' }} animate={{ opacity: 1, letterSpacing: '4px' }} transition={{ delay: 0.2, duration: 1.2, ease: "easeOut" }}
           style={{ fontFamily: 'Bebas Neue, sans-serif', fontSize: 16, color: '#e6c875', marginBottom: 12 }}>
@@ -143,8 +154,8 @@ export default function Hero() {
       {/* FEATURES BAND (BOTTOM) */}
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.2, duration: 0.8 }}
         style={{
-          position: 'relative', zIndex: 10, margin: '0 60px 10px 60px', flexShrink: 0,
-          display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 1,
+          position: 'relative', zIndex: 10, margin: isMobile ? '0 20px 10px 20px' : '0 60px 10px 60px', flexShrink: 0,
+          display: 'grid', gridTemplateColumns: isMobile ? 'repeat(2, 1fr)' : 'repeat(4, 1fr)', gap: 1,
           background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)',
           backdropFilter: 'blur(16px)', borderRadius: 12, overflow: 'hidden'
         }}>
@@ -154,7 +165,11 @@ export default function Hero() {
           { icon: <History size={18} color="#e6c875" strokeWidth={1.5} />, title: 'HISTORIA EVOLUTIVA', desc: 'Desde su origen hasta su extinción. La historia completa.' },
           { icon: <Map size={18} color="#e6c875" strokeWidth={1.5} />, title: 'FÓSILES Y DESCUBRIMIENTOS', desc: 'Los últimos hallazgos y cómo se reconstruye el pasado.' },
         ].map((item, i) => (
-          <div key={i} style={{ padding: '10px 16px', background: 'rgba(0,0,0,0.4)', borderRight: i < 3 ? '1px solid rgba(255,255,255,0.05)' : 'none' }}>
+          <div key={i} style={{ 
+            padding: '10px 16px', background: 'rgba(0,0,0,0.4)', 
+            borderRight: (isMobile ? (i % 2 === 0) : (i < 3)) ? '1px solid rgba(255,255,255,0.05)' : 'none',
+            borderBottom: (isMobile && i < 2) ? '1px solid rgba(255,255,255,0.05)' : 'none'
+          }}>
             <div style={{ marginBottom: 4, display: 'flex', filter: 'drop-shadow(0 0 8px rgba(230,200,117,0.4))' }}>{item.icon}</div>
             <div style={{ fontFamily: 'Inter, sans-serif', fontWeight: 600, fontSize: 11, color: '#fff', marginBottom: 2 }}>{item.title}</div>
             <div style={{ fontFamily: 'Inter, sans-serif', fontSize: 10, color: 'rgba(255,255,255,0.5)', lineHeight: 1.2 }}>{item.desc}</div>
