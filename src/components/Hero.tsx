@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
-import { Search, Mouse, Bone, Trees, History, Map } from 'lucide-react'
+import { Search, Mouse } from 'lucide-react'
+import MagicFeaturesBand from './MagicFeaturesBand'
 
 export default function Hero() {
   const parallaxRef = useRef<HTMLDivElement>(null)
@@ -162,30 +163,7 @@ export default function Hero() {
       </div>
 
       {/* FEATURES BAND (BOTTOM) */}
-      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.2, duration: 0.8 }}
-        style={{
-          position: 'relative', zIndex: 10, margin: isMobile ? '0 20px 10px 20px' : '0 60px 10px 60px', flexShrink: 0,
-          display: 'grid', gridTemplateColumns: isMobile ? 'repeat(2, 1fr)' : 'repeat(4, 1fr)', gap: 1,
-          background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)',
-          backdropFilter: 'blur(16px)', borderRadius: 12, overflow: 'hidden'
-        }}>
-        {[
-          { icon: <Bone size={18} color="#e6c875" strokeWidth={1.5} />, title: 'ESPECIES INCREÍBLES', desc: 'Conoce los dinosaurios más fascinantes que jamás existieron.' },
-          { icon: <Trees size={18} color="#e6c875" strokeWidth={1.5} />, title: 'HÁBITATS REALISTAS', desc: 'Descubre los ecosistemas donde vivieron y cómo era su entorno.' },
-          { icon: <History size={18} color="#e6c875" strokeWidth={1.5} />, title: 'HISTORIA EVOLUTIVA', desc: 'Desde su origen hasta su extinción. La historia completa.' },
-          { icon: <Map size={18} color="#e6c875" strokeWidth={1.5} />, title: 'FÓSILES Y DESCUBRIMIENTOS', desc: 'Los últimos hallazgos y cómo se reconstruye el pasado.' },
-        ].map((item, i) => (
-          <div key={i} style={{ 
-            padding: '10px 16px', background: 'rgba(0,0,0,0.4)', 
-            borderRight: (isMobile ? (i % 2 === 0) : (i < 3)) ? '1px solid rgba(255,255,255,0.05)' : 'none',
-            borderBottom: (isMobile && i < 2) ? '1px solid rgba(255,255,255,0.05)' : 'none'
-          }}>
-            <div style={{ marginBottom: 4, display: 'flex', filter: 'drop-shadow(0 0 8px rgba(230,200,117,0.4))' }}>{item.icon}</div>
-            <div style={{ fontFamily: 'Inter, sans-serif', fontWeight: 600, fontSize: 11, color: '#fff', marginBottom: 2 }}>{item.title}</div>
-            <div style={{ fontFamily: 'Inter, sans-serif', fontSize: 10, color: 'rgba(255,255,255,0.5)', lineHeight: 1.2 }}>{item.desc}</div>
-          </div>
-        ))}
-      </motion.div>
+      <MagicFeaturesBand />
 
       {/* SCROLL INDICATOR */}
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.8 }}
