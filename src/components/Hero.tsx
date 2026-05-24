@@ -90,22 +90,30 @@ export default function Hero() {
             fontFamily: 'Bebas Neue, sans-serif', fontSize: 'clamp(40px, 7vw, 80px)',
             lineHeight: 0.95, letterSpacing: 1, color: '#fff', textShadow: '0 4px 20px rgba(0,0,0,0.5)', margin: 0
           }}>
-          <div style={{ overflow: 'hidden', paddingBottom: 4 }}>
+          <div style={{ overflow: 'hidden', padding: '12px 0 4px', margin: '-12px 0 0' }}>
             {["DESCUBRE", "EL"].map((word, i) => (
-              <motion.span key={i} style={{ display: 'inline-block', marginRight: '0.22em' }}
+              <motion.span key={i} style={{ display: 'inline-block', marginRight: '0.22em', cursor: 'default' }}
                 variants={{
                   hidden: { y: "110%", opacity: 0, rotateZ: 5 },
                   visible: { y: 0, opacity: 1, rotateZ: 0, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } }
-                }}>{word}</motion.span>
+                }}
+                whileHover={{ scale: 1.05, y: -6, color: '#e6c875', transition: { type: 'spring', stiffness: 400, damping: 10 } }}
+              >
+                {word}
+              </motion.span>
             ))}
           </div>
-          <div style={{ overflow: 'hidden', paddingBottom: 4 }}>
+          <div style={{ overflow: 'hidden', padding: '12px 0 4px', margin: '-12px 0 0' }}>
             {["MUNDO", "DE", "LOS", "DINOSAURIOS"].map((word, i) => (
-              <motion.span key={i} style={{ display: 'inline-block', marginRight: '0.22em' }}
+              <motion.span key={i} style={{ display: 'inline-block', marginRight: '0.22em', cursor: 'default' }}
                 variants={{
                   hidden: { y: "110%", opacity: 0, rotateZ: 5 },
                   visible: { y: 0, opacity: 1, rotateZ: 0, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } }
-                }}>{word}</motion.span>
+                }}
+                whileHover={{ scale: 1.05, y: -6, color: '#e6c875', transition: { type: 'spring', stiffness: 400, damping: 10 } }}
+              >
+                {word}
+              </motion.span>
             ))}
           </div>
         </motion.h1>
