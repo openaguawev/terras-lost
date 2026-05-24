@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
-import { Search, PlayCircle, Mouse, Bone, Trees, History, Map } from 'lucide-react'
+import { Search, Mouse, Bone, Trees, History, Map } from 'lucide-react'
 
 export default function Hero() {
   const parallaxRef = useRef<HTMLDivElement>(null)
