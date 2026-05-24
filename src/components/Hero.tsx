@@ -106,16 +106,14 @@ export default function Hero() {
 
       {/* CONTENIDO HERO */}
       <div style={{
-        position: 'relative',
+        position: 'absolute', 
         zIndex: 10,
-        height: '100%',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'flex-end',
-        paddingLeft: '60px',
-        paddingRight: '60px',
-        paddingBottom: '80px',
-        paddingTop: '0px',
+        top: '50%',
+        transform: 'translateY(-50%)',
+        left: 0,
+        padding: '0 60px',
+        width: '100%',
+        maxWidth: '800px',
       }}>
 
         <motion.p
@@ -141,7 +139,6 @@ export default function Hero() {
             fontWeight: 900, lineHeight: 0.9,
             letterSpacing: -2, color: '#fff',
             textShadow: '0 4px 40px rgba(0,0,0,0.9)',
-            maxWidth: 800,
           }}
         >
           DESCUBRE EL<br />
@@ -199,49 +196,6 @@ export default function Hero() {
           </button>
         </motion.div>
 
-        {/* FEATURES BAND */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 2.2, duration: 0.8 }}
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(4, 1fr)',
-            gap: 1,
-            marginTop: 48,
-            background: 'rgba(201,168,76,0.1)',
-            border: '1px solid rgba(201,168,76,0.15)',
-            borderRadius: 8,
-            overflow: 'hidden',
-          }}
-        >
-          {[
-            { icon: '🦴', title: 'ESPECIES INCREÍBLES', desc: 'Conoce los dinosaurios más fascinantes que jamás existieron.' },
-            { icon: '🌿', title: 'HÁBITATS REALISTAS', desc: 'Descubre los ecosistemas donde vivieron y cómo era su entorno.' },
-            { icon: '📖', title: 'HISTORIA EVOLUTIVA', desc: 'Desde su origen hasta su extinción. La historia completa.' },
-            { icon: '🔬', title: 'FÓSILES Y DESCUBRIMIENTOS', desc: 'Los últimos hallazgos y cómo se reconstruye el pasado.' },
-          ].map((item, i) => (
-            <div key={i} style={{
-              padding: '20px 24px',
-              background: 'rgba(0,0,0,0.5)',
-              backdropFilter: 'blur(12px)',
-              borderRight: i < 3 ? '1px solid rgba(201,168,76,0.1)' : 'none',
-            }}>
-              <div style={{ fontSize: 28, marginBottom: 8 }}>{item.icon}</div>
-              <div style={{
-                fontFamily: 'Bebas Neue, sans-serif',
-                fontSize: 13, letterSpacing: 2,
-                color: '#fff', marginBottom: 6,
-              }}>{item.title}</div>
-              <div style={{
-                fontFamily: 'Crimson Pro, serif',
-                fontSize: 13, color: 'rgba(255,255,255,0.45)',
-                lineHeight: 1.5,
-              }}>{item.desc}</div>
-            </div>
-          ))}
-        </motion.div>
-
       </div>
 
       {/* SCROLL INDICATOR */}
@@ -251,7 +205,7 @@ export default function Hero() {
         transition={{ delay: 2.5 }}
         style={{
           position: 'absolute',
-          bottom: 20, left: '50%',
+          bottom: '150px', left: '50%',
           transform: 'translateX(-50%)',
           display: 'flex', flexDirection: 'column',
           alignItems: 'center', gap: 6, zIndex: 10,
@@ -271,6 +225,53 @@ export default function Hero() {
             transformOrigin: 'top',
           }}
         />
+      </motion.div>
+
+      {/* FEATURES BAND */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 2.2, duration: 0.8 }}
+        style={{
+          position: 'absolute',
+          bottom: 0, left: '60px', right: '60px',
+          display: 'grid',
+          gridTemplateColumns: 'repeat(4, 1fr)',
+          gap: 1,
+          background: 'rgba(201,168,76,0.1)',
+          border: '1px solid rgba(201,168,76,0.15)',
+          borderBottom: 'none',
+          borderTopLeftRadius: 16,
+          borderTopRightRadius: 16,
+          overflow: 'hidden',
+          zIndex: 10,
+        }}
+      >
+        {[
+          { icon: '🦴', title: 'ESPECIES INCREÍBLES', desc: 'Conoce los dinosaurios más fascinantes que jamás existieron.' },
+          { icon: '🌿', title: 'HÁBITATS REALISTAS', desc: 'Descubre los ecosistemas donde vivieron y cómo era su entorno.' },
+          { icon: '📖', title: 'HISTORIA EVOLUTIVA', desc: 'Desde su origen hasta su extinción. La historia completa.' },
+          { icon: '🔬', title: 'FÓSILES Y DESCUBRIMIENTOS', desc: 'Los últimos hallazgos y cómo se reconstruye el pasado.' },
+        ].map((item, i) => (
+          <div key={i} style={{
+            padding: '24px',
+            background: 'rgba(0,0,0,0.5)',
+            backdropFilter: 'blur(12px)',
+            borderRight: i < 3 ? '1px solid rgba(201,168,76,0.1)' : 'none',
+          }}>
+            <div style={{ fontSize: 28, marginBottom: 8 }}>{item.icon}</div>
+            <div style={{
+              fontFamily: 'Bebas Neue, sans-serif',
+              fontSize: 13, letterSpacing: 2,
+              color: '#fff', marginBottom: 6,
+            }}>{item.title}</div>
+            <div style={{
+              fontFamily: 'Crimson Pro, serif',
+              fontSize: 13, color: 'rgba(255,255,255,0.45)',
+              lineHeight: 1.5,
+            }}>{item.desc}</div>
+          </div>
+        ))}
       </motion.div>
 
     </section>
