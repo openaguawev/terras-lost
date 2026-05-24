@@ -54,17 +54,6 @@ export default function ExploreEras() {
   return (
     <section className="explore-eras-section">
       <div className="eras-header">
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="eras-number"
-        >
-          <span className="dot"></span>
-          03
-          <span className="dot"></span>
-        </motion.div>
-        
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -109,6 +98,7 @@ export default function ExploreEras() {
             className="era-card"
             style={{ 
               backgroundImage: `url(${era.image})`,
+              backgroundPosition: era.id === 'jurassic' ? 'center 15%' : 'center',
               borderColor: `${era.color}40`,
               boxShadow: `0 0 30px ${era.color}10`
             }}
