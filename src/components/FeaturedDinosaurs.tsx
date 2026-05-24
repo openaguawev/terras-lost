@@ -141,7 +141,10 @@ export default function FeaturedDinosaurs() {
               exit={{ opacity: 0, scale: 0.9 }}
               transition={{ duration: 0.3 }}
               className={`dino-card ${idx < 3 && activeCategory === 'todos' ? 'top-row' : 'bottom-row'}`}
-              style={{ backgroundImage: `url(${dino.image})` }}
+              style={{ 
+                backgroundImage: `url(${dino.image})`,
+                backgroundPosition: dino.id === '04' ? '20% center' : 'center'
+              }}
             >
               <div className="dino-card-overlay"></div>
               
