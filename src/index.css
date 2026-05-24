@@ -1,21 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Crimson+Pro:ital,wght@0,300;0,400;1,300;1,400&family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap');
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
-  --gold: #C9A84C;
-  --gold2: #E8C96A;
-  --dark: #070504;
-  --dark2: #0f0a06;
+  --gold: #e6c875;
+  --gold-dim: rgba(230,200,117,0.8);
 }
 
 body {
   background: #000;
   color: #fff;
-  font-family: 'Crimson Pro', serif;
+  font-family: 'Inter', sans-serif;
   overflow-x: hidden;
 }
 
-::-webkit-scrollbar { width: 2px; }
+::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: #000; }
-::-webkit-scrollbar-thumb { background: #C9A84C; }
+::-webkit-scrollbar-thumb { background: var(--gold); }
