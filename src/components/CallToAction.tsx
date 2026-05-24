@@ -160,11 +160,11 @@ export default function CallToAction() {
         <div className="footer-content">
           <div className="footer-left">
             <div className="footer-logo">
-              <div className="footer-logo-icon">
-                <PawPrint size={24} color="#fbbf24" />
+              <div className="footer-logo-icon" style={{ padding: 0, border: 'none', background: 'transparent' }}>
+                <img src="/logo.png" alt="Dinorex Logo" style={{ width: 50, height: 50, borderRadius: '50%' }} />
               </div>
               <div className="footer-logo-text">
-                <h2>DINOMUNDO</h2>
+                <h2>DINOREX</h2>
                 <p>EXPLORA. APRENDE. DESCUBRE LA VIDA.</p>
               </div>
             </div>
@@ -213,7 +213,7 @@ export default function CallToAction() {
               <a href="#"><Play size={18} /></a>
               <a href="#"><MessageCircle size={18} /></a>
             </div>
-            <p className="footer-copyright">© 2024 Dinomundo. Todos los derechos reservados.</p>
+            <p className="footer-copyright">© 2024 Dinorex. Todos los derechos reservados.</p>
           </div>
         </div>
       </footer>
