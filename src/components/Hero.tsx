@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import { Search, Mouse } from 'lucide-react'
-import MagicFeaturesBand from './MagicFeaturesBand'
 
 export default function Hero() {
   const parallaxRef = useRef<HTMLDivElement>(null)
@@ -100,7 +99,7 @@ export default function Hero() {
         padding: isMobile ? '0 20px' : '0 60px', maxWidth: 710
       }}>
         <motion.p initial={{ opacity: 0, letterSpacing: '0px' }} animate={{ opacity: 1, letterSpacing: '4px' }} transition={{ delay: 0.2, duration: 1.2, ease: "easeOut" }}
-          style={{ fontFamily: 'Bebas Neue, sans-serif', fontSize: 16, color: '#e6c875', marginBottom: 12, display: isMobile ? 'none' : 'block' }}>
+          style={{ fontFamily: 'Bebas Neue, sans-serif', fontSize: 16, color: '#e6c875', marginBottom: 12 }}>
           VIAJA MILLONES DE AÑOS ATRÁS
         </motion.p>
 
@@ -142,7 +141,7 @@ export default function Hero() {
         </motion.h1>
 
         <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.8, duration: 1 }}
-          style={{ fontFamily: 'Inter, sans-serif', fontSize: 15, color: 'rgba(255,255,255,0.8)', marginTop: 16, lineHeight: 1.5, maxWidth: 500, display: isMobile ? 'none' : 'block' }}>
+          style={{ fontFamily: 'Inter, sans-serif', fontSize: 15, color: 'rgba(255,255,255,0.8)', marginTop: 16, lineHeight: 1.5, maxWidth: 500 }}>
           Explora su vida, sus hábitats, su historia y los secretos que aún guarda la Tierra prehistórica.
         </motion.p>
 
@@ -163,14 +162,17 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      {/* FEATURES BAND (BOTTOM) */}
-      <MagicFeaturesBand />
-
       {/* SCROLL INDICATOR */}
-      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.8 }}
+      <motion.div 
+        initial={{ opacity: 0 }} 
+        animate={{ opacity: 1, y: [0, 10, 0] }} 
+        transition={{ 
+          opacity: { delay: 1.8 },
+          y: { repeat: Infinity, duration: 1.5, ease: "easeInOut" }
+        }}
         style={{
-          position: 'relative', margin: '0 auto 12px auto', zIndex: 10, flexShrink: 0,
-          display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 4
+          position: 'absolute', bottom: 20, left: '50%', x: '-50%', zIndex: 10,
+          display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 4, cursor: 'pointer'
         }}>
         <span style={{ fontFamily: 'Inter, sans-serif', fontWeight: 600, fontSize: 9, letterSpacing: 2, color: 'rgba(255,255,255,0.5)' }}>DESLIZA PARA EXPLORAR</span>
         <Mouse size={16} color="rgba(255,255,255,0.5)" />
