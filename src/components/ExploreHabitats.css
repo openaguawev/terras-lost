@@ -1,0 +1,329 @@
+.explore-habitats-section {
+  padding: 6rem 5%;
+  background-color: #050505;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.habitats-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  max-width: 800px;
+  position: relative;
+  z-index: 2;
+}
+
+.habitats-subtitle {
+  font-family: 'Oswald', sans-serif;
+  color: #fbbf24;
+  font-size: 1.1rem;
+  letter-spacing: 4px;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.habitats-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+  color: #e5e5e5;
+  text-transform: uppercase;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+.habitats-description {
+  color: #a3a3a3;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.habitats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1400px;
+  margin-bottom: 4rem;
+  position: relative;
+  z-index: 2;
+}
+
+.habitat-card {
+  position: relative;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  height: 650px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem 1.5rem;
+}
+
+.habitat-card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.5) 40%, rgba(0,0,0,0.95) 100%);
+  z-index: 1;
+}
+
+.habitat-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100%;
+  justify-content: flex-end;
+}
+
+.habitat-icon-wrapper {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: auto; /* push to top */
+  backdrop-filter: blur(4px);
+}
+
+.habitat-card-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+
+.habitat-card-subtitle {
+  color: #a3a3a3;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+.habitat-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.5rem;
+  width: 100%;
+  margin-bottom: 2rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 1rem;
+}
+
+.habitat-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.stat-header {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.habitat-stat .stat-label {
+  font-size: 0.65rem;
+  color: #a3a3a3;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.habitat-stat .stat-value {
+  font-size: 0.8rem;
+  color: #e5e5e5;
+  font-weight: 500;
+}
+
+.habitat-button {
+  background: transparent;
+  border: 1px solid;
+  border-radius: 8px;
+  padding: 1rem;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Banner */
+.habitats-banner {
+  width: 100%;
+  max-width: 1400px;
+  background: linear-gradient(90deg, rgba(20,20,20,1) 0%, rgba(10,10,10,1) 100%);
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 16px;
+  padding: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.banner-left {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex: 1.5;
+}
+
+.banner-icon-bg {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(251, 191, 36, 0.1);
+  border: 1px solid rgba(251, 191, 36, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.banner-text h4 {
+  color: #fbbf24;
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+  letter-spacing: 1px;
+}
+
+.banner-text p {
+  color: #a3a3a3;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.banner-middle {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  border-left: 1px solid rgba(255,255,255,0.1);
+  border-right: 1px solid rgba(255,255,255,0.1);
+  padding: 0 2.5rem;
+  flex: 1;
+}
+
+.banner-stat-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.bs-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.bs-value {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1;
+  margin-bottom: 0.2rem;
+}
+
+.bs-label {
+  color: #a3a3a3;
+  font-size: 0.6rem;
+  letter-spacing: 1px;
+  line-height: 1.2;
+}
+
+.banner-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.8rem;
+  flex: 1;
+}
+
+.banner-button {
+  background: transparent;
+  border: 1px solid rgba(251, 191, 36, 0.4);
+  color: #fbbf24;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.banner-btn-hint {
+  color: #737373;
+  font-size: 0.75rem;
+}
+
+@media (max-width: 1200px) {
+  .habitats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .habitats-banner {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+  
+  .banner-left {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .banner-middle {
+    border-left: none;
+    border-right: none;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding: 2rem 0;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .banner-right {
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .habitats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .habitats-title {
+    font-size: 3rem;
+  }
+  
+  .banner-middle {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+  }
+}
