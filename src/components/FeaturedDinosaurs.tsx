@@ -91,6 +91,8 @@ const CATEGORIES = [
   { id: 'voladores', label: 'VOLADORES', icon: <Wind size={16} /> },
 ];
 
+import BlurText from './BlurText';
+
 export default function FeaturedDinosaurs() {
   const [activeCategory, setActiveCategory] = useState('todos');
 
@@ -100,7 +102,13 @@ export default function FeaturedDinosaurs() {
     <section className="featured-dinos-section">
       <div className="dinos-header">
         <span className="dinos-eyebrow">DINOSAURIOS DESTACADOS</span>
-        <h2 className="dinos-title">CONOCE A LOS GIGANTES<br/>QUE DOMINARON LA TIERRA</h2>
+        <BlurText 
+          text="CONOCE A LOS GIGANTES QUE DOMINARON LA TIERRA" 
+          delay={50}
+          animateBy="words"
+          direction="top"
+          className="dinos-title"
+        />
         <p className="dinos-subtitle">
           Explora los dinosaurios más impresionantes que han habitado nuestro planeta.<br/>
           Descubre sus características, hábitos y el legado que dejaron millones de años atrás.

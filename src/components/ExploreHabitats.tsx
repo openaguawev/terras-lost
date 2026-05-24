@@ -71,6 +71,8 @@ const HABITATS = [
   }
 ];
 
+import BlurText from './BlurText';
+
 export default function ExploreHabitats() {
   return (
     <section className="explore-habitats-section">
@@ -84,15 +86,13 @@ export default function ExploreHabitats() {
           HÁBITATS PREHISTÓRICOS
         </motion.h3>
         
-        <motion.h2 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.1 }}
+        <BlurText 
+          text="DESCUBRE LOS MUNDOS QUE HABITARON" 
+          delay={50}
+          animateBy="words"
+          direction="top"
           className="habitats-title"
-        >
-          DESCUBRE LOS MUNDOS QUE HABITARON
-        </motion.h2>
+        />
         
         <motion.p 
           initial={{ opacity: 0, y: 20 }}
@@ -118,6 +118,7 @@ export default function ExploreHabitats() {
             className="habitat-card"
             style={{ 
               backgroundImage: `url(${habitat.image})`,
+              backgroundPosition: habitat.id === 'ocean' ? '20% center' : 'center',
               borderColor: `${habitat.color}30`
             }}
           >
