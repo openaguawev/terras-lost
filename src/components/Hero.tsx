@@ -96,71 +96,75 @@ export default function Hero() {
       {/* MAIN CONTENT (LEFT SIDE) */}
       <div style={{
         position: 'relative', zIndex: 10, flex: 1, display: 'flex', flexDirection: 'column', 
-        justifyContent: isMobile ? 'flex-end' : 'center',
-        padding: isMobile ? '0 20px 15vh 20px' : '0 60px', maxWidth: 710
+        justifyContent: isMobile ? 'space-between' : 'center',
+        padding: isMobile ? '5vh 20px 15vh 20px' : '0 60px', maxWidth: 710
       }}>
-        <motion.p initial={{ opacity: 0, letterSpacing: '0px' }} animate={{ opacity: 1, letterSpacing: '4px' }} transition={{ delay: 0.2, duration: 1.2, ease: "easeOut" }}
-          style={{ fontFamily: 'Bebas Neue, sans-serif', fontSize: 16, color: '#e6c875', marginBottom: 12 }}>
-          VIAJA MILLONES DE AÑOS ATRÁS
-        </motion.p>
+        <div>
+          <motion.p initial={{ opacity: 0, letterSpacing: '0px' }} animate={{ opacity: 1, letterSpacing: '4px' }} transition={{ delay: 0.2, duration: 1.2, ease: "easeOut" }}
+            style={{ fontFamily: 'Bebas Neue, sans-serif', fontSize: 16, color: '#e6c875', marginBottom: 12 }}>
+            VIAJA MILLONES DE AÑOS ATRÁS
+          </motion.p>
 
-        <motion.h1 initial="hidden" animate="visible"
-          variants={{
-            hidden: {},
-            visible: { transition: { staggerChildren: 0.08, delayChildren: 0.4 } }
-          }}
-          style={{
-            fontFamily: 'Bebas Neue, sans-serif', fontSize: 'clamp(40px, 7vw, 80px)',
-            lineHeight: 0.95, letterSpacing: 1, color: '#fff', textShadow: '0 4px 20px rgba(0,0,0,0.5)', margin: 0
-          }}>
-          <div style={{ overflow: 'hidden', padding: '12px 0 4px', margin: '-12px 0 0' }}>
-            {["DESCUBRE", "EL"].map((word, i) => (
-              <motion.span key={i} style={{ display: 'inline-block', marginRight: '0.22em', cursor: 'default' }}
-                variants={{
-                  hidden: { y: "110%", opacity: 0, rotateZ: 5 },
-                  visible: { y: 0, opacity: 1, rotateZ: 0, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } }
-                }}
-                whileHover={{ scale: 1.05, y: -6, color: '#e6c875', transition: { type: 'spring', stiffness: 400, damping: 10 } }}
-              >
-                {word}
-              </motion.span>
-            ))}
-          </div>
-          <div style={{ overflow: 'hidden', padding: '12px 0 4px', margin: '-12px 0 0' }}>
-            {["MUNDO", "DE", "LOS", "DINOSAURIOS"].map((word, i) => (
-              <motion.span key={i} style={{ display: 'inline-block', marginRight: '0.22em', cursor: 'default' }}
-                variants={{
-                  hidden: { y: "110%", opacity: 0, rotateZ: 5 },
-                  visible: { y: 0, opacity: 1, rotateZ: 0, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } }
-                }}
-                whileHover={{ scale: 1.05, y: -6, color: '#e6c875', transition: { type: 'spring', stiffness: 400, damping: 10 } }}
-              >
-                {word}
-              </motion.span>
-            ))}
-          </div>
-        </motion.h1>
+          <motion.h1 initial="hidden" animate="visible"
+            variants={{
+              hidden: {},
+              visible: { transition: { staggerChildren: 0.08, delayChildren: 0.4 } }
+            }}
+            style={{
+              fontFamily: 'Bebas Neue, sans-serif', fontSize: 'clamp(40px, 7vw, 80px)',
+              lineHeight: 0.95, letterSpacing: 1, color: '#fff', textShadow: '0 4px 20px rgba(0,0,0,0.5)', margin: 0
+            }}>
+            <div style={{ overflow: 'hidden', padding: '12px 0 4px', margin: '-12px 0 0' }}>
+              {["DESCUBRE", "EL"].map((word, i) => (
+                <motion.span key={i} style={{ display: 'inline-block', marginRight: '0.22em', cursor: 'default' }}
+                  variants={{
+                    hidden: { y: "110%", opacity: 0, rotateZ: 5 },
+                    visible: { y: 0, opacity: 1, rotateZ: 0, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } }
+                  }}
+                  whileHover={{ scale: 1.05, y: -6, color: '#e6c875', transition: { type: 'spring', stiffness: 400, damping: 10 } }}
+                >
+                  {word}
+                </motion.span>
+              ))}
+            </div>
+            <div style={{ overflow: 'hidden', padding: '12px 0 4px', margin: '-12px 0 0' }}>
+              {["MUNDO", "DE", "LOS", "DINOSAURIOS"].map((word, i) => (
+                <motion.span key={i} style={{ display: 'inline-block', marginRight: '0.22em', cursor: 'default' }}
+                  variants={{
+                    hidden: { y: "110%", opacity: 0, rotateZ: 5 },
+                    visible: { y: 0, opacity: 1, rotateZ: 0, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } }
+                  }}
+                  whileHover={{ scale: 1.05, y: -6, color: '#e6c875', transition: { type: 'spring', stiffness: 400, damping: 10 } }}
+                >
+                  {word}
+                </motion.span>
+              ))}
+            </div>
+          </motion.h1>
+        </div>
 
-        <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.8, duration: 1 }}
-          style={{ fontFamily: 'Inter, sans-serif', fontSize: 15, color: 'rgba(255,255,255,0.8)', marginTop: 16, lineHeight: 1.5, maxWidth: 500 }}>
-          Explora su vida, sus hábitats, su historia y los secretos que aún guarda la Tierra prehistórica.
-        </motion.p>
+        <div>
+          <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.8, duration: 1 }}
+            style={{ fontFamily: 'Inter, sans-serif', fontSize: 15, color: 'rgba(255,255,255,0.8)', marginTop: 16, lineHeight: 1.5, maxWidth: 500 }}>
+            Explora su vida, sus hábitats, su historia y los secretos que aún guarda la Tierra prehistórica.
+          </motion.p>
 
-        <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1 }}
-          style={{ display: 'flex', marginTop: 24 }}>
-          <button style={{
-            background: '#e6c875', color: '#000', border: 'none', borderRadius: 40,
-            padding: '18px 40px', fontFamily: 'Inter, sans-serif', fontWeight: 700, fontSize: 14,
-            cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 12,
-            boxShadow: '0 8px 30px rgba(230,200,117,0.3)', transition: 'transform 0.2s',
-          }}
-          onMouseEnter={e => e.currentTarget.style.transform = 'translateY(-2px)'}
-          onMouseLeave={e => e.currentTarget.style.transform = 'translateY(0)'}
-          >
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 4C8.686 4 6 6.686 6 10v4.536l-1.562 1.562A2 2 0 005 19.5V20h14v-.5a2 2 0 00-.586-1.414L16.85 16.526V10c0-3.314-2.686-6-6-6zM9 13h.01M15 13h.01M9 17h6" /></svg>
-            EXPLORAR DINOSAURIOS
-          </button>
-        </motion.div>
+          <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1 }}
+            style={{ display: 'flex', marginTop: 24 }}>
+            <button style={{
+              background: '#e6c875', color: '#000', border: 'none', borderRadius: 40,
+              padding: '18px 40px', fontFamily: 'Inter, sans-serif', fontWeight: 700, fontSize: 14,
+              cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 12,
+              boxShadow: '0 8px 30px rgba(230,200,117,0.3)', transition: 'transform 0.2s',
+            }}
+            onMouseEnter={e => e.currentTarget.style.transform = 'translateY(-2px)'}
+            onMouseLeave={e => e.currentTarget.style.transform = 'translateY(0)'}
+            >
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 4C8.686 4 6 6.686 6 10v4.536l-1.562 1.562A2 2 0 005 19.5V20h14v-.5a2 2 0 00-.586-1.414L16.85 16.526V10c0-3.314-2.686-6-6-6zM9 13h.01M15 13h.01M9 17h6" /></svg>
+              EXPLORAR DINOSAURIOS
+            </button>
+          </motion.div>
+        </div>
       </div>
 
       {/* SCROLL INDICATOR */}
