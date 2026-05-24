@@ -103,8 +103,9 @@ export default function ExploreEras() {
             key={era.id}
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
+            whileHover={{ scale: 1.02, y: -10 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.2 + idx * 0.2 }}
+            transition={{ duration: 0.4, delay: 0.2 + idx * 0.2 }}
             className="era-card"
             style={{ 
               backgroundImage: `url(${era.image})`,
@@ -114,30 +115,60 @@ export default function ExploreEras() {
           >
             <div className="era-card-overlay"></div>
             
-            <div className="era-time">
+            <motion.div 
+              className="era-time"
+              initial={{ scale: 0.8, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              transition={{ delay: 0.4 + idx * 0.2 }}
+            >
               {era.time}
-            </div>
+            </motion.div>
 
             <div className="era-content">
-              <div className="era-icon-wrapper" style={{ borderColor: era.color }}>
+              <motion.div 
+                className="era-icon-wrapper" 
+                style={{ borderColor: era.color }}
+                whileHover={{ rotate: 360 }}
+                transition={{ duration: 0.5 }}
+              >
                 {era.icon}
-              </div>
+              </motion.div>
               
               <h3 className="era-card-title">{era.title}</h3>
               <p className="era-card-subtitle" style={{ color: era.color }}>{era.subtitle}</p>
               
-              <ul className="era-features">
+              <motion.ul 
+                className="era-features"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={{
+                  hidden: { opacity: 0 },
+                  visible: { opacity: 1, transition: { staggerChildren: 0.1, delayChildren: 0.5 + idx * 0.2 } }
+                }}
+              >
                 {era.features.map((feature, fIdx) => (
-                  <li key={fIdx}>
+                  <motion.li 
+                    key={fIdx}
+                    variants={{
+                      hidden: { opacity: 0, x: -10 },
+                      visible: { opacity: 1, x: 0 }
+                    }}
+                  >
                     <span className="feature-icon">{feature.icon}</span>
                     {feature.text}
-                  </li>
+                  </motion.li>
                 ))}
-              </ul>
+              </motion.ul>
               
-              <button className="era-button" style={{ borderColor: `${era.color}60` }}>
+              <motion.button 
+                className="era-button" 
+                style={{ borderColor: `${era.color}60` }}
+                whileHover={{ backgroundColor: `${era.color}30`, scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
                 EXPLORAR ERA <ChevronRight size={16} color={era.color} />
-              </button>
+              </motion.button>
             </div>
           </motion.div>
         ))}
@@ -160,30 +191,55 @@ export default function ExploreEras() {
         
         <div className="timeline-bar">
           <div className="timeline-line">
-            <div className="timeline-progress" style={{ background: 'linear-gradient(90deg, #ff6a00 0%, #4ade80 50%, #fbbf24 100%)' }}></div>
+            <motion.div 
+              className="timeline-progress" 
+              initial={{ width: '0%' }}
+              whileInView={{ width: '100%' }}
+              viewport={{ once: true }}
+              transition={{ duration: 1.5, ease: "easeInOut", delay: 0.8 }}
+              style={{ background: 'linear-gradient(90deg, #ff6a00 0%, #4ade80 50%, #fbbf24 100%)' }}
+            />
           </div>
           
           <div className="timeline-points">
-            <div className="timeline-point" style={{ left: '0%' }}>
-              <span className="point-time">252 Ma</span>
-              <div className="point-dot" style={{ backgroundColor: '#ff6a00' }}></div>
-              <span className="point-label">TRIÁSICO</span>
-            </div>
-            <div className="timeline-point" style={{ left: '33%' }}>
-              <span className="point-time">201 Ma</span>
-              <div className="point-dot" style={{ backgroundColor: '#4ade80' }}></div>
-              <span className="point-label">JURÁSICO</span>
-            </div>
-            <div className="timeline-point" style={{ left: '66%' }}>
-              <span className="point-time">145 Ma</span>
-              <div className="point-dot" style={{ backgroundColor: '#fbbf24' }}></div>
-              <span className="point-label">CRETÁCICO</span>
-            </div>
-            <div className="timeline-point" style={{ left: '100%' }}>
-              <span className="point-time">66 Ma</span>
-              <div className="point-dot" style={{ backgroundColor: '#ffffff' }}></div>
-              <span className="point-label">HOY</span>
-            </div>
+            {[ 
+              { time: '252 Ma', label: 'TRIÁSICO', color: '#ff6a00', left: '0%' },
+              { time: '201 Ma', label: 'JURÁSICO', color: '#4ade80', left: '33%' },
+              { time: '145 Ma', label: 'CRETÁCICO', color: '#fbbf24', left: '66%' },
+              { time: '66 Ma', label: 'HOY', color: '#ffffff', left: '100%' },
+            ].map((point, i) => (
+              <div className="timeline-point" style={{ left: point.left }} key={point.label}>
+                <motion.span 
+                  className="point-time"
+                  initial={{ opacity: 0, y: -10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 1 + i * 0.3 }}
+                >
+                  {point.time}
+                </motion.span>
+                
+                <motion.div 
+                  className="point-dot" 
+                  style={{ backgroundColor: point.color }}
+                  initial={{ scale: 0 }}
+                  whileInView={{ scale: 1 }}
+                  whileHover={{ scale: 1.5 }}
+                  viewport={{ once: true }}
+                  transition={{ type: "spring", stiffness: 300, delay: 0.8 + i * 0.3 }}
+                />
+                
+                <motion.span 
+                  className="point-label"
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 1.1 + i * 0.3 }}
+                >
+                  {point.label}
+                </motion.span>
+              </div>
+            ))}
           </div>
         </div>
       </motion.div>

@@ -81,11 +81,7 @@
   flex-direction: column;
   justify-content: space-between;
   padding: 1.5rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.era-card:hover {
-  transform: translateY(-10px);
+  /* transition: transform 0.3s ease, box-shadow 0.3s ease; removed because framer-motion handles it */
 }
 
 .era-card-overlay {
