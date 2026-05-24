@@ -1,0 +1,322 @@
+.explore-eras-section {
+  padding: 6rem 5%;
+  background-color: #050505;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.eras-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  max-width: 800px;
+}
+
+.eras-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: #fbbf24;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+
+.eras-number .dot {
+  width: 4px;
+  height: 4px;
+  background-color: #fbbf24;
+  border-radius: 50%;
+}
+
+.eras-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 4.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+  color: #e5e5e5;
+  text-transform: uppercase;
+}
+
+.eras-subtitle {
+  font-family: 'Oswald', sans-serif;
+  color: #a3a3a3;
+  font-size: 1.2rem;
+  letter-spacing: 3px;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.eras-description {
+  color: #737373;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.eras-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 5rem;
+}
+
+.era-card {
+  position: relative;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  height: 600px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.era-card:hover {
+  transform: translateY(-10px);
+}
+
+.era-card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.6) 40%, rgba(0,0,0,0.95) 100%);
+  z-index: 1;
+}
+
+.era-time {
+  position: relative;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  align-self: flex-start;
+  color: #fff;
+}
+
+.era-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.era-icon-wrapper {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  backdrop-filter: blur(4px);
+}
+
+.era-card-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  letter-spacing: 1px;
+}
+
+.era-card-subtitle {
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.5px;
+}
+
+.era-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.era-features li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+  color: #d4d4d4;
+}
+
+.feature-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.era-button {
+  background: transparent;
+  border: 1px solid;
+  border-radius: 24px;
+  padding: 0.75rem 1.5rem;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-self: stretch;
+  justify-content: center;
+}
+
+.era-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Timeline */
+.timeline-container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  padding: 2rem 0;
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.timeline-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-width: 250px;
+}
+
+.timeline-info .timeline-text h4 {
+  color: #fbbf24;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  margin: 0;
+  font-weight: 600;
+}
+
+.timeline-info .timeline-text p {
+  color: #a3a3a3;
+  font-size: 0.8rem;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.timeline-bar {
+  flex: 1;
+  position: relative;
+  height: 60px;
+}
+
+.timeline-line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-50%);
+}
+
+.timeline-progress {
+  height: 100%;
+  width: 100%;
+  opacity: 0.8;
+}
+
+.timeline-points {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.timeline-point {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.point-time {
+  position: absolute;
+  top: -25px;
+  font-size: 0.7rem;
+  color: #a3a3a3;
+  white-space: nowrap;
+}
+
+.point-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  position: relative;
+  z-index: 2;
+  border: 2px solid #111;
+}
+
+.point-label {
+  position: absolute;
+  bottom: -25px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #e5e5e5;
+  white-space: nowrap;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 1024px) {
+  .eras-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .eras-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .eras-title {
+    font-size: 3rem;
+  }
+  
+  .timeline-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+  
+  .timeline-bar {
+    width: 100%;
+  }
+}
