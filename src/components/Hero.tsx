@@ -47,16 +47,17 @@ export default function Hero() {
         position: 'relative', zIndex: 50, flexShrink: 0,
         padding: isMobile ? '16px 20px' : '16px 60px', display: 'flex', alignItems: 'center', justifyContent: 'space-between'
       }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-          {/* Skull Logo SVG Placeholder */}
-          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.5">
-            <path d="M12 4C8.686 4 6 6.686 6 10v4.536l-1.562 1.562A2 2 0 005 19.5V20h14v-.5a2 2 0 00-.586-1.414L16.85 16.526V10c0-3.314-2.686-6-6-6zM9 13h.01M15 13h.01M9 17h6" />
-          </svg>
+        <motion.div 
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          style={{ display: 'flex', alignItems: 'center', gap: 12 }}
+        >
+          <img src="/logo.png" alt="Dinorex Logo" style={{ width: 32, height: 32, borderRadius: '50%' }} />
           <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <span style={{ fontFamily: 'Bebas Neue, sans-serif', fontSize: 28, letterSpacing: 2, lineHeight: 1 }}>DINOMUNDO</span>
+            <span style={{ fontFamily: 'Bebas Neue, sans-serif', fontSize: 28, letterSpacing: 2, lineHeight: 1 }}>DINOREX</span>
             <span style={{ fontFamily: 'Inter, sans-serif', fontSize: 8, letterSpacing: 2, color: 'rgba(255,255,255,0.6)', marginTop: -2 }}>EXPLORA EL PASADO. DESCUBRE LA VIDA.</span>
           </div>
-        </div>
+        </motion.div>
 
         <div style={{ display: 'flex', alignItems: 'center', gap: 32 }}>
           <div style={{ display: isMobile ? 'none' : 'flex', alignItems: 'center', gap: 32 }}>
@@ -99,7 +100,7 @@ export default function Hero() {
         padding: isMobile ? '0 20px' : '0 60px', maxWidth: 710
       }}>
         <motion.p initial={{ opacity: 0, letterSpacing: '0px' }} animate={{ opacity: 1, letterSpacing: '4px' }} transition={{ delay: 0.2, duration: 1.2, ease: "easeOut" }}
-          style={{ fontFamily: 'Bebas Neue, sans-serif', fontSize: 16, color: '#e6c875', marginBottom: 12 }}>
+          style={{ fontFamily: 'Bebas Neue, sans-serif', fontSize: 16, color: '#e6c875', marginBottom: 12, display: isMobile ? 'none' : 'block' }}>
           VIAJA MILLONES DE AÑOS ATRÁS
         </motion.p>
 
@@ -141,7 +142,7 @@ export default function Hero() {
         </motion.h1>
 
         <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.8, duration: 1 }}
-          style={{ fontFamily: 'Inter, sans-serif', fontSize: 15, color: 'rgba(255,255,255,0.8)', marginTop: 16, lineHeight: 1.5, maxWidth: 500 }}>
+          style={{ fontFamily: 'Inter, sans-serif', fontSize: 15, color: 'rgba(255,255,255,0.8)', marginTop: 16, lineHeight: 1.5, maxWidth: 500, display: isMobile ? 'none' : 'block' }}>
           Explora su vida, sus hábitats, su historia y los secretos que aún guarda la Tierra prehistórica.
         </motion.p>
 
