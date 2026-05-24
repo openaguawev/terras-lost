@@ -35,7 +35,7 @@ export default function Hero() {
       {/* NAVBAR */}
       <nav style={{
         position: 'relative', zIndex: 50, flexShrink: 0,
-        padding: '24px 60px', display: 'flex', alignItems: 'center', justifyContent: 'space-between'
+        padding: '16px 60px', display: 'flex', alignItems: 'center', justifyContent: 'space-between'
       }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
           {/* Skull Logo SVG Placeholder */}
@@ -83,19 +83,19 @@ export default function Hero() {
 
         <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4, duration: 0.8 }}
           style={{
-            fontFamily: 'Bebas Neue, sans-serif', fontSize: 'clamp(50px, 8vw, 96px)',
+            fontFamily: 'Bebas Neue, sans-serif', fontSize: 'clamp(40px, 7vw, 80px)',
             lineHeight: 0.95, letterSpacing: 1, color: '#fff', textShadow: '0 4px 20px rgba(0,0,0,0.5)', margin: 0
           }}>
           DESCUBRE EL<br />MUNDO DE LOS DINOSAURIOS
         </motion.h1>
 
         <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.8, duration: 1 }}
-          style={{ fontFamily: 'Inter, sans-serif', fontSize: 16, color: 'rgba(255,255,255,0.8)', marginTop: 24, lineHeight: 1.6, maxWidth: 500 }}>
+          style={{ fontFamily: 'Inter, sans-serif', fontSize: 15, color: 'rgba(255,255,255,0.8)', marginTop: 16, lineHeight: 1.5, maxWidth: 500 }}>
           Explora su vida, sus hábitats, su historia y los secretos que aún guarda la Tierra prehistórica.
         </motion.p>
 
         <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1 }}
-          style={{ display: 'flex', marginTop: 40 }}>
+          style={{ display: 'flex', marginTop: 24 }}>
           <button style={{
             background: '#e6c875', color: '#000', border: 'none', borderRadius: 40,
             padding: '18px 40px', fontFamily: 'Inter, sans-serif', fontWeight: 700, fontSize: 14,
@@ -114,21 +114,21 @@ export default function Hero() {
       {/* FEATURES BAND (BOTTOM) */}
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.2, duration: 0.8 }}
         style={{
-          position: 'relative', zIndex: 10, margin: '0 60px 16px 60px', flexShrink: 0,
+          position: 'relative', zIndex: 10, margin: '0 60px 10px 60px', flexShrink: 0,
           display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 1,
           background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)',
           backdropFilter: 'blur(16px)', borderRadius: 12, overflow: 'hidden'
         }}>
         {[
-          { icon: <Bone size={22} color="#e6c875" strokeWidth={1.5} />, title: 'ESPECIES INCREÍBLES', desc: 'Conoce los dinosaurios más fascinantes que jamás existieron.' },
-          { icon: <Trees size={22} color="#e6c875" strokeWidth={1.5} />, title: 'HÁBITATS REALISTAS', desc: 'Descubre los ecosistemas donde vivieron y cómo era su entorno.' },
-          { icon: <History size={22} color="#e6c875" strokeWidth={1.5} />, title: 'HISTORIA EVOLUTIVA', desc: 'Desde su origen hasta su extinción. La historia completa.' },
-          { icon: <Map size={22} color="#e6c875" strokeWidth={1.5} />, title: 'FÓSILES Y DESCUBRIMIENTOS', desc: 'Los últimos hallazgos y cómo se reconstruye el pasado.' },
+          { icon: <Bone size={18} color="#e6c875" strokeWidth={1.5} />, title: 'ESPECIES INCREÍBLES', desc: 'Conoce los dinosaurios más fascinantes que jamás existieron.' },
+          { icon: <Trees size={18} color="#e6c875" strokeWidth={1.5} />, title: 'HÁBITATS REALISTAS', desc: 'Descubre los ecosistemas donde vivieron y cómo era su entorno.' },
+          { icon: <History size={18} color="#e6c875" strokeWidth={1.5} />, title: 'HISTORIA EVOLUTIVA', desc: 'Desde su origen hasta su extinción. La historia completa.' },
+          { icon: <Map size={18} color="#e6c875" strokeWidth={1.5} />, title: 'FÓSILES Y DESCUBRIMIENTOS', desc: 'Los últimos hallazgos y cómo se reconstruye el pasado.' },
         ].map((item, i) => (
-          <div key={i} style={{ padding: '16px 20px', background: 'rgba(0,0,0,0.4)', borderRight: i < 3 ? '1px solid rgba(255,255,255,0.05)' : 'none' }}>
-            <div style={{ marginBottom: 8, display: 'flex', filter: 'drop-shadow(0 0 8px rgba(230,200,117,0.4))' }}>{item.icon}</div>
-            <div style={{ fontFamily: 'Inter, sans-serif', fontWeight: 600, fontSize: 12, color: '#fff', marginBottom: 4 }}>{item.title}</div>
-            <div style={{ fontFamily: 'Inter, sans-serif', fontSize: 11, color: 'rgba(255,255,255,0.5)', lineHeight: 1.4 }}>{item.desc}</div>
+          <div key={i} style={{ padding: '10px 16px', background: 'rgba(0,0,0,0.4)', borderRight: i < 3 ? '1px solid rgba(255,255,255,0.05)' : 'none' }}>
+            <div style={{ marginBottom: 4, display: 'flex', filter: 'drop-shadow(0 0 8px rgba(230,200,117,0.4))' }}>{item.icon}</div>
+            <div style={{ fontFamily: 'Inter, sans-serif', fontWeight: 600, fontSize: 11, color: '#fff', marginBottom: 2 }}>{item.title}</div>
+            <div style={{ fontFamily: 'Inter, sans-serif', fontSize: 10, color: 'rgba(255,255,255,0.5)', lineHeight: 1.2 }}>{item.desc}</div>
           </div>
         ))}
       </motion.div>
@@ -136,7 +136,7 @@ export default function Hero() {
       {/* SCROLL INDICATOR */}
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.8 }}
         style={{
-          position: 'relative', margin: '0 auto 16px auto', zIndex: 10, flexShrink: 0,
+          position: 'relative', margin: '0 auto 12px auto', zIndex: 10, flexShrink: 0,
           display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 4
         }}>
         <span style={{ fontFamily: 'Inter, sans-serif', fontWeight: 600, fontSize: 9, letterSpacing: 2, color: 'rgba(255,255,255,0.5)' }}>DESLIZA PARA EXPLORAR</span>
