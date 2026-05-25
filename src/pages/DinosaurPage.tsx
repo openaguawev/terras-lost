@@ -1,11 +1,11 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { 
   ChevronLeft, Box, Bone, MapPin, Play, ChevronRight,
   Skull, Eye, Wind, TrendingUp, Users, Radio, Brain, Swords, Scissors, Shield,
-  Droplets, Radar, Fish, Thermometer, Heart, MoveUp, Feather
+  Droplets, Radar, Fish, Thermometer, Heart, MoveUp, Feather, Footprints
 } from 'lucide-react';
 import { getDinosaurBySlug } from '../data/dinosaurs';
 import './DinosaurPage.css';
@@ -28,12 +28,12 @@ const IconMap: Record<string, React.ElementType> = {
   'heart': Heart,
   'move-up': MoveUp,
   'feather': Feather,
+  'footprints': Footprints,
 };
 
 export default function DinosaurPage() {
   const { slug } = useParams();
   const dino = getDinosaurBySlug(slug || '');
-  const [activeTab, setActiveTab] = useState('DESCRIPCIÓN');
 
   useEffect(() => {
     window.scrollTo(0, 0);

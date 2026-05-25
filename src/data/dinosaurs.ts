@@ -53,21 +53,19 @@ export const dinosaurs: DinosaurDetail[] = [
       { label: 'EXPECTATIVA DE VIDA', value: '28 - 30 años' },
     ],
     content: {
-      subtitle: 'EL DEPREDADOR DEFINITIVO',
+      subtitle: 'SOBRE EL TYRANNOSAURUS REX',
       paragraphs: [
-        'El Tyrannosaurus Rex poseía una de las mordidas más poderosas de cualquier animal terrestre que haya existido. Sus dientes, algunos del tamaño de plátanos, estaban diseñados para triturar hueso sólido.',
+        'Hace 68 millones de años, el Tyrannosaurus Rex poseía una de las mordidas más poderosas de cualquier animal terrestre que haya existido. Sus dientes, algunos del tamaño de plátanos, estaban diseñados para triturar hueso sólido.',
         'A pesar de sus diminutos brazos, su inmensa cabeza, cuello musculoso y poderosas patas traseras lo convertían en una máquina de caza perfectamente adaptada a su entorno.'
       ],
-      mapLocation: 'Norteamérica (EE. UU. y Canadá)'
+      mapLocation: 'América del Norte'
     },
     videoText: 'Observa al T-Rex en su entorno natural y escucha su aterrador rugido.',
     attributeBars: [
-      { label: 'FUERZA', value: 10 },
-      { label: 'MANDÍBULA', value: 10 },
-      { label: 'VELOCIDAD', value: 5 },
-      { label: 'INTELIGENCIA', value: 7 },
       { label: 'AGRESIVIDAD', value: 10 },
-      { label: 'RESISTENCIA', value: 8 },
+      { label: 'INTELIGENCIA', value: 7 },
+      { label: 'VELOCIDAD', value: 5 },
+      { label: 'TAMAÑO', value: 9 },
     ],
     fossils: [
       { name: 'CRÁNEO COMPLETO', code: 'FMNH PR 2081 (Sue)', location: 'Chicago, EE. UU.', image: '/dinos/fossil_1.png' },
@@ -76,10 +74,10 @@ export const dinosaurs: DinosaurDetail[] = [
       { name: 'ESQUELETO MONTADO', code: 'AMNH 5027', location: 'Nueva York, EE. UU.', image: '/dinos/fossil_3.png' },
     ],
     features: [
-      { title: 'MORDIDA LETAL', description: 'Fuerza de mordida de hasta 57,000 Newtons, capaz de romper acero.', icon: 'skull' },
-      { title: 'VISIÓN BINOCULAR', description: 'Visión tridimensional comparable a la de las águilas modernas.', icon: 'eye' },
-      { title: 'OLFATO AGUDO', description: 'Grandes bulbos olfativos para rastrear presas a kilómetros de distancia.', icon: 'wind' },
-      { title: 'CRECIMIENTO RÁPIDO', description: 'Ganaban más de 2 kg por día durante su etapa de adolescencia.', icon: 'trending-up' },
+      { title: 'SU MORDIDA', description: 'Fuerza de mordida letal, capaz de triturar los huesos de sus presas.', icon: 'skull' },
+      { title: 'BRAZOS PEQUEÑOS', description: 'A pesar de su tamaño, podían levantar gran peso.', icon: 'scissors' },
+      { title: 'PASOS GIGANTES', description: 'Sus grandes zancadas le permitían cubrir mucho terreno rápidamente.', icon: 'footprints' },
+      { title: 'VISIÓN AFILADA', description: 'Visión binocular perfecta para calcular distancias al acechar.', icon: 'eye' },
     ]
   },
   {
