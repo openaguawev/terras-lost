@@ -11,8 +11,8 @@
   position: relative;
   min-height: 100vh;
   display: flex;
-  align-items: center;
-  padding: 100px 60px 40px;
+  align-items: flex-start;
+  padding: 140px 60px 40px;
   overflow: hidden;
 }
 
@@ -51,7 +51,7 @@
 
 .dp-hero-left {
   flex: 1;
-  max-width: 700px;
+  max-width: 600px;
 }
 
 .dp-hero-eyebrow {
