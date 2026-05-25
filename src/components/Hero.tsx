@@ -52,7 +52,7 @@ export default function Hero() {
           animate={{ opacity: 1, x: 0 }}
           style={{ display: 'flex', alignItems: 'center', gap: 12 }}
         >
-          <img src="/logo.png" alt="Dinorex Logo" style={{ width: 32, height: 32, borderRadius: '50%' }} />
+          <img src="/logo.png" alt="Dinorex Logo" width={32} height={32} style={{ width: '32px', height: '32px', borderRadius: '50%' }} />
           <div style={{ display: 'flex', flexDirection: 'column' }}>
             <span style={{ fontFamily: 'Bebas Neue, sans-serif', fontSize: 28, letterSpacing: 2, lineHeight: 1 }}>DINOREX</span>
             <span style={{ fontFamily: 'Inter, sans-serif', fontSize: 8, letterSpacing: 2, color: 'rgba(255,255,255,0.6)', marginTop: -2 }}>EXPLORA EL PASADO. DESCUBRE LA VIDA.</span>

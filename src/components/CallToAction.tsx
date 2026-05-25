@@ -161,7 +161,7 @@ export default function CallToAction() {
           <div className="footer-left">
             <div className="footer-logo">
               <div className="footer-logo-icon" style={{ padding: 0, border: 'none', background: 'transparent' }}>
-                <img src="/logo.png" alt="Dinorex Logo" style={{ width: 50, height: 50, borderRadius: '50%' }} />
+                <img src="/logo.png" alt="Dinorex Logo" width={50} height={50} style={{ width: '50px', height: '50px', borderRadius: '50%' }} />
               </div>
               <div className="footer-logo-text">
                 <h2>DINOREX</h2>

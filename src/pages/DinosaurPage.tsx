@@ -66,7 +66,7 @@ export default function DinosaurPage() {
         </nav>
 
         <div style={{ height: '70vh', position: 'relative', overflow: 'hidden', display: 'flex', alignItems: 'flex-end' }}>
-          <img src={dino.image} alt={`${dino.name} - ${dino.subtitle}`}
+          <img src={dino.image} alt={`${dino.name} - ${dino.subtitle}`} width={1920} height={1080}
             style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', filter: 'brightness(0.5)' }} />
           <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(7,5,4,1) 0%, transparent 50%)' }} />
           <div style={{ position: 'relative', zIndex: 2, padding: '0 60px 60px' }}>
