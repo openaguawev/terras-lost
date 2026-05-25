@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Volume2, ChevronRight, Leaf, Beef, Droplets, Wind, ScanFace, CheckCircle, Bone, Globe2, Dna } from 'lucide-react';
@@ -13,7 +14,9 @@ const DINO_DATA = [
     length: '12-13 m',
     period: 'Cretácico Superior',
     danger: 5,
-    category: 'carnivoros'
+    category: 'carnivoros',
+    slug: 'tyrannosaurus-rex',
+    altText: 'Tyrannosaurus Rex dinosaurio carnívoro más grande del Cretácico'
   },
   {
     id: '02',
@@ -24,7 +27,9 @@ const DINO_DATA = [
     length: '1.8-2.4 m',
     period: 'Cretácico Superior',
     danger: 4,
-    category: 'carnivoros'
+    category: 'carnivoros',
+    slug: 'velociraptor',
+    altText: 'Velociraptor dinosaurio cazador inteligente del Cretácico'
   },
   {
     id: '03',
@@ -35,7 +40,9 @@ const DINO_DATA = [
     length: '8-9 m',
     period: 'Cretácico Superior',
     danger: 3,
-    category: 'herbivoros'
+    category: 'herbivoros',
+    slug: 'triceratops',
+    altText: 'Triceratops dinosaurio con cuernos del Cretácico'
   },
   {
     id: '04',
@@ -46,7 +53,9 @@ const DINO_DATA = [
     length: '15-18 m',
     period: 'Cretácico Inferior',
     danger: 5,
-    category: 'acuaticos'
+    category: 'acuaticos',
+    slug: 'spinosaurus',
+    altText: 'Spinosaurus el depredador semiacuático más grande'
   },
   {
     id: '05',
@@ -57,7 +66,9 @@ const DINO_DATA = [
     length: '22-26 m',
     period: 'Jurásico Superior',
     danger: 2,
-    category: 'herbivoros'
+    category: 'herbivoros',
+    slug: 'brachiosaurus',
+    altText: 'Brachiosaurus dinosaurio de cuello largo del Jurásico'
   },
   {
     id: '06',
@@ -68,7 +79,9 @@ const DINO_DATA = [
     length: '6-8 m',
     period: 'Cretácico Superior',
     danger: 3,
-    category: 'voladores'
+    category: 'voladores',
+    slug: 'pterodactilo',
+    altText: 'Pterodactylus primer vertebrado volador del Jurásico'
   },
   {
     id: '07',
@@ -79,7 +92,9 @@ const DINO_DATA = [
     length: '7-9 m',
     period: 'Jurásico Superior',
     danger: 3,
-    category: 'herbivoros'
+    category: 'herbivoros',
+    slug: 'stegosaurus',
+    altText: 'Stegosaurus dinosaurio acorazado del Jurásico'
   }
 ];
 
@@ -141,6 +156,8 @@ export default function FeaturedDinosaurs() {
               exit={{ opacity: 0, scale: 0.9 }}
               transition={{ duration: 0.3 }}
               className={`dino-card ${idx < 3 && activeCategory === 'todos' ? 'top-row' : 'bottom-row'}`}
+              role="img"
+              aria-label={dino.altText}
               style={{ 
                 backgroundImage: `url(${dino.image})`,
                 backgroundPosition: dino.id === '04' ? '20% center' : 'center'
@@ -150,7 +167,7 @@ export default function FeaturedDinosaurs() {
               
               <div className="dino-card-top">
                 <span className="dino-id">{dino.id}</span>
-                <button className="dino-sound"><Volume2 size={16} /></button>
+                <button className="dino-sound" aria-label="Escuchar rugido"><Volume2 size={16} /></button>
               </div>
 
               <div className="dino-card-content">
@@ -187,9 +204,9 @@ export default function FeaturedDinosaurs() {
                   </div>
                 </div>
 
-                <button className="dino-full-btn">
-                  VER FICHA COMPLETA <ChevronRight size={14} />
-                </button>
+                <Link to={`/criaturas/${dino.slug}`} className="dino-full-btn">
+                  VER COMPLETO <ChevronRight size={14} />
+                </Link>
               </div>
             </motion.div>
           ))}

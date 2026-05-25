@@ -32,6 +32,7 @@ export default function Hero() {
           objectPosition: isMobile ? '80% center' : 'center center',
           filter: 'brightness(0.9) contrast(1.1) saturate(1.2)',
         }}>
+          <source src="/hero-compressed.mp4" type="video/mp4" />
           <source src="/hero.mp4" type="video/mp4" />
         </video>
       </div>
@@ -151,7 +152,7 @@ export default function Hero() {
 
           <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1 }}
             style={{ display: 'flex', marginTop: 24 }}>
-            <button style={{
+            <button aria-label="Explorar dinosaurios" style={{
               background: '#e6c875', color: '#000', border: 'none', borderRadius: 40,
               padding: '18px 40px', fontFamily: 'Inter, sans-serif', fontWeight: 700, fontSize: 14,
               cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 12,
