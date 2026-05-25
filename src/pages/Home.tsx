@@ -1,6 +1,7 @@
 import { lazy, Suspense } from 'react'
 
 const Hero = lazy(() => import('../components/Hero'))
+const DinosaurSpotlight = lazy(() => import('../components/DinosaurSpotlight'))
 const FeaturedDinosaurs = lazy(() => import('../components/FeaturedDinosaurs'))
 const ExploreEras = lazy(() => import('../components/ExploreEras'))
 const ExploreHabitats = lazy(() => import('../components/ExploreHabitats'))
@@ -12,6 +13,7 @@ export default function Home() {
     <div id="main-content">
       <Suspense fallback={<div style={{ height: '100vh', background: '#070504' }} />}>
         <Hero />
+        <DinosaurSpotlight />
         <FeaturedDinosaurs />
         <ExploreEras />
         <ExploreHabitats />
