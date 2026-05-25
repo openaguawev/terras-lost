@@ -1,13 +1,38 @@
 import { useEffect } from 'react';
-import { useParams, Link, useNavigate } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { Play, ChevronRight, Trees, Skull, Ruler, Weight, Gauge, Search, Thermometer, Leaf, Footprints, Globe2, Beef, Calendar, Volume2, ChevronLeft } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { 
+  ChevronLeft, Box, Bone, MapPin, Play, ChevronRight,
+  Skull, Eye, Wind, TrendingUp, Users, Radio, Brain, Swords, Scissors, Shield,
+  Droplets, Radar, Fish, Thermometer, Heart, MoveUp, Feather, Footprints
+} from 'lucide-react';
 import { getDinosaurBySlug } from '../data/dinosaurs';
 import './DinosaurPage.css';
 
+const IconMap: Record<string, React.ElementType> = {
+  'skull': Skull,
+  'eye': Eye,
+  'wind': Wind,
+  'trending-up': TrendingUp,
+  'users': Users,
+  'radio': Radio,
+  'brain': Brain,
+  'swords': Swords,
+  'scissors': Scissors,
+  'shield': Shield,
+  'droplets': Droplets,
+  'radar': Radar,
+  'fish': Fish,
+  'thermometer': Thermometer,
+  'heart': Heart,
+  'move-up': MoveUp,
+  'feather': Feather,
+  'footprints': Footprints,
+};
+
 export default function DinosaurPage() {
   const { slug } = useParams();
-  const navigate = useNavigate();
   const dino = getDinosaurBySlug(slug || '');
 
   useEffect(() => {
@@ -23,188 +48,201 @@ export default function DinosaurPage() {
     );
   }
 
+  const TABS = ['DESCRIPCIÓN', 'CARACTERÍSTICAS', 'COMPORTAMIENTO', 'FÓSILES', 'CURIOSIDADES'];
+
   return (
-    <section className="dino-spotlight-section">
+    <div className="dino-page-container">
       <Helmet>
         <title>{dino.name} — DinoRex</title>
         <meta name="description" content={dino.tagline} />
       </Helmet>
 
-      {/* Nav back button */}
+      {/* HEADER / NAV (Simple back button for now, assuming main nav is in App/Layout) */}
       <nav style={{ position: 'absolute', top: 0, left: 0, right: 0, padding: '30px 60px', zIndex: 100 }}>
-        <button onClick={() => navigate(-1)} style={{ background: 'none', border: 'none', color: '#e6c875', display: 'flex', alignItems: 'center', gap: 8, cursor: 'pointer', fontFamily: 'Bebas Neue', letterSpacing: 2 }}>
-          <ChevronLeft size={16} /> VOLVER
-        </button>
+        <Link to="/" style={{ color: '#C9A84C', display: 'flex', alignItems: 'center', gap: 8, textDecoration: 'none', fontFamily: 'Bebas Neue', letterSpacing: 2 }}>
+          <ChevronLeft size={16} /> VOLVER A DINOSAURIOS
+        </Link>
       </nav>
 
-      <div className="spotlight-bg" style={{ backgroundImage: `url('${dino.heroImage || '/dinos/trex_spotlight_full.png'}')` }}></div>
-      <div className="spotlight-overlay"></div>
-
-      <div className="spotlight-content">
-        <div className="spotlight-left">
-          <div className="sl-eyebrow">
-            <Skull size={14} color="#e6c875" />
-            <span>DINOSAURIO DESTACADO</span>
-          </div>
-
-          <h1 className="sl-title">{dino.name}</h1>
-          <h2 className="sl-subtitle">{dino.content.subtitle}</h2>
-
-          <p className="sl-desc">
-            {dino.tagline}
-          </p>
-
-          <div className="sl-stats-list">
-            <div className="sl-stat-bar">
-              <div className="sl-stat-label">
-                <Ruler size={14} color="#e6c875"/> <span>LONGITUD</span>
-              </div>
-              <div className="sl-bar-container"><div className="sl-bar-fill" style={{ width: '80%' }}></div></div>
-              <div className="sl-stat-val">12 – 13 m</div>
-            </div>
-
-            <div className="sl-stat-bar">
-              <div className="sl-stat-label">
-                <Leaf size={14} color="#e6c875"/> <span>ALTURA (A LA CADERA)</span>
-              </div>
-              <div className="sl-bar-container"><div className="sl-bar-fill" style={{ width: '60%' }}></div></div>
-              <div className="sl-stat-val">4 – 4.5 m</div>
-            </div>
-
-            <div className="sl-stat-bar">
-              <div className="sl-stat-label">
-                <Weight size={14} color="#e6c875"/> <span>PESO</span>
-              </div>
-              <div className="sl-bar-container"><div className="sl-bar-fill" style={{ width: '70%' }}></div></div>
-              <div className="sl-stat-val">6 – 9 toneladas</div>
-            </div>
-
-            <div className="sl-stat-bar">
-              <div className="sl-stat-label">
-                <Gauge size={14} color="#e6c875"/> <span>VELOCIDAD</span>
-              </div>
-              <div className="sl-bar-container"><div className="sl-bar-fill" style={{ width: '50%' }}></div></div>
-              <div className="sl-stat-val">20 – 27 km/h</div>
-            </div>
-
-            <div className="sl-stat-bar">
-              <div className="sl-stat-label">
-                <Search size={14} color="#e6c875"/> <span>FUERZA DE MORDIDA</span>
-              </div>
-              <div className="sl-bar-container"><div className="sl-bar-fill" style={{ width: '95%' }}></div></div>
-              <div className="sl-stat-val">Hasta 57.000 N</div>
-            </div>
-            
-            <hr className="sl-divider" />
-
-            <div className="sl-stat-text">
-              <div className="sl-stat-label">
-                <Beef size={14} color="#e6c875"/> <span>DIETA</span>
-              </div>
-              <div className="sl-stat-val text-gold">{dino.heroStats.diet}</div>
-            </div>
-
-            <div className="sl-stat-text">
-              <div className="sl-stat-label">
-                <Trees size={14} color="#e6c875"/> <span>HÁBITAT</span>
-              </div>
-              <div className="sl-stat-val text-gold">{dino.heroStats.habitat}</div>
-            </div>
-
-            <div className="sl-stat-text">
-              <div className="sl-stat-label">
-                <Calendar size={14} color="#e6c875"/> <span>PERÍODO</span>
-              </div>
-              <div className="sl-stat-val text-gold">{dino.heroStats.period}</div>
-            </div>
-            
-            <hr className="sl-divider" />
-
-            <div className="sl-danger-row">
-              <div className="sl-stat-label">
-                <Skull size={14} color="#e6c875"/> <span>NIVEL DE PELIGRO</span>
-              </div>
-              <div className="sl-skulls">
-                {[...Array(10)].map((_, i) => (
-                  <Skull key={i} size={18} color={i < 10 ? "#e6c875" : "rgba(255,255,255,0.1)"} fill={i < 10 ? "#e6c875" : "none"} className={i < 10 ? "skull-active" : ""} />
-                ))}
-              </div>
-            </div>
-          </div>
-
-          <div className="sl-actions">
-            <button className="btn-explore">EXPLORAR ESPECIE <ChevronRight size={16} /></button>
-            <button className="btn-secondary"><Trees size={16} /> VER HÁBITAT</button>
-            <button className="btn-secondary"><Volume2 size={16} /> ESCUCHAR RUGIDO</button>
-          </div>
+      {/* HERO SECTION */}
+      <section className="dp-hero">
+        <div className="dp-hero-bg">
+          <img src={dino.heroImage} alt={dino.name} />
         </div>
+        <div className="dp-hero-gradient"></div>
+        
+        <div className="dp-hero-content">
+          <div className="dp-hero-left">
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
+              <div className="dp-hero-eyebrow">
+                <Box size={16} /> EL REY DE LOS DINOSAURIOS
+              </div>
+              <h1 className="dp-hero-title">{dino.name}</h1>
+              <h2 className="dp-hero-scientific">{dino.scientificName}</h2>
+              <p className="dp-hero-tagline">{dino.tagline}</p>
 
-        <div className="spotlight-right">
-          <div className="sl-pagination">
-            <div className="sl-pag-dot active"></div>
-            <div className="sl-pag-dot"></div>
-            <div className="sl-pag-dot"></div>
-            <div className="sl-pag-num"><span>03</span>/10</div>
+              <div className="dp-hero-stats-grid">
+                <div className="dp-hero-stat-item">
+                  <div className="dp-hero-stat-icon"><Clock size={14} /> PERÍODO</div>
+                  <div className="dp-hero-stat-value">{dino.heroStats.period}</div>
+                </div>
+                <div className="dp-hero-stat-item">
+                  <div className="dp-hero-stat-icon"><MapPin size={14} /> HÁBITAT</div>
+                  <div className="dp-hero-stat-value">{dino.heroStats.habitat}</div>
+                </div>
+                <div className="dp-hero-stat-item">
+                  <div className="dp-hero-stat-icon"><Bone size={14} /> DIETA</div>
+                  <div className="dp-hero-stat-value">{dino.heroStats.diet}</div>
+                </div>
+                <div className="dp-hero-stat-item">
+                  <div className="dp-hero-stat-icon"><Pen size={14} /> DESCUBIERTO</div>
+                  <div className="dp-hero-stat-value">{dino.heroStats.discovered}</div>
+                </div>
+              </div>
+
+              <div className="dp-hero-buttons">
+                <button className="dp-btn-primary">
+                  <Bone size={20} /> VER ESQUELETO
+                </button>
+              </div>
+            </motion.div>
           </div>
 
-          <div className="sl-view-360">
-            <button className="btn-play-360">
-              <Play size={20} color="#e6c875" fill="#e6c875" />
-            </button>
-            <div className="view-360-text">
-              <strong>VISTA 360°</strong>
-              <span>Explora el modelo<br/>en 3D interactivo</span>
-            </div>
-          </div>
+          <motion.div className="dp-hero-right" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.2 }}>
+            {dino.sideStats.map((stat, idx) => (
+              <div className="dp-side-stat" key={idx}>
+                <div className="dp-side-stat-icon">
+                  <ChevronRight size={16} />
+                </div>
+                <div className="dp-side-stat-content">
+                  <span className="dp-side-stat-label">{stat.label}</span>
+                  <span className="dp-side-stat-value">{stat.value}</span>
+                </div>
+              </div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* TABS */}
+      <div className="dp-tabs-wrapper">
+        <div className="dp-tabs">
+          {TABS.map(tab => (
+            <a 
+              key={tab} 
+              href={`#${tab.toLowerCase()}`}
+              className="dp-tab"
+              style={{ textDecoration: 'none' }}
+            >
+              {tab === 'DESCRIPCIÓN' && <Box size={16} />}
+              {tab === 'CARACTERÍSTICAS' && <Bone size={16} />}
+              {tab === 'COMPORTAMIENTO' && <Play size={16} />}
+              {tab === 'FÓSILES' && <MapPin size={16} />}
+              {tab === 'CURIOSIDADES' && <Eye size={16} />}
+              {tab}
+            </a>
+          ))}
         </div>
       </div>
 
-      <div className="sl-bottom-panel">
-        <div className="sl-bot-col map-col">
-          <Globe2 size={18} color="#e6c875"/>
-          <div className="fc-text">
-            <h4>UBICACIÓN</h4>
-            <p className="highlight">{dino.content.mapLocation}</p>
-            <div className="map-img" style={{ backgroundImage: `url('/dinos/mapa_norteamerica.png')` }}></div>
+      {/* MAIN CONTENT */}
+      <section className="dp-main-content">
+        <div className="dp-grid-3col" id="descripción">
+          {/* Left Column */}
+          <div className="dp-col-left">
+            <div className="dp-text-content">
+              <h3 className="dp-section-title">{dino.content.subtitle}</h3>
+              {dino.content.paragraphs.map((p, idx) => (
+                <p key={idx}>{p}</p>
+              ))}
+            </div>
+            
+            <div className="dp-map-box">
+              <h4 className="dp-map-title">DISTRIBUCIÓN GEOGRÁFICA</h4>
+              <img src="/dinos/map_dark.png" alt="Map" className="dp-map-img" width={400} height={200} />
+              <div className="dp-map-location">
+                <MapPin size={14} color="#C9A84C" /> {dino.content.mapLocation}
+              </div>
+            </div>
           </div>
+
+
+
+          {/* Right Column */}
+          <div className="dp-col-right">
+            <h3 className="dp-section-title" style={{ fontSize: 18, marginBottom: 30 }}>ASÍ ERA EL {dino.name}</h3>
+            <div className="dp-stats-list">
+              {dino.attributeBars.map((attr, idx) => (
+                <div className="dp-stat-row" key={idx}>
+                  <div className="dp-stat-row-left">
+                    <Box size={14} opacity={0.5} /> {attr.label}
+                  </div>
+                  <div className="dp-stat-bars">
+                    {[...Array(10)].map((_, i) => (
+                      <div key={i} className={`dp-stat-bar ${i < attr.value ? 'filled' : 'empty'}`}></div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* FÓSILES */}
+        <div className="dp-fossils-header" id="fósiles">
+          <h3 className="dp-section-title" style={{ margin: 0 }}>FÓSILES DESTACADOS</h3>
+          <a href="#todos" className="dp-view-all">VER TODOS LOS FÓSILES <ChevronRight size={14} /></a>
         </div>
         
-        <div className="sl-bot-col">
-          <Thermometer size={18} color="#e6c875"/>
-          <div>
-            <h4>CLIMA</h4>
-            <p className="highlight">Cálido y húmedo</p>
-            <p className="sl-temp-big">25°C y 35°C</p>
-          </div>
+        <div className="dp-fossils-grid">
+          {dino.fossils.map((fossil, idx) => (
+            <div className="dp-fossil-card" key={idx}>
+              <img src={fossil.image} alt={fossil.name} className="dp-fossil-img" width={300} height={168} />
+              <div className="dp-fossil-info">
+                <h4 className="dp-fossil-name">{fossil.name}</h4>
+                <p className="dp-fossil-code">{fossil.code}</p>
+                <p className="dp-fossil-loc">{fossil.location}</p>
+              </div>
+            </div>
+          ))}
         </div>
 
-        <div className="sl-bot-col feature-col">
-          <Leaf size={18} color="#e6c875"/>
-          <div className="fc-text">
-            <h4>VEGETACIÓN</h4>
-            <p>Bosques densos,<br/>helechos gigantes,<br/>coníferas y cicadáceas.</p>
-          </div>
-          <div className="feature-img" style={{ backgroundImage: `url('/dinos/vegetacion_dino.png')` }}></div>
+        {/* FEATURES GRID */}
+        <div className="dp-features-grid" id="curiosidades">
+          {dino.features.map((feat, idx) => {
+            const Icon = IconMap[feat.icon] || Box;
+            return (
+              <div className="dp-feature-item" key={idx}>
+                <div className="dp-feature-icon">
+                  <Icon size={32} strokeWidth={1.5} />
+                </div>
+                <div className="dp-feature-content">
+                  <h4>{feat.title}</h4>
+                  <p>{feat.description}</p>
+                </div>
+              </div>
+            );
+          })}
         </div>
 
-        <div className="sl-bot-col feature-col">
-          <Skull size={18} color="#e6c875"/>
-          <div className="fc-text">
-            <h4>¿SABÍAS QUÉ?</h4>
-            <p>Su visión binocular y su<br/>extraordinario olfato le<br/>permitían detectar presas<br/>a varios kilómetros.</p>
+        {/* FOOTER CTA */}
+        <div className="dp-cta-banner">
+          <img src="/hero.png" alt="Background" className="dp-cta-bg" width={1200} height={300} />
+          <div className="dp-cta-gradient"></div>
+          <div className="dp-cta-content">
+            <h2>EL PASADO TE LLAMA</h2>
+            <p>Explora más dinosaurios y descubre los secretos de un mundo que existió millones de años antes que nosotros.</p>
           </div>
-          <div className="feature-img" style={{ backgroundImage: `url('/dinos/dino_eye.png')` }}></div>
+          <Link to="/" className="dp-cta-btn" style={{ textDecoration: 'none' }}>
+            EXPLORAR MÁS DINOSAURIOS <ChevronRight size={20} />
+          </Link>
         </div>
 
-        <div className="sl-bot-col feature-col">
-          <Footprints size={18} color="#e6c875"/>
-          <div className="fc-text">
-            <h4>HUELLAS ENCONTRADAS</h4>
-            <p>Miles de huellas fósiles<br/>han sido encontradas en<br/>formaciones de Montana<br/>y Dakotas.</p>
-          </div>
-          <div className="feature-img" style={{ backgroundImage: `url('/dinos/fossil_footprint.png')` }}></div>
-        </div>
-      </div>
-    </section>
-  )
+      </section>
+    </div>
+  );
 }
+
+// Quick inline icons for hero stats since we don't want to overcomplicate imports
+const Clock = ({size}: {size:number}) => <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>;
+const Pen = ({size}: {size:number}) => <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>;

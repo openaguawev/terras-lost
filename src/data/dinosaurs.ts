@@ -63,9 +63,10 @@ export const dinosaurs: DinosaurDetail[] = [
     videoText: 'Observa al T-Rex en su entorno natural y escucha su aterrador rugido.',
     attributeBars: [
       { label: 'AGRESIVIDAD', value: 10 },
-      { label: 'INTELIGENCIA', value: 7 },
+      { label: 'FUERZA', value: 10 },
       { label: 'VELOCIDAD', value: 5 },
-      { label: 'TAMAÑO', value: 9 },
+      { label: 'INTELIGENCIA', value: 7 },
+      { label: 'RESISTENCIA', value: 8 },
     ],
     fossils: [
       { name: 'CRÁNEO COMPLETO', code: 'FMNH PR 2081 (Sue)', location: 'Chicago, EE. UU.', image: '/dinos/fossil_1.png' },
