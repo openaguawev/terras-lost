@@ -1,22 +1,27 @@
+import { lazy, Suspense } from 'react'
 import './index.css'
 import SEO from './components/SEO'
 import Hero from './components/Hero'
-import FeaturedDinosaurs from './components/FeaturedDinosaurs'
-import ExploreEras from './components/ExploreEras'
-import ExploreHabitats from './components/ExploreHabitats'
-import EarthHistory from './components/EarthHistory'
-import CallToAction from './components/CallToAction'
+
+// Lazy load components below the fold to improve PageSpeed
+const FeaturedDinosaurs = lazy(() => import('./components/FeaturedDinosaurs'))
+const ExploreEras = lazy(() => import('./components/ExploreEras'))
+const ExploreHabitats = lazy(() => import('./components/ExploreHabitats'))
+const EarthHistory = lazy(() => import('./components/EarthHistory'))
+const CallToAction = lazy(() => import('./components/CallToAction'))
 
 function App() {
   return (
     <div>
       <SEO />
       <Hero />
-      <FeaturedDinosaurs />
-      <ExploreEras />
-      <ExploreHabitats />
-      <EarthHistory />
-      <CallToAction />
+      <Suspense fallback={<div style={{ height: '100vh', background: '#000' }} />}>
+        <FeaturedDinosaurs />
+        <ExploreEras />
+        <ExploreHabitats />
+        <EarthHistory />
+        <CallToAction />
+      </Suspense>
     </div>
   )
 }

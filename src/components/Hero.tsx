@@ -27,7 +27,7 @@ export default function Hero() {
     <section style={{ minHeight: '100dvh', position: 'relative', overflow: 'hidden', background: '#000', display: 'flex', flexDirection: 'column' }}>
       {/* BACKGROUND VIDEO */}
       <div ref={parallaxRef} style={{ position: 'absolute', inset: 0, transform: 'scale(1.1)' }}>
-        <video autoPlay muted loop playsInline style={{
+        <video autoPlay muted loop playsInline poster="/hero.png" style={{
           width: '100%', height: '100%', objectFit: 'cover',
           objectPosition: isMobile ? '80% center' : 'center center',
           filter: 'brightness(0.9) contrast(1.1) saturate(1.2)',
