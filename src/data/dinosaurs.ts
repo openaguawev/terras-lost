@@ -1,182 +1,337 @@
-export interface Dinosaur {
-  slug: string
-  name: string
-  subtitle: string
-  era: string
-  type: string
-  description: string
-  longDescription: string
-  stats: { label: string; value: string }[]
-  keywords: string
-  metaDescription: string
-  image: string
-  facts: string[]
+export interface DinosaurDetail {
+  slug: string;
+  name: string;
+  scientificName: string;
+  tagline: string;
+  heroImage: string;
+  heroStats: {
+    period: string;
+    habitat: string;
+    diet: string;
+    discovered: string;
+  };
+  sideStats: { label: string; value: string }[];
+  content: {
+    subtitle: string;
+    paragraphs: string[];
+    mapLocation: string;
+  };
+  videoText: string;
+  attributeBars: { label: string; value: number }[];
+  fossils: {
+    name: string;
+    code: string;
+    location: string;
+    image: string;
+  }[];
+  features: {
+    title: string;
+    description: string;
+    icon: string;
+  }[];
 }
 
-export const dinosaurs: Dinosaur[] = [
+export const dinosaurs: DinosaurDetail[] = [
   {
     slug: 'tyrannosaurus-rex',
-    name: 'Tyrannosaurus Rex',
-    subtitle: 'El último rey del Cretácico',
-    era: 'Cretácico Tardío · 68–66 Ma',
-    type: 'Theropoda · Depredador Apex',
-    description: 'La mordida más devastadora en la historia terrestre. 57.000 newtons de fuerza pura.',
-    longDescription: `El Tyrannosaurus Rex fue el depredador más poderoso que jamás pisó la Tierra. Con hasta 12 metros de longitud y 8 toneladas de peso, dominó los ecosistemas del Cretácico Tardío durante casi 3 millones de años. Su mordida de 57.000 newtons podía triturar hueso como arcilla. Sus pequeños brazos, lejos de ser inútiles, eran extraordinariamente poderosos. Estudios recientes sugieren que poseía labios escamosos que cubrían sus dientes. Vivió en lo que hoy es Norteamérica occidental.`,
-    stats: [
-      { label: 'Longitud', value: '12 metros' },
-      { label: 'Peso', value: '8 toneladas' },
-      { label: 'Mordida', value: '57.000 N' },
-      { label: 'Velocidad', value: '20 km/h' },
-      { label: 'Período', value: '68–66 Ma' },
-      { label: 'Hábitat', value: 'Norteamérica' },
+    name: 'TYRANNOSAURUS REX',
+    scientificName: 'Tyrannosaurus rex',
+    tagline: 'El rey de los dinosaurios. Uno de los depredadores más temibles de todos los tiempos. Con una fuerza de mordida letal y un tamaño colosal, el T-Rex dominó la cadena alimenticia del Cretácico Tardío.',
+    heroImage: '/dinos/trex_spotlight_full.png',
+    heroStats: {
+      period: 'Cretácico Tardío',
+      habitat: 'Bosques y valles',
+      diet: 'Carnívoro',
+      discovered: '1902'
+    },
+    sideStats: [
+      { label: 'NOMBRE SIGNIFICADO', value: '"Rey de los lagartos tiranos"' },
+      { label: 'LONGITUD', value: '12 - 13 m' },
+      { label: 'ALTURA', value: '3.6 - 4 m' },
+      { label: 'PESO', value: '7 - 9 toneladas' },
+      { label: 'VELOCIDAD', value: 'Hasta 27 km/h' },
+      { label: 'EXPECTATIVA DE VIDA', value: '28 - 30 años' },
     ],
-    keywords: 'tyrannosaurus rex, t-rex, dinosaurio carnívoro, cretácico, depredador, características tyrannosaurus rex',
-    metaDescription: 'Todo sobre el Tyrannosaurus Rex: características, tamaño, alimentación y curiosidades del dinosaurio carnívoro más famoso del Cretácico.',
-    image: '/dinos/trex.jpg',
-    facts: [
-      'Su nombre significa "rey de los lagartos tiranos"',
-      'Tenía una visión binocular mejor que los halcones modernos',
-      'Podía comer hasta 230 kg de carne en un solo bocado',
-      'Sus huesos tenían cavidades de aire como los pájaros modernos',
-      'Los científicos creen que podía vivir hasta 28 años',
+    content: {
+      subtitle: 'EL DEPREDADOR DEFINITIVO',
+      paragraphs: [
+        'El Tyrannosaurus Rex poseía una de las mordidas más poderosas de cualquier animal terrestre que haya existido. Sus dientes, algunos del tamaño de plátanos, estaban diseñados para triturar hueso sólido.',
+        'A pesar de sus diminutos brazos, su inmensa cabeza, cuello musculoso y poderosas patas traseras lo convertían en una máquina de caza perfectamente adaptada a su entorno.'
+      ],
+      mapLocation: 'Norteamérica (EE. UU. y Canadá)'
+    },
+    videoText: 'Observa al T-Rex en su entorno natural y escucha su aterrador rugido.',
+    attributeBars: [
+      { label: 'FUERZA', value: 10 },
+      { label: 'MANDÍBULA', value: 10 },
+      { label: 'VELOCIDAD', value: 5 },
+      { label: 'INTELIGENCIA', value: 7 },
+      { label: 'AGRESIVIDAD', value: 10 },
+      { label: 'RESISTENCIA', value: 8 },
+    ],
+    fossils: [
+      { name: 'CRÁNEO COMPLETO', code: 'FMNH PR 2081 (Sue)', location: 'Chicago, EE. UU.', image: '/dinos/fossil_1.png' },
+      { name: 'DIENTE SERRADO', code: 'MOR 1125', location: 'Montana, EE. UU.', image: '/dinos/fossil_4.png' },
+      { name: 'FÉMUR INTACTO', code: 'BHI 3033', location: 'Dakota del Sur, EE. UU.', image: '/dinos/fossil_2.png' },
+      { name: 'ESQUELETO MONTADO', code: 'AMNH 5027', location: 'Nueva York, EE. UU.', image: '/dinos/fossil_3.png' },
+    ],
+    features: [
+      { title: 'MORDIDA LETAL', description: 'Fuerza de mordida de hasta 57,000 Newtons, capaz de romper acero.', icon: 'skull' },
+      { title: 'VISIÓN BINOCULAR', description: 'Visión tridimensional comparable a la de las águilas modernas.', icon: 'eye' },
+      { title: 'OLFATO AGUDO', description: 'Grandes bulbos olfativos para rastrear presas a kilómetros de distancia.', icon: 'wind' },
+      { title: 'CRECIMIENTO RÁPIDO', description: 'Ganaban más de 2 kg por día durante su etapa de adolescencia.', icon: 'trending-up' },
     ]
   },
   {
     slug: 'velociraptor',
-    name: 'Velociraptor',
-    subtitle: 'Inteligencia letal en forma pura',
-    era: 'Cretácico · 75–71 Ma',
-    type: 'Dromaeosauridae · Cazador',
-    description: 'Cubierto de plumas. Coordinación táctica aterradora.',
-    longDescription: `Contrario a su representación en el cine, el Velociraptor real era del tamaño de un pavo grande — apenas 1.8 metros de largo y 15 kg de peso. Pero lo que le faltaba en tamaño lo compensaba con inteligencia. Su cerebro era proporcionalmente más grande que el de casi cualquier otro dinosaurio. Estaba completamente cubierto de plumas y cazaba en manadas con coordinación táctica. Su garra retráctil en forma de hoz podía perforar la tráquea de su presa con precisión quirúrgica.`,
-    stats: [
-      { label: 'Longitud', value: '1.8 metros' },
-      { label: 'Peso', value: '15 kg' },
-      { label: 'Velocidad', value: '25 km/h' },
-      { label: 'Garra', value: '6.5 cm' },
-      { label: 'Período', value: '75–71 Ma' },
-      { label: 'Hábitat', value: 'Asia Central' },
+    name: 'VELOCIRAPTOR',
+    scientificName: 'Velociraptor mongoliensis',
+    tagline: 'Pequeño en tamaño, gigante en velocidad e inteligencia. El Velociraptor era un depredador ágil y estratégico, conocido por cazar en grupo y comunicarse con sofisticados sonidos y movimientos.',
+    heroImage: '/dinos/velociraptor_1779606904540.png',
+    heroStats: {
+      period: 'Cretácico Superior',
+      habitat: 'Desiertos de Asia Central',
+      diet: 'Carnívoro',
+      discovered: '1923'
+    },
+    sideStats: [
+      { label: 'NOMBRE SIGNIFICADO', value: '"Ladrón veloz"' },
+      { label: 'LONGITUD', value: '1.8 - 2.4 m' },
+      { label: 'ALTURA', value: '0.6 - 0.9 m' },
+      { label: 'PESO', value: '15 - 20 kg' },
+      { label: 'VELOCIDAD', value: 'Hasta 65 km/h' },
+      { label: 'EXPECTATIVA DE VIDA', value: '20 - 30 años' },
     ],
-    keywords: 'velociraptor, velociraptor real, velociraptor tamaño, dinosaurio cazador, velociraptor plumas',
-    metaDescription: 'Descubrí la verdad sobre el Velociraptor: tamaño real, plumas e inteligencia. Muy diferente al del cine.',
-    image: '/dinos/raptor.jpg',
-    facts: [
-      'Tenía plumas — era básicamente un ave con dientes',
-      'Su garra retráctil se usaba para sujetar, no para cortar',
-      'Era del tamaño de un pavo, no de un humano como en Jurassic Park',
-      'Cazaba en grupos coordinados como los lobos modernos',
-      'Su nombre significa "ladrón veloz"',
+    content: {
+      subtitle: 'PEQUEÑO, PERO MORTAL',
+      paragraphs: [
+        'El Velociraptor medía alrededor de 2 metros de largo y pesaba entre 15 y 20 kg. Su agilidad, visión aguda y cerebro desarrollado lo convertían en un cazador excepcional.',
+        'Vivía en manadas organizadas, usando la velocidad, la estrategia y la comunicación para acechar y derribar a sus presas. Las evidencias fósiles demuestran que estaban cubiertos de plumas.'
+      ],
+      mapLocation: 'Asia Central (Mongolia y China)'
+    },
+    videoText: 'Observa al Velociraptor en movimiento y descubre cómo cazaba a sus presas.',
+    attributeBars: [
+      { label: 'AGRESIVIDAD', value: 9 },
+      { label: 'VELOCIDAD', value: 10 },
+      { label: 'INTELIGENCIA', value: 9 },
+      { label: 'SIGILO', value: 10 },
+      { label: 'FUERZA', value: 4 },
+      { label: 'RESISTENCIA', value: 6 },
+    ],
+    fossils: [
+      { name: 'CRÁNEO COMPLETO', code: 'IVPP V 13332', location: 'Mongolia', image: '/dinos/fossil_1.png' },
+      { name: 'GARRA DE HOZ', code: 'Característica garra', location: 'Pie del depredador', image: '/dinos/fossil_4.png' },
+      { name: 'ESQUELETO ARTICULADO', code: 'IVPP V 14350', location: 'Mongolia', image: '/dinos/fossil_3.png' },
+      { name: 'HUEVOS FÓSILES', code: 'Otogon Obo', location: 'Mongolia', image: '/dinos/fossil_2.png' },
+    ],
+    features: [
+      { title: 'CAZA EN MANADA', description: 'Coordinaban ataques en grupo para cazar presas mucho más grandes.', icon: 'users' },
+      { title: 'COMUNICADORES', description: 'Emitían sonidos complejos y señales visuales para coordinarse.', icon: 'radio' },
+      { title: 'VISIÓN EXCEPCIONAL', description: 'Tenía una vista aguda, ideal para detectar presas a gran distancia.', icon: 'eye' },
+      { title: 'CEREBRO DESARROLLADO', description: 'Uno de los dinosaurios con mejor relación cerebro-tamaño corporal.', icon: 'brain' },
     ]
   },
   {
-    slug: 'pterodactilo',
-    name: 'Pterodactylus',
-    subtitle: 'El primero en conquistar los cielos',
-    era: 'Jurásico Tardío · 150 Ma',
-    type: 'Pterosauria · Volador',
-    description: 'El primer vertebrado en conquistar el cielo.',
-    longDescription: `El Pterodactylus no era técnicamente un dinosaurio, sino un pterosaurio — un reptil volador que evolucionó independientemente el vuelo. Con una envergadura de hasta 1 metro en los adultos, dominó los cielos del Jurásico Tardío. Sus alas eran membranas de piel vascularizada sostenidas por un dedo anular extremadamente elongado. Se alimentaba principalmente de peces y pequeños animales. Fue el primer pterosaurio descubierto por la ciencia, en 1784 en Baviera, Alemania.`,
-    stats: [
-      { label: 'Envergadura', value: '1 metro' },
-      { label: 'Peso', value: '1 kg' },
-      { label: 'Período', value: '150 Ma' },
-      { label: 'Hábitat', value: 'Europa' },
-      { label: 'Dieta', value: 'Peces' },
-      { label: 'Tipo', value: 'Pterosaurio' },
+    slug: 'triceratops',
+    name: 'TRICERATOPS',
+    scientificName: 'Triceratops horridus',
+    tagline: 'Uno de los dinosaurios herbívoros más icónicos del Cretácico tardío. Su imponente gola ósea y sus tres cuernos lo convirtieron en una fortaleza viviente contra los depredadores.',
+    heroImage: '/dinos/triceratops_1779606918531.png',
+    heroStats: {
+      period: 'Cretácico Tardío',
+      habitat: 'Llanuras y pantanos',
+      diet: 'Herbívoro',
+      discovered: '1887'
+    },
+    sideStats: [
+      { label: 'NOMBRE SIGNIFICADO', value: '"Cara con tres cuernos"' },
+      { label: 'LONGITUD', value: '8.5 - 9 m' },
+      { label: 'ALTURA', value: '2.9 - 3 m' },
+      { label: 'PESO', value: '6 - 12 toneladas' },
+      { label: 'VELOCIDAD', value: 'Hasta 24 km/h' },
+      { label: 'EXPECTATIVA DE VIDA', value: '30 - 35 años' },
     ],
-    keywords: 'pterodactilo, pterodáctilo características, dinosaurio volador, pterodáctilo tamaño',
-    metaDescription: 'Todo sobre el Pterodáctilo: características, envergadura y datos curiosos del primer vertebrado en conquistar los cielos.',
-    image: '/dinos/ptero.jpg',
-    facts: [
-      'Técnicamente no era un dinosaurio sino un pterosaurio',
-      'Su dedo anular sostenía toda el ala',
-      'Fue el primer reptil volador descubierto por la ciencia',
-      'Podía caminar en cuatro patas en el suelo',
-      'Tenía una cresta ósea en la cabeza para comunicarse',
+    content: {
+      subtitle: 'UN ESCUDO NATURAL',
+      paragraphs: [
+        'El Triceratops poseía una enorme gola ósea que podría haber usado para defenderse de depredadores como el T-Rex, intimidar a rivales o incluso para regular su temperatura corporal.',
+        'Vivía en manadas y se alimentaba de plantas duras y fibrosas, usando su fuerte y afilado pico poderoso para arrancar la dura vegetación de la época.'
+      ],
+      mapLocation: 'Norteamérica (EE. UU. y Canadá)'
+    },
+    videoText: 'Observa al Triceratops en su hábitat natural y descubre cómo se movía este gigante herbívoro.',
+    attributeBars: [
+      { label: 'DEFENSA', value: 10 },
+      { label: 'FUERZA', value: 9 },
+      { label: 'VELOCIDAD', value: 4 },
+      { label: 'INTELIGENCIA', value: 4 },
+      { label: 'AGRESIVIDAD', value: 6 },
+      { label: 'RESISTENCIA', value: 9 },
+    ],
+    fossils: [
+      { name: 'CRÁNEO COMPLETO', code: 'NMMNH P-2089', location: 'Denver, EE. UU.', image: '/dinos/fossil_1.png' },
+      { name: 'GOLA ÓSEA', code: 'NMMNH P-2089-FR', location: 'Denver, EE. UU.', image: '/dinos/fossil_3.png' },
+      { name: 'CUERNO FRONTAL', code: 'NMMNH P-2089-H1', location: 'Denver, EE. UU.', image: '/dinos/fossil_4.png' },
+      { name: 'HUESO DE PATA', code: 'NMMNH P-2089-L1', location: 'Denver, EE. UU.', image: '/dinos/fossil_2.png' },
+    ],
+    features: [
+      { title: 'VIVÍA EN MANADA', description: 'Se han encontrado restos de varios individuos juntos, sugiriendo vidas grupales.', icon: 'users' },
+      { title: 'CUERNOS IMPRESIONANTES', description: 'Sus cuernos frontales podían medir hasta 1 metro de longitud.', icon: 'swords' },
+      { title: 'PICO PODEROSO', description: 'Su pico de ave era ideal para cortar ramas y plantas muy resistentes.', icon: 'scissors' },
+      { title: 'GOLA MULTIFUNCIONAL', description: 'Probablemente la usaba para defensa, exhibición y regulación térmica.', icon: 'shield' },
+    ]
+  },
+  {
+    slug: 'spinosaurus',
+    name: 'SPINOSAURUS',
+    scientificName: 'Spinosaurus aegyptiacus',
+    tagline: 'El Spinosaurus fue uno de los dinosaurios carnívoros más grandes que jamás haya existido. A diferencia de otros terópodos, estaba perfectamente adaptado para la vida acuática, convirtiéndose en el rey de los ríos.',
+    heroImage: '/dinos/spinosaurus_1779606934087.png',
+    heroStats: {
+      period: 'Cretácico Superior',
+      habitat: 'Ríos y deltas',
+      diet: 'Carnívoro (piscívoro)',
+      discovered: '1912'
+    },
+    sideStats: [
+      { label: 'NOMBRE SIGNIFICADO', value: '"Lagarto espinoso"' },
+      { label: 'LONGITUD', value: '15 - 18 m' },
+      { label: 'ALTURA', value: '4 - 5 m' },
+      { label: 'PESO', value: '7 - 20 toneladas' },
+      { label: 'VELOCIDAD', value: 'Hasta 30 km/h (agua)' },
+      { label: 'EXPECTATIVA DE VIDA', value: '30 - 40 años' },
+    ],
+    content: {
+      subtitle: 'UN DEPREDADOR ACUÁTICO ÚNICO',
+      paragraphs: [
+        'El Spinosaurus tenía adaptaciones únicas que le permitían cazar en el agua con una eficiencia letal. Su hocico alargado como el de un cocodrilo y sus dientes cónicos eran perfectos para atrapar peces resbaladizos.',
+        'Sus poderosas patas traseras palmeadas le daban fuerza en el agua, mientras que su gran vela dorsal pudo haber servido para regular su temperatura o para exhibición territorial.'
+      ],
+      mapLocation: 'África del Norte (Egipto, Marruecos, Túnez)'
+    },
+    videoText: 'Observa al Spinosaurus en su hábitat natural y descubre cómo dominaba las aguas.',
+    attributeBars: [
+      { label: 'AGRESIVIDAD', value: 8 },
+      { label: 'FUERZA', value: 9 },
+      { label: 'VELOCIDAD (AGUA)', value: 8 },
+      { label: 'INTELIGENCIA', value: 6 },
+      { label: 'SIGILO', value: 7 },
+      { label: 'RESISTENCIA', value: 9 },
+    ],
+    fossils: [
+      { name: 'CRÁNEO PARCIAL', code: 'MSNM V4047', location: 'Marruecos', image: '/dinos/fossil_1.png' },
+      { name: 'DIENTES CÓNICOS', code: 'MSNM V4047', location: 'Marruecos', image: '/dinos/fossil_4.png' },
+      { name: 'VÉRTEBRAS DORSALES', code: 'MSNM V4047', location: 'Marruecos', image: '/dinos/fossil_3.png' },
+      { name: 'GARRA CURVA', code: 'MSNM V4047', location: 'Marruecos', image: '/dinos/fossil_2.png' },
+    ],
+    features: [
+      { title: 'NADADOR EXPERTO', description: 'Sus patas traseras palmeadas y cola plana le daban propulsión en el agua.', icon: 'droplets' },
+      { title: 'HOCICO SENSORIAL', description: 'Su hocico alargado tenía terminaciones para detectar presión en el agua.', icon: 'radar' },
+      { title: 'DIETA ESPECIALIZADA', description: 'Se alimentaba principalmente de peces gigantes, pero también cazaba en tierra.', icon: 'fish' },
+      { title: 'VELA TÉRMICA', description: 'Su enorme vela dorsal pudo haberle ayudado a regular la temperatura rápidamente.', icon: 'thermometer' },
     ]
   },
   {
     slug: 'brachiosaurus',
-    name: 'Brachiosaurus',
-    subtitle: 'Un edificio viviente que respiraba',
-    era: 'Jurásico Tardío · 154–153 Ma',
-    type: 'Sauropoda · Titán Herbívoro',
-    description: 'Su corazón pesaba 400kg. El titán del Jurásico.',
-    longDescription: `El Brachiosaurus fue uno de los animales más grandes que jamás caminaron sobre la Tierra. Con hasta 26 metros de altura y 58 toneladas de peso, era como un edificio de seis pisos con patas. Su cuello de 9 metros alcanzaba las copas de árboles que ningún otro ser podía tocar. A diferencia de otros saurópodos, sus patas delanteras eran más largas que las traseras, dándole una postura inclinada hacia arriba. Su corazón pesaba unos 400 kg y latía poderosamente para bombear sangre hasta su cerebro a 13 metros de altura.`,
-    stats: [
-      { label: 'Altura', value: '26 metros' },
-      { label: 'Peso', value: '58 toneladas' },
-      { label: 'Cuello', value: '9 metros' },
-      { label: 'Longitud', value: '30 metros' },
-      { label: 'Período', value: '154–153 Ma' },
-      { label: 'Hábitat', value: 'Norteamérica' },
+    name: 'BRACHIOSAURUS',
+    scientificName: 'Brachiosaurus altithorax',
+    tagline: 'Uno de los dinosaurios más grandes que jamás haya caminado sobre la Tierra. Su largo cuello y postura erguida le permitían alcanzar la vegetación más alta, convirtiéndolo en un gigante amable de la era Jurásica.',
+    heroImage: '/dinos/brachiosaurus_1779606953114.png',
+    heroStats: {
+      period: 'Jurásico Superior',
+      habitat: 'Llanuras y bosques',
+      diet: 'Herbívoro',
+      discovered: '1903'
+    },
+    sideStats: [
+      { label: 'NOMBRE SIGNIFICADO', value: '"Lagarto de brazo"' },
+      { label: 'LONGITUD', value: '22 - 26 m' },
+      { label: 'ALTURA', value: '12 - 16 m' },
+      { label: 'PESO', value: '30 - 50 toneladas' },
+      { label: 'VELOCIDAD', value: 'Hasta 10 km/h' },
+      { label: 'EXPECTATIVA DE VIDA', value: '70 - 100 años' },
     ],
-    keywords: 'brachiosaurus, brachiosaurus altura, dinosaurio cuello largo, sauropodo, jurásico',
-    metaDescription: 'Descubrí el Brachiosaurus: altura, peso, alimentación y curiosidades del titán del Jurásico.',
-    image: '/dinos/bronto.jpg',
-    facts: [
-      'Era tan alto como un edificio de 6 pisos',
-      'Su corazón pesaba aproximadamente 400 kg',
-      'Necesitaba comer más de 400 kg de plantas por día',
-      'Sus fosas nasales estaban en la cima de su cabeza',
-      'Vivía en manadas para protegerse de los depredadores',
+    content: {
+      subtitle: 'UN GIGANTE GENTIL',
+      paragraphs: [
+        'El Brachiosaurus se distinguía por sus patas delanteras más largas que las traseras y su cuello extremadamente largo, lo que le daba una postura única entre los gigantes saurópodos.',
+        'Vivía en manadas y se alimentaba de las copas de los árboles, ramas y plantas altas que ningún otro herbívoro del ecosistema podía alcanzar.'
+      ],
+      mapLocation: 'Norteamérica (Colorado, EE. UU.)'
+    },
+    videoText: 'Explora al Brachiosaurus en su hábitat natural y observa cómo vivía este colosal herbívoro.',
+    attributeBars: [
+      { label: 'TAMAÑO', value: 10 },
+      { label: 'DEFENSA', value: 8 },
+      { label: 'VELOCIDAD', value: 2 },
+      { label: 'INTELIGENCIA', value: 3 },
+      { label: 'AGRESIVIDAD', value: 1 },
+      { label: 'RESISTENCIA', value: 9 },
+    ],
+    fossils: [
+      { name: 'CRÁNEO PARCIAL', code: 'FMNH P 25107', location: 'Colorado, EE. UU.', image: '/dinos/fossil_1.png' },
+      { name: 'VÉRTEBRAS CERVICALES', code: 'FMNH P 25107', location: 'Colorado, EE. UU.', image: '/dinos/fossil_3.png' },
+      { name: 'FÉMUR IZQUIERDO', code: 'FMNH P 25107', location: 'Colorado, EE. UU.', image: '/dinos/fossil_2.png' },
+      { name: 'COSTILLAS GIGANTES', code: 'FMNH P 25107', location: 'Colorado, EE. UU.', image: '/dinos/fossil_4.png' },
+    ],
+    features: [
+      { title: 'CORAZÓN ENORME', description: 'Su corazón podía pesar más de 1 tonelada para bombear sangre a su cerebro.', icon: 'heart' },
+      { title: 'RESPIRACIÓN EFICIENTE', description: 'Tenía un sistema respiratorio adaptado para mantener su inmenso cuerpo.', icon: 'wind' },
+      { title: 'ALCANCE IMPRESIONANTE', description: 'Su cuello de grúa le permitía alcanzar hojas a más de 12 metros de altura.', icon: 'move-up' },
+      { title: 'MANADAS PACÍFICAS', description: 'Se han encontrado evidencias de que viajaban en grandes manadas protectoras.', icon: 'users' },
     ]
   },
   {
-    slug: 'smilodon',
-    name: 'Smilodon',
-    subtitle: 'El cazador que esperaba en silencio',
-    era: 'Pleistoceno · 2.5 Ma–10 Ka',
-    type: 'Felidae · Emboscador',
-    description: 'Colmillos de 28cm. No perseguía su presa. La esperaba.',
-    longDescription: `El Smilodon, comúnmente llamado tigre dientes de sable, no era realmente un tigre. Era un félido extinto que evolucionó independientemente sus enormes caninos. Con hasta 400 kg de peso y colmillos de 28 cm, era el depredador de emboscada definitivo. Su mandíbula podía abrirse hasta 120° — el doble que un león moderno. No perseguía a su presa en largas carreras; la esperaba oculto para atacar con una precisión letal. Se extinguió hace apenas 10.000 años, posiblemente por la caza humana y el cambio climático.`,
-    stats: [
-      { label: 'Longitud', value: '2.1 metros' },
-      { label: 'Peso', value: '400 kg' },
-      { label: 'Colmillos', value: '28 cm' },
-      { label: 'Apertura', value: '120°' },
-      { label: 'Período', value: '2.5Ma–10Ka' },
-      { label: 'Hábitat', value: 'Américas' },
+    slug: 'pteranodon',
+    name: 'PTERANODON',
+    scientificName: 'Pteranodon longiceps',
+    tagline: 'El Pteranodon fue uno de los reptiles voladores más grandes que jamás haya existido. Dominaba los cielos del Cretácico con su enorme envergadura y su increíble capacidad de vuelo sobre océanos y continentes.',
+    heroImage: '/dinos/pteranodon_1779606968978.png',
+    heroStats: {
+      period: 'Cretácico Superior',
+      habitat: 'Costas y acantilados',
+      diet: 'Piscívoro',
+      discovered: '1876'
+    },
+    sideStats: [
+      { label: 'NOMBRE SIGNIFICADO', value: '"Alado y sin dientes"' },
+      { label: 'ENVERGADURA', value: '6 - 8 m' },
+      { label: 'LONGITUD', value: '1.5 - 2 m' },
+      { label: 'PESO', value: '15 - 25 kg' },
+      { label: 'VELOCIDAD', value: 'Hasta 80 km/h' },
+      { label: 'EXPECTATIVA DE VIDA', value: '20 - 25 años' },
     ],
-    keywords: 'smilodon, tigre dientes de sable, smilodon características, felino prehistórico, animales extintos',
-    metaDescription: 'Todo sobre el Smilodon o tigre dientes de sable: colmillos, tamaño, caza y extinción del felino prehistórico más famoso.',
-    image: '/dinos/smilodon.jpg',
-    facts: [
-      'No era un tigre — era un félido completamente diferente',
-      'Sus colmillos eran tan frágiles que no podía morderlos en hueso',
-      'Se extinguió hace solo 10.000 años — convivió con humanos',
-      'Miles de fósiles fueron encontrados en los pozos de La Brea, California',
-      'Probablemente cazaba en grupos como los leones modernos',
-    ]
-  },
-  {
-    slug: 'styracosaurus',
-    name: 'Styracosaurus',
-    subtitle: 'Una fortaleza viviente de cuernos y voluntad',
-    era: 'Cretácico Tardío · 75.5 Ma',
-    type: 'Ceratopsidae · Herbívoro',
-    description: 'Seis cuernos en la corona. Ni el T-Rex se atrevía a acercarse.',
-    longDescription: `El Styracosaurus fue uno de los ceratopsios más espectaculares que jamás existió. Su corona ósea lucía hasta 6 cuernos largos, más un imponente cuerno nasal de 60 cm. Con 3 toneladas de peso y una actitud defensiva feroz, vivía en grandes manadas que formaban círculos protectores ante los depredadores. Incluso el Tyrannosaurus Rex pensaba dos veces antes de atacar a un grupo de Styracosaurus. Su colorida corona probablemente también se usaba para comunicarse y atraer pareja.`,
-    stats: [
-      { label: 'Longitud', value: '6 metros' },
-      { label: 'Peso', value: '3 toneladas' },
-      { label: 'Cuerno nasal', value: '60 cm' },
-      { label: 'Cuernos corona', value: '6' },
-      { label: 'Período', value: '75.5 Ma' },
-      { label: 'Hábitat', value: 'Norteamérica' },
+    content: {
+      subtitle: 'MAESTRO DEL VIENTO',
+      paragraphs: [
+        'El Pteranodon tenía una de las envergaduras más grandes del reino animal. Su cráneo alargado y sin dientes estaba diseñado para pescar hábilmente en la superficie del agua.',
+        'Sus alas, formadas por una fuerte membrana de piel y sostenidas por un solo dedo alargado, le permitían planear durante largos períodos aprovechando las corrientes de aire cálido.'
+      ],
+      mapLocation: 'América del Norte (Kansas, EE. UU.)'
+    },
+    videoText: 'Observa al Pteranodon planear sobre los océanos del Cretácico en una experiencia interactiva.',
+    attributeBars: [
+      { label: 'ENVERGADURA', value: 10 },
+      { label: 'VELOCIDAD', value: 9 },
+      { label: 'MANIOBRABILIDAD', value: 7 },
+      { label: 'INTELIGENCIA', value: 5 },
+      { label: 'FUERZA', value: 4 },
+      { label: 'RESISTENCIA', value: 8 },
     ],
-    keywords: 'styracosaurus, styracosaurus cuernos, ceratopsio, dinosaurio herbívoro, cretácico',
-    metaDescription: 'Conocé el Styracosaurus: el dinosaurio con corona de cuernos del Cretácico. Características, defensa y curiosidades.',
-    image: '/dinos/styra.jpg',
-    facts: [
-      'Su nombre significa "lagarto de picos"',
-      'Su corona de cuernos podía tener colores brillantes',
-      'Vivía en manadas de cientos de individuos',
-      'El cuerno nasal podía crecer hasta 60 centímetros',
-      'Era pariente cercano del Triceratops',
+    fossils: [
+      { name: 'CRÁNEO COMPLETO', code: 'YPM 1923', location: 'Kansas, EE. UU.', image: '/dinos/fossil_1.png' },
+      { name: 'ESQUELETO ARTICULADO', code: 'YPM 2281', location: 'Kansas, EE. UU.', image: '/dinos/fossil_3.png' },
+      { name: 'CRESTA CRANEAL', code: 'YPM 1923', location: 'Kansas, EE. UU.', image: '/dinos/fossil_4.png' },
+      { name: 'HUESOS DEL ALA', code: 'YPM 2281', location: 'Kansas, EE. UU.', image: '/dinos/fossil_2.png' },
+    ],
+    features: [
+      { title: 'VUELO EFICIENTE', description: 'Podía planear cientos de kilómetros aprovechando las corrientes oceánicas.', icon: 'wind' },
+      { title: 'PESCADOR EXPERTO', description: 'Su pico hidrodinámico le permitía atrapar peces en picada sin perder velocidad.', icon: 'fish' },
+      { title: 'HUESOS LIGEROS', description: 'Sus huesos eran completamente huecos, dándole ligereza sin perder estructura.', icon: 'feather' },
+      { title: 'VISIÓN AGUDA', description: 'Sus grandes ojos le daban una vista excelente para cazar peces desde las alturas.', icon: 'eye' },
     ]
-  },
-]
+  }
+];
 
-export const getDinosaurBySlug = (slug: string) =>
-  dinosaurs.find(d => d.slug === slug)
+export const getDinosaurBySlug = (slug: string) => dinosaurs.find((d) => d.slug === slug);
