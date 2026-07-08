@@ -73,12 +73,7 @@ export default function SEO({
             "name": "DinoRex",
             "url": "https://www.dinorex.org",
             "description": description,
-            "inLanguage": "es",
-            "potentialAction": {
-              "@type": "SearchAction",
-              "target": "https://www.dinorex.org/buscar?q={search_term_string}",
-              "query-input": "required name=search_term_string"
-            }
+            "inLanguage": "es"
           })}
         </script>
       )}

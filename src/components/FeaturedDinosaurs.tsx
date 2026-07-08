@@ -9,7 +9,7 @@ const DINO_DATA = [
     id: '01',
     name: 'T-REX',
     scientific: 'TIRANOSAURUS REX',
-    image: '/dinos/trex_1779606889463.png',
+    image: '/dinos/trex_1779606889463.webp',
     diet: 'Carnívoro',
     length: '12-13 m',
     period: 'Cretácico Superior',
@@ -22,7 +22,7 @@ const DINO_DATA = [
     id: '02',
     name: 'VELOCIRAPTOR',
     scientific: 'VELOCIRAPTOR MONGOLIENSIS',
-    image: '/dinos/velociraptor_1779606904540.png',
+    image: '/dinos/velociraptor_1779606904540.webp',
     diet: 'Carnívoro',
     length: '1.8-2.4 m',
     period: 'Cretácico Superior',
@@ -35,7 +35,7 @@ const DINO_DATA = [
     id: '03',
     name: 'TRICERATOPS',
     scientific: 'TRICERATOPS HORRIDUS',
-    image: '/dinos/triceratops_1779606918531.png',
+    image: '/dinos/triceratops_1779606918531.webp',
     diet: 'Herbívoro',
     length: '8-9 m',
     period: 'Cretácico Superior',
@@ -48,7 +48,7 @@ const DINO_DATA = [
     id: '04',
     name: 'SPINOSAURUS',
     scientific: 'SPINOSAURUS AEGYPTIACUS',
-    image: '/dinos/spinosaurus_1779606934087.png',
+    image: '/dinos/spinosaurus_1779606934087.webp',
     diet: 'Carnívoro',
     length: '15-18 m',
     period: 'Cretácico Inferior',
@@ -61,7 +61,7 @@ const DINO_DATA = [
     id: '05',
     name: 'BRACHIOSAURUS',
     scientific: 'BRACHIOSAURUS ALTITHORAX',
-    image: '/dinos/brachiosaurus_1779606953114.png',
+    image: '/dinos/brachiosaurus_1779606953114.webp',
     diet: 'Herbívoro',
     length: '22-26 m',
     period: 'Jurásico Superior',
@@ -74,7 +74,7 @@ const DINO_DATA = [
     id: '06',
     name: 'PTERANODON',
     scientific: 'PTERANODON LONGICEPS',
-    image: '/dinos/pteranodon_1779606968978.png',
+    image: '/dinos/pteranodon_1779606968978.webp',
     diet: 'Carnívoro',
     length: '6-8 m',
     period: 'Cretácico Superior',
@@ -87,7 +87,7 @@ const DINO_DATA = [
     id: '07',
     name: 'STEGOSAURUS',
     scientific: 'STEGOSAURUS STENOPS',
-    image: '/dinos/stegosaurus_1779606982968.png',
+    image: '/dinos/stegosaurus_1779606982968.webp',
     diet: 'Herbívoro',
     length: '7-9 m',
     period: 'Jurásico Superior',
@@ -100,7 +100,7 @@ const DINO_DATA = [
     id: '08',
     name: 'ARGENTINOSAURUS',
     scientific: 'ARGENTINOSAURUS HUINCULENSIS',
-    image: '/dinos/argentinosaurus_spotlight.png',
+    image: '/dinos/argentinosaurus_spotlight.webp',
     diet: 'Herbívoro',
     length: '30-35 m',
     period: 'Cretácico Superior',
@@ -113,7 +113,7 @@ const DINO_DATA = [
     id: '09',
     name: 'ANKYLOSAURUS',
     scientific: 'ANKYLOSAURUS MAGNIVENTRIS',
-    image: '/dinos/ankylosaurus_spotlight.png',
+    image: '/dinos/ankylosaurus_spotlight.webp',
     diet: 'Herbívoro',
     length: '6-8 m',
     period: 'Cretácico Superior',
@@ -182,13 +182,8 @@ export default function FeaturedDinosaurs() {
               exit={{ opacity: 0, scale: 0.9 }}
               transition={{ duration: 0.3 }}
               className={`dino-card ${idx < 3 && activeCategory === 'todos' ? 'top-row' : 'bottom-row'}`}
-              role="img"
-              aria-label={dino.altText}
-              style={{ 
-                backgroundImage: `url(${dino.image})`,
-                backgroundPosition: dino.id === '04' ? '20% center' : 'center'
-              }}
             >
+              <img src={dino.image} alt={dino.altText} loading="lazy" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: dino.id === '04' ? '20% center' : 'center', zIndex: 0 }} />
               <div className="dino-card-overlay"></div>
               
               <div className="dino-card-top">

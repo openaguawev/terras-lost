@@ -2,7 +2,7 @@
   background-color: #100d0b;
   background-image: 
     linear-gradient(to bottom, #100d0b 0%, rgba(20,17,15,0.7) 15%, rgba(20,17,15,0.7) 100%), 
-    url('/dinos/jungle_bg.png');
+    url('/dinos/jungle_bg.webp');
   background-size: cover;
   background-position: center top;
   background-attachment: fixed;

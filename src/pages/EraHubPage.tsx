@@ -23,7 +23,7 @@ const ERA_DATA: Record<string, {
     subtitle: 'El comienzo de los dinosaurios',
     description: 'La era Triásica marcó el inicio de la dinastía de los dinosaurios tras la gran extinción del Pérmico. En un mundo cálido dominado por el supercontinente Pangea, surgieron los primeros reptiles ágiles y arcosaurios que sentaron las bases para los siguientes millones de años de evolución y dominio terrestre.',
     color: '#ff6a00',
-    image: '/triassic.png'
+    image: '/triassic.webp'
   },
   'jurasico': {
     title: 'JURÁSICO',
@@ -31,7 +31,7 @@ const ERA_DATA: Record<string, {
     subtitle: 'La era de los gigantes',
     description: 'Durante el período Jurásico, la fragmentación de Pangea dio origen a climas más húmedos y templados, permitiendo la expansión de exuberantes selvas y bosques de coníferas. Bajo estas condiciones ideales, la vida vegetal floreció y surgieron los mayores gigantes de la Tierra, los enormes saurópodos de cuello largo y los primeros acorazados.',
     color: '#4ade80',
-    image: '/jurassic.png'
+    image: '/jurassic.webp'
   },
   'cretacico': {
     title: 'CRETÁCICO',
@@ -39,7 +39,7 @@ const ERA_DATA: Record<string, {
     subtitle: 'El dominio y la extinción',
     description: 'El Cretácico representa el apogeo y florecimiento de la diversidad dinosauriana. Los continentes se separaron hacia sus posiciones modernas y surgieron los depredadores terrestres más temibles, los ceratópsidos con cuernos y el desarrollo completo de armaduras defensivas. La era terminó con un cataclismo masivo por impacto astronómico.',
     color: '#fbbf24',
-    image: '/cretaceous.png'
+    image: '/cretaceous.webp'
   }
 };
 
@@ -110,25 +110,36 @@ export default function EraHubPage() {
   const filteredDinos = dinosaurs.filter(d => d.era === eraKey);
 
   // Generate CollectionPage Schema
-  const schema = {
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "name": `${eraInfo.title} — DinoRex`,
-    "description": eraInfo.description,
-    "url": `https://www.dinorex.org/eras/${eraKey}`,
-    "about": {
-      "@type": "Thing",
-      "name": `Era ${eraInfo.title}`
+  const schema = [
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": `${eraInfo.title} — DinoRex`,
+      "description": eraInfo.description,
+      "url": `https://www.dinorex.org/eras/${eraKey}`,
+      "about": {
+        "@type": "Thing",
+        "name": `Era ${eraInfo.title}`
+      },
+      "mainEntity": {
+        "@type": "ItemList",
+        "itemListElement": filteredDinos.map((dino, index) => ({
+          "@type": "ListItem",
+          "position": index + 1,
+          "url": `https://www.dinorex.org/criaturas/${dino.slug}`
+        }))
+      }
     },
-    "mainEntity": {
-      "@type": "ItemList",
-      "itemListElement": filteredDinos.map((dino, index) => ({
-        "@type": "ListItem",
-        "position": index + 1,
-        "url": `https://www.dinorex.org/criaturas/${dino.slug}`
-      }))
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.dinorex.org/" },
+        { "@type": "ListItem", "position": 2, "name": "Eras", "item": "https://www.dinorex.org/#eras" },
+        { "@type": "ListItem", "position": 3, "name": eraInfo.title, "item": `https://www.dinorex.org/eras/${eraKey}` }
+      ]
     }
-  };
+  ];
 
   return (
     <div className="era-hub-container">
@@ -168,7 +179,8 @@ export default function EraHubPage() {
         {filteredDinos.length > 0 ? (
           <div ref={gridRef} className="era-hub-grid">
             {filteredDinos.map(dino => (
-              <Link to={`/criaturas/${dino.slug}`} key={dino.slug} className="era-dino-card" style={{ backgroundImage: `url(${dino.heroImage})` }}>
+              <Link to={`/criaturas/${dino.slug}`} key={dino.slug} className="era-dino-card">
+                <img src={dino.heroImage} alt={dino.name} loading="lazy" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 0 }} />
                 <div className="era-dino-card-overlay"></div>
                 <div className="era-dino-card-content">
                   <span className="era-dino-diet" style={{ 

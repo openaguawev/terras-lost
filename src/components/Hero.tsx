@@ -27,13 +27,13 @@ export default function Hero() {
     <section style={{ minHeight: '100dvh', position: 'relative', overflow: 'hidden', background: '#000', display: 'flex', flexDirection: 'column' }}>
       {/* BACKGROUND VIDEO */}
       <div ref={parallaxRef} style={{ position: 'absolute', inset: 0, transform: 'scale(1.1)' }}>
-        <video autoPlay muted loop playsInline poster="/hero.png" style={{
+        <video autoPlay muted loop playsInline poster="/hero.webp" style={{
           width: '100%', height: '100%', objectFit: 'cover',
           objectPosition: isMobile ? '80% center' : 'center center',
           filter: 'brightness(0.9) contrast(1.1) saturate(1.2)',
         }}>
           <source src="/hero-compressed.mp4" type="video/mp4" />
-          <source src="/hero.mp4" type="video/mp4" />
+          <source src="/hero-compressed.mp4" type="video/mp4" />
         </video>
       </div>
 
@@ -52,7 +52,7 @@ export default function Hero() {
           animate={{ opacity: 1, x: 0 }}
           style={{ display: 'flex', alignItems: 'center', gap: 12 }}
         >
-          <img src="/logo.png" alt="Dinorex Logo" width={32} height={32} style={{ width: '32px', height: '32px', borderRadius: '50%' }} />
+          <img src="/logo.webp" alt="Dinorex Logo" width={32} height={32} style={{ width: '32px', height: '32px', borderRadius: '50%' }} />
           <div style={{ display: 'flex', flexDirection: 'column' }}>
             <span style={{ fontFamily: 'Bebas Neue, sans-serif', fontSize: 28, letterSpacing: 2, lineHeight: 1 }}>DINOREX</span>
             <span style={{ fontFamily: 'Inter, sans-serif', fontSize: 8, letterSpacing: 2, color: 'rgba(255,255,255,0.6)', marginTop: -2 }}>EXPLORA EL PASADO. DESCUBRE LA VIDA.</span>
@@ -62,17 +62,14 @@ export default function Hero() {
         <div style={{ display: 'flex', alignItems: 'center', gap: 32 }}>
           <div style={{ display: isMobile ? 'none' : 'flex', alignItems: 'center', gap: 32 }}>
             {[
-              { label: 'INICIO', active: true },
-              { label: 'DINOSAURIOS ⌄' },
-              { label: 'HÁBITAT' },
-              { label: 'HISTORIA' },
-              { label: 'FÓSILES' },
-              { label: 'NOTICIAS' },
-              { label: 'CONTACTO' },
+              { label: 'INICIO', href: '/', active: true },
+              { label: 'DINOSAURIOS ⌄', href: '/#dinosaurios' },
+              { label: 'HÁBITAT', href: '/#habitats' },
+              { label: 'ERAS', href: '/#eras' },
             ].map(link => (
               <div key={link.label} style={{ position: 'relative', paddingBottom: 4 }}>
                 <motion.a 
-                  href="#" 
+                  href={link.href} 
                   initial={{ color: link.active ? '#fff' : 'rgba(255,255,255,0.7)' }}
                   whileHover={{ scale: 1.1, color: '#e6c875' }}
                   transition={{ duration: 0.2 }}

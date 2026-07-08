@@ -12,7 +12,7 @@ const ERAS_DATA = [
     description: 'Los primeros dinosaurios aparecen en un mundo dominado por volcanes y grandes cambios climáticos.',
     color: '#ef4444',
     icon: <Mountain size={20} color="#ef4444" />,
-    image: '/triassic.png'
+    image: '/triassic.webp'
   },
   {
     id: 'jurassic',
@@ -22,7 +22,7 @@ const ERAS_DATA = [
     description: 'Los dinosaurios alcanzan tamaños colosales y los mares, cielos y tierras se llenan de vida diversa y exuberante.',
     color: '#4ade80',
     icon: <Leaf size={20} color="#4ade80" />,
-    image: '/jurassic.png'
+    image: '/jurassic.webp'
   },
   {
     id: 'cretaceous',
@@ -32,7 +32,7 @@ const ERAS_DATA = [
     description: 'Los dinosaurios dominan la Tierra. Surgen los depredadores más temibles y los continentes se acercan a su forma actual.',
     color: '#fbbf24',
     icon: <PawPrint size={20} color="#fbbf24" />,
-    image: '/cretaceous.png'
+    image: '/cretaceous.webp'
   },
   {
     id: 'extinction',
@@ -42,7 +42,7 @@ const ERAS_DATA = [
     description: 'Un evento catastrófico cambió la vida para siempre. Los dinosaurios desaparecieron, pero su legado continúa.',
     color: '#a855f7',
     icon: <Flame size={20} color="#a855f7" />,
-    image: '/extinction.png'
+    image: '/extinction.webp'
   }
 ];
 

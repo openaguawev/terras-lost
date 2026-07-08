@@ -72,6 +72,7 @@ export default function DinosaurPage() {
       <SEO
         title={`${dino.name} — DinoRex`}
         description={dino.tagline}
+        keywords={`${dino.name.toLowerCase()}, dinosaurio, ${dino.scientificName.toLowerCase()}, ${dino.heroStats.period.toLowerCase()}, fósiles, prehistoria`}
         url={`https://www.dinorex.org/criaturas/${dino.slug}`}
         image={dino.heroImage.startsWith('http') ? dino.heroImage : `https://www.dinorex.org${dino.heroImage}`}
         customSchema={[
@@ -95,7 +96,7 @@ export default function DinosaurPage() {
               "name": "DinoRex",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://www.dinorex.org/logo.png"
+                "url": "https://www.dinorex.org/logo.webp"
               }
             },
             "datePublished": "2026-01-01T00:00:00Z",
@@ -112,6 +113,15 @@ export default function DinosaurPage() {
                 "text": faq.answer
               }
             }))
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.dinorex.org/" },
+              { "@type": "ListItem", "position": 2, "name": "Dinosaurios", "item": "https://www.dinorex.org/#dinosaurios" },
+              { "@type": "ListItem", "position": 3, "name": dino.name, "item": `https://www.dinorex.org/criaturas/${dino.slug}` }
+            ]
           }
         ]}
       />
@@ -126,7 +136,7 @@ export default function DinosaurPage() {
       {/* HERO SECTION */}
       <section className="dp-hero">
         <div className="dp-hero-bg">
-          <img src={dino.heroImage} alt={dino.name} />
+          <img src={dino.heroImage} alt={dino.name} width="1920" height="1080" style={{ width: '100%', height: '100%', objectFit: 'cover' }} fetchPriority="high" />
         </div>
         <div className="dp-hero-gradient"></div>
         
@@ -220,7 +230,7 @@ export default function DinosaurPage() {
             <div className="dp-map-box">
               <h4 className="dp-map-title">DISTRIBUCIÓN GEOGRÁFICA</h4>
               <div className="dp-map-container">
-                <img src="/dinos/map_dark.png" alt="Map" className="dp-map-img" width={400} height={200} />
+                <img src="/dinos/map_dark.webp" alt="Map" className="dp-map-img" width={400} height={200} />
                 {MAP_COORDS[dino.slug] && (
                   <div 
                     className="dp-map-marker"
@@ -334,7 +344,7 @@ export default function DinosaurPage() {
 
         {/* FOOTER CTA */}
         <div className="dp-cta-banner">
-          <img src="/hero.png" alt="Background" className="dp-cta-bg" width={1200} height={300} />
+          <img src="/hero.webp" alt="Background" className="dp-cta-bg" width={1200} height={300} />
           <div className="dp-cta-gradient"></div>
           <div className="dp-cta-content">
             <h2>EL PASADO TE LLAMA</h2>

@@ -40,7 +40,7 @@ export const dinosaurs: DinosaurDetail[] = [
     name: 'TYRANNOSAURUS REX',
     scientificName: 'Tyrannosaurus rex',
     tagline: 'El rey de los dinosaurios. Uno de los depredadores más temibles de todos los tiempos. Con una fuerza de mordida letal y un tamaño colosal, el T-Rex dominó la cadena alimenticia del Cretácico Tardío.',
-    heroImage: '/dinos/trex_spotlight_full.png',
+    heroImage: '/dinos/trex_spotlight_full.webp',
     heroStats: {
       period: 'Cretácico Tardío',
       habitat: 'Bosques y valles',
@@ -75,10 +75,10 @@ export const dinosaurs: DinosaurDetail[] = [
       { label: 'RESISTENCIA', value: 8 },
     ],
     fossils: [
-      { name: 'CRÁNEO COMPLETO', code: 'FMNH PR 2081 (Sue)', location: 'Chicago, EE. UU.', image: '/dinos/fossil_1.png' },
-      { name: 'DIENTE SERRADO', code: 'MOR 1125', location: 'Montana, EE. UU.', image: '/dinos/fossil_4.png' },
-      { name: 'FÉMUR INTACTO', code: 'BHI 3033', location: 'Dakota del Sur, EE. UU.', image: '/dinos/fossil_2.png' },
-      { name: 'ESQUELETO MONTADO', code: 'AMNH 5027', location: 'Nueva York, EE. UU.', image: '/dinos/fossil_3.png' },
+      { name: 'CRÁNEO COMPLETO', code: 'FMNH PR 2081 (Sue)', location: 'Chicago, EE. UU.', image: '/dinos/fossil_1.webp' },
+      { name: 'DIENTE SERRADO', code: 'MOR 1125', location: 'Montana, EE. UU.', image: '/dinos/fossil_4.webp' },
+      { name: 'FÉMUR INTACTO', code: 'BHI 3033', location: 'Dakota del Sur, EE. UU.', image: '/dinos/fossil_2.webp' },
+      { name: 'ESQUELETO MONTADO', code: 'AMNH 5027', location: 'Nueva York, EE. UU.', image: '/dinos/fossil_3.webp' },
     ],
     features: [
       { title: 'SU MORDIDA', description: 'Fuerza de mordida letal, capaz de triturar los huesos de sus presas.', icon: 'skull' },
@@ -100,7 +100,7 @@ export const dinosaurs: DinosaurDetail[] = [
     name: 'VELOCIRAPTOR',
     scientificName: 'Velociraptor mongoliensis',
     tagline: 'Pequeño en tamaño, gigante en velocidad e inteligencia. El Velociraptor era un depredador ágil y estratégico, conocido por cazar en grupo y comunicarse con sofisticados sonidos y movimientos.',
-    heroImage: '/dinos/velociraptor_1779606904540.png',
+    heroImage: '/dinos/velociraptor_1779606904540.webp',
     heroStats: {
       period: 'Cretácico Superior',
       habitat: 'Desiertos de Asia Central',
@@ -136,10 +136,10 @@ export const dinosaurs: DinosaurDetail[] = [
       { label: 'RESISTENCIA', value: 6 },
     ],
     fossils: [
-      { name: 'CRÁNEO COMPLETO', code: 'IVPP V 13332', location: 'Mongolia', image: '/dinos/fossil_1.png' },
-      { name: 'GARRA DE HOZ', code: 'Garra distintiva', location: 'Pie del depredador', image: '/dinos/fossil_4.png' },
-      { name: 'ESQUELETO ARTICULADO', code: 'IVPP V 14350', location: 'Mongolia', image: '/dinos/fossil_3.png' },
-      { name: 'HUEVOS FÓSILES', code: 'Otogon Obo', location: 'Mongolia', image: '/dinos/fossil_2.png' },
+      { name: 'CRÁNEO COMPLETO', code: 'IVPP V 13332', location: 'Mongolia', image: '/dinos/fossil_1.webp' },
+      { name: 'GARRA DE HOZ', code: 'Garra distintiva', location: 'Pie del depredador', image: '/dinos/fossil_4.webp' },
+      { name: 'ESQUELETO ARTICULADO', code: 'IVPP V 14350', location: 'Mongolia', image: '/dinos/fossil_3.webp' },
+      { name: 'HUEVOS FÓSILES', code: 'Otogon Obo', location: 'Mongolia', image: '/dinos/fossil_2.webp' },
     ],
     features: [
       { title: 'CAZA EN MANADA', description: 'Coordinaban ataques en grupo para cazar presas mucho más grandes.', icon: 'users' },
@@ -161,7 +161,7 @@ export const dinosaurs: DinosaurDetail[] = [
     name: 'TRICERATOPS',
     scientificName: 'Triceratops horridus',
     tagline: 'Uno de los dinosaurios herbívoros más icónicos del Cretácico tardío. Su imponente gola ósea y sus tres cuernos lo convirtieron en una fortaleza viviente contra los depredadores.',
-    heroImage: '/dinos/triceratops_1779606918531.png',
+    heroImage: '/dinos/triceratops_1779606918531.webp',
     heroStats: {
       period: 'Cretácico Tardío',
       habitat: 'Llanuras y pantanos',
@@ -197,10 +197,10 @@ export const dinosaurs: DinosaurDetail[] = [
       { label: 'RESISTENCIA', value: 9 },
     ],
     fossils: [
-      { name: 'CRÁNEO COMPLETO', code: 'NMMNH P-2089', location: 'Denver, EE. UU.', image: '/dinos/fossil_1.png' },
-      { name: 'GOLA ÓSEA', code: 'NMMNH P-2089-FR', location: 'Denver, EE. UU.', image: '/dinos/fossil_3.png' },
-      { name: 'CUERNO FRONTAL', code: 'NMMNH P-2089-H1', location: 'Denver, EE. UU.', image: '/dinos/fossil_4.png' },
-      { name: 'HUESO DE PATA', code: 'NMMNH P-2089-L1', location: 'Denver, EE. UU.', image: '/dinos/fossil_2.png' },
+      { name: 'CRÁNEO COMPLETO', code: 'NMMNH P-2089', location: 'Denver, EE. UU.', image: '/dinos/fossil_1.webp' },
+      { name: 'GOLA ÓSEA', code: 'NMMNH P-2089-FR', location: 'Denver, EE. UU.', image: '/dinos/fossil_3.webp' },
+      { name: 'CUERNO FRONTAL', code: 'NMMNH P-2089-H1', location: 'Denver, EE. UU.', image: '/dinos/fossil_4.webp' },
+      { name: 'HUESO DE PATA', code: 'NMMNH P-2089-L1', location: 'Denver, EE. UU.', image: '/dinos/fossil_2.webp' },
     ],
     features: [
       { title: 'VIVÍA EN MANADA', description: 'Se han encontrado restos de varios individuos juntos, sugiriendo vidas grupales.', icon: 'users' },
@@ -222,7 +222,7 @@ export const dinosaurs: DinosaurDetail[] = [
     name: 'SPINOSAURUS',
     scientificName: 'Spinosaurus aegyptiacus',
     tagline: 'El Spinosaurus fue uno de los dinosaurios carnívoros más grandes que jamás haya existido. A diferencia de otros terópodos, estaba perfectamente adaptado para la vida acuática, convirtiéndose en el rey de los ríos.',
-    heroImage: '/dinos/spinosaurus_1779606934087.png',
+    heroImage: '/dinos/spinosaurus_1779606934087.webp',
     heroStats: {
       period: 'Cretácico Superior',
       habitat: 'Ríos y deltas',
@@ -258,10 +258,10 @@ export const dinosaurs: DinosaurDetail[] = [
       { label: 'RESISTENCIA', value: 9 },
     ],
     fossils: [
-      { name: 'CRÁNEO PARCIAL', code: 'MSNM V4047', location: 'Marruecos', image: '/dinos/fossil_1.png' },
-      { name: 'DIENTES CÓNICOS', code: 'MSNM V4047', location: 'Marruecos', image: '/dinos/fossil_4.png' },
-      { name: 'VÉRTEBRAS DORSALES', code: 'MSNM V4047', location: 'Marruecos', image: '/dinos/fossil_3.png' },
-      { name: 'GARRA CURVA', code: 'MSNM V4047', location: 'Marruecos', image: '/dinos/fossil_2.png' },
+      { name: 'CRÁNEO PARCIAL', code: 'MSNM V4047', location: 'Marruecos', image: '/dinos/fossil_1.webp' },
+      { name: 'DIENTES CÓNICOS', code: 'MSNM V4047', location: 'Marruecos', image: '/dinos/fossil_4.webp' },
+      { name: 'VÉRTEBRAS DORSALES', code: 'MSNM V4047', location: 'Marruecos', image: '/dinos/fossil_3.webp' },
+      { name: 'GARRA CURVA', code: 'MSNM V4047', location: 'Marruecos', image: '/dinos/fossil_2.webp' },
     ],
     features: [
       { title: 'NADADOR EXPERTO', description: 'Sus patas traseras palmeadas y cola plana le daban propulsión en el agua.', icon: 'droplets' },
@@ -283,7 +283,7 @@ export const dinosaurs: DinosaurDetail[] = [
     name: 'BRACHIOSAURUS',
     scientificName: 'Brachiosaurus altithorax',
     tagline: 'Uno de los dinosaurios más grandes que jamás haya caminado sobre la Tierra. Su largo cuello y postura erguida le permitían alcanzar la vegetación más alta, convirtiéndolo en un gigante amable de la era Jurásica.',
-    heroImage: '/dinos/brachiosaurus_1779606953114.png',
+    heroImage: '/dinos/brachiosaurus_1779606953114.webp',
     heroStats: {
       period: 'Jurásico Superior',
       habitat: 'Llanuras and bosques',
@@ -319,10 +319,10 @@ export const dinosaurs: DinosaurDetail[] = [
       { label: 'RESISTENCIA', value: 9 },
     ],
     fossils: [
-      { name: 'CRÁNEO PARCIAL', code: 'FMNH P 25107', location: 'Colorado, EE. UU.', image: '/dinos/fossil_1.png' },
-      { name: 'VÉRTEBRAS CERVICALES', code: 'FMNH P 25107', location: 'Colorado, EE. UU.', image: '/dinos/fossil_3.png' },
-      { name: 'FÉMUR IZQUIERDO', code: 'FMNH P 25107', location: 'Colorado, EE. UU.', image: '/dinos/fossil_2.png' },
-      { name: 'COSTILLAS GIGANTES', code: 'FMNH P 25107', location: 'Colorado, EE. UU.', image: '/dinos/fossil_4.png' },
+      { name: 'CRÁNEO PARCIAL', code: 'FMNH P 25107', location: 'Colorado, EE. UU.', image: '/dinos/fossil_1.webp' },
+      { name: 'VÉRTEBRAS CERVICALES', code: 'FMNH P 25107', location: 'Colorado, EE. UU.', image: '/dinos/fossil_3.webp' },
+      { name: 'FÉMUR IZQUIERDO', code: 'FMNH P 25107', location: 'Colorado, EE. UU.', image: '/dinos/fossil_2.webp' },
+      { name: 'COSTILLAS GIGANTES', code: 'FMNH P 25107', location: 'Colorado, EE. UU.', image: '/dinos/fossil_4.webp' },
     ],
     features: [
       { title: 'CORAZÓN ENORME', description: 'Su corazón podía pesar más de 1 tonelada para bombear sangre a su cerebro.', icon: 'heart' },
@@ -344,7 +344,7 @@ export const dinosaurs: DinosaurDetail[] = [
     name: 'PTERANODON',
     scientificName: 'Pteranodon longiceps',
     tagline: 'El Pteranodon fue uno de los reptiles voladores más grandes que jamás haya existido. Dominaba los cielos del Cretácico con su enorme envergadura y su increíble capacidad de vuelo sobre océanos y continentes.',
-    heroImage: '/dinos/pteranodon_1779606968978.png',
+    heroImage: '/dinos/pteranodon_1779606968978.webp',
     heroStats: {
       period: 'Cretácico Superior',
       habitat: 'Costas y acantilados',
@@ -380,10 +380,10 @@ export const dinosaurs: DinosaurDetail[] = [
       { label: 'RESISTENCIA', value: 8 },
     ],
     fossils: [
-      { name: 'CRÁNEO COMPLETO', code: 'YPM 1923', location: 'Kansas, EE. UU.', image: '/dinos/fossil_1.png' },
-      { name: 'ESQUELETO ARTICULADO', code: 'YPM 2281', location: 'Kansas, EE. UU.', image: '/dinos/fossil_3.png' },
-      { name: 'CRESTA CRANEAL', code: 'YPM 1923', location: 'Kansas, EE. UU.', image: '/dinos/fossil_4.png' },
-      { name: 'HUESOS DEL ALA', code: 'YPM 2281', location: 'Kansas, EE. UU.', image: '/dinos/fossil_2.png' },
+      { name: 'CRÁNEO COMPLETO', code: 'YPM 1923', location: 'Kansas, EE. UU.', image: '/dinos/fossil_1.webp' },
+      { name: 'ESQUELETO ARTICULADO', code: 'YPM 2281', location: 'Kansas, EE. UU.', image: '/dinos/fossil_3.webp' },
+      { name: 'CRESTA CRANEAL', code: 'YPM 1923', location: 'Kansas, EE. UU.', image: '/dinos/fossil_4.webp' },
+      { name: 'HUESOS DEL ALA', code: 'YPM 2281', location: 'Kansas, EE. UU.', image: '/dinos/fossil_2.webp' },
     ],
     features: [
       { title: 'VUELO EFICIENTE', description: 'Podía planear cientos de kilómetros aprovechando las corrientes oceánicas.', icon: 'wind' },
@@ -405,7 +405,7 @@ export const dinosaurs: DinosaurDetail[] = [
     name: 'ARGENTINOSAURUS',
     scientificName: 'Argentinosaurus huinculensis',
     tagline: 'El gigante de gigantes. El dinosaurio más grande conocido por la ciencia, un titanosaurio colosal que habitó lo que hoy es Argentina durante el Cretácico Superior.',
-    heroImage: '/dinos/argentinosaurus_spotlight.png',
+    heroImage: '/dinos/argentinosaurus_spotlight.webp',
     heroStats: {
       period: 'Cretácico Superior',
       habitat: 'Llanuras y bosques fluviales',
@@ -441,10 +441,10 @@ export const dinosaurs: DinosaurDetail[] = [
       { label: 'RESISTENCIA', value: 10 },
     ],
     fossils: [
-      { name: 'VÉRTEBRA DORSAL', code: 'MCF-PVPH-1', location: 'Plaza Huincul, Argentina', image: '/dinos/fossil_3.png' },
-      { name: 'FÉMUR COMPLETO', code: 'MCF-PVPH-2', location: 'Neuquén, Argentina', image: '/dinos/fossil_2.png' },
-      { name: 'COSTILLA GIGANTE', code: 'MCF-PVPH-3', location: 'Plaza Huincul, Argentina', image: '/dinos/fossil_4.png' },
-      { name: 'FIBULA DETALLADA', code: 'MCF-PVPH-4', location: 'Patagonia, Argentina', image: '/dinos/fossil_1.png' },
+      { name: 'VÉRTEBRA DORSAL', code: 'MCF-PVPH-1', location: 'Plaza Huincul, Argentina', image: '/dinos/fossil_3.webp' },
+      { name: 'FÉMUR COMPLETO', code: 'MCF-PVPH-2', location: 'Neuquén, Argentina', image: '/dinos/fossil_2.webp' },
+      { name: 'COSTILLA GIGANTE', code: 'MCF-PVPH-3', location: 'Plaza Huincul, Argentina', image: '/dinos/fossil_4.webp' },
+      { name: 'FIBULA DETALLADA', code: 'MCF-PVPH-4', location: 'Patagonia, Argentina', image: '/dinos/fossil_1.webp' },
     ],
     features: [
       { title: 'TAMAÑO TITÁNICO', description: 'El animal terrestre más grande conocido, un auténtico rascacielos de carne y hueso.', icon: 'move-up' },
@@ -466,7 +466,7 @@ export const dinosaurs: DinosaurDetail[] = [
     name: 'STEGOSAURUS',
     scientificName: 'Stegosaurus stenops',
     tagline: 'El acorazado de placas. Un herbívoro icónico del período Jurásico, famoso por las placas óseas alineadas en su lomo y su cola espinosa lista para la defensa.',
-    heroImage: '/dinos/stegosaurus_1779606982968.png',
+    heroImage: '/dinos/stegosaurus_1779606982968.webp',
     heroStats: {
       period: 'Jurásico Superior',
       habitat: 'Llanuras y bosques abiertos',
@@ -502,10 +502,10 @@ export const dinosaurs: DinosaurDetail[] = [
       { label: 'RESISTENCIA', value: 8 },
     ],
     fossils: [
-      { name: 'ESQUELETO COMPLETO', code: 'NHMUK PV R36730 (Sophie)', location: 'Londres, Reino Unido', image: '/dinos/fossil_3.png' },
-      { name: 'PLACA EXCEPCIONAL', code: 'USNM 4934', location: 'Washington D.C., EE. UU.', image: '/dinos/fossil_1.png' },
-      { name: 'ESPINAS DE COLA', code: 'YPM 1853', location: 'Utah, EE. UU.', image: '/dinos/fossil_4.png' },
-      { name: 'MANDÍBULA CON DIENTES', code: 'USNM 4936', location: 'Colorado, EE. UU.', image: '/dinos/fossil_2.png' },
+      { name: 'ESQUELETO COMPLETO', code: 'NHMUK PV R36730 (Sophie)', location: 'Londres, Reino Unido', image: '/dinos/fossil_3.webp' },
+      { name: 'PLACA EXCEPCIONAL', code: 'USNM 4934', location: 'Washington D.C., EE. UU.', image: '/dinos/fossil_1.webp' },
+      { name: 'ESPINAS DE COLA', code: 'YPM 1853', location: 'Utah, EE. UU.', image: '/dinos/fossil_4.webp' },
+      { name: 'MANDÍBULA CON DIENTES', code: 'USNM 4936', location: 'Colorado, EE. UU.', image: '/dinos/fossil_2.webp' },
     ],
     features: [
       { title: 'PLACAS TÉRMICAS', description: 'Placas que captaban o disipaban el calor según su orientación al sol.', icon: 'thermometer' },
@@ -527,7 +527,7 @@ export const dinosaurs: DinosaurDetail[] = [
     name: 'ANKYLOSAURUS',
     scientificName: 'Ankylosaurus magniventris',
     tagline: 'El tanque prehistórico. Un dinosaurio herbívoro acorazado con una gruesa armadura de placas óseas y una maza pesada en su cola capaz de fracturar los huesos de los depredadores más grandes.',
-    heroImage: '/dinos/ankylosaurus_spotlight.png',
+    heroImage: '/dinos/ankylosaurus_spotlight.webp',
     heroStats: {
       period: 'Cretácico Tardío',
       habitat: 'Bosques y llanuras costeras',
@@ -563,10 +563,10 @@ export const dinosaurs: DinosaurDetail[] = [
       { label: 'RESISTENCIA', value: 9 },
     ],
     fossils: [
-      { name: 'CRÁNEO ACORAZADO', code: 'AMNH 5895', location: 'Montana, EE. UU.', image: '/dinos/fossil_1.png' },
-      { name: 'MAZA DE LA COLA', code: 'AMNH 5214', location: 'Alberta, Canadá', image: '/dinos/fossil_4.png' },
-      { name: 'PLACAS DORSALES', code: 'NMC 8880', location: 'Alberta, Canadá', image: '/dinos/fossil_3.png' },
-      { name: 'ESQUELETO PARCIAL', code: 'AMNH 5241', location: 'Wyoming, EE. UU.', image: '/dinos/fossil_2.png' },
+      { name: 'CRÁNEO ACORAZADO', code: 'AMNH 5895', location: 'Montana, EE. UU.', image: '/dinos/fossil_1.webp' },
+      { name: 'MAZA DE LA COLA', code: 'AMNH 5214', location: 'Alberta, Canadá', image: '/dinos/fossil_4.webp' },
+      { name: 'PLACAS DORSALES', code: 'NMC 8880', location: 'Alberta, Canadá', image: '/dinos/fossil_3.webp' },
+      { name: 'ESQUELETO PARCIAL', code: 'AMNH 5241', location: 'Wyoming, EE. UU.', image: '/dinos/fossil_2.webp' },
     ],
     features: [
       { title: 'ARMADURA DORSAL', description: 'Osteodermos macizos fusionados en la piel que le daban una protección similar a la de un tanque.', icon: 'shield' },
@@ -581,6 +581,114 @@ export const dinosaurs: DinosaurDetail[] = [
       { question: '¿Qué comía el Ankylosaurus?', answer: 'Era herbívoro, alimentándose de plantas bajas, arbustos, helechos y frutos caídos.' },
       { question: '¿Cuándo se extinguió el Ankylosaurus?', answer: 'Se extinguió al final del período Cretácico, hace unos 66 millones de años.' },
       { question: '¿Dónde se encontraron sus fósiles?', answer: 'Sus fósiles han sido recolectados en formaciones geológicas de Montana (EE. UU.) y Alberta (Canadá).' }
+    ]
+  },
+  {
+    slug: 'coelophysis',
+    name: 'COELOPHYSIS',
+    scientificName: 'Coelophysis bauri',
+    tagline: 'Uno de los primeros dinosaurios cazadores. Un terópodo ágil y ligero del Triásico que se adaptó perfectamente a los duros desiertos prehistóricos.',
+    heroImage: '/dinos/coelophysis.webp',
+    heroStats: {
+      period: 'Triásico Tardío',
+      habitat: 'Desiertos y llanuras secas',
+      diet: 'Carnívoro',
+      discovered: '1881'
+    },
+    sideStats: [
+      { label: 'NOMBRE SIGNIFICADO', value: '"Forma hueca"' },
+      { label: 'LONGITUD', value: '2.5 - 3 m' },
+      { label: 'ALTURA', value: '1 m' },
+      { label: 'PESO', value: '15 - 20 kg' },
+      { label: 'VELOCIDAD', value: 'Hasta 40 km/h' },
+      { label: 'EXPECTATIVA DE VIDA', value: '10 - 15 años' }
+    ],
+    content: {
+      subtitle: 'SOBRE EL COELOPHYSIS',
+      paragraphs: [
+        'El Coelophysis fue uno de los dinosaurios más antiguos que se conocen, vagando por los desiertos del Triásico Tardío. Su nombre hace referencia a los huesos huecos de sus patas, una característica que le proporcionaba una ligereza excepcional y lo convertía en un corredor sumamente veloz.',
+        'A diferencia de los grandes depredadores que aparecerían millones de años después, el Coelophysis dependía de su velocidad y agilidad para cazar pequeños reptiles y mamíferos incipientes, utilizando sus agudos dientes aserrados para atrapar y sujetar a sus escurridizas presas en un entorno muy competitivo y seco.'
+      ],
+      mapLocation: 'Norteamérica, formaciones del suroeste de EE. UU.'
+    },
+    videoText: 'Los densos yacimientos de fósiles sugieren que estos rápidos depredadores del Triásico pudieron haber vivido y cazado en manadas numerosas.',
+    attributeBars: [
+      { label: 'FUERZA', value: 30 },
+      { label: 'INTELIGENCIA', value: 50 },
+      { label: 'VELOCIDAD', value: 85 },
+      { label: 'AGILIDAD', value: 90 },
+      { label: 'DEFENSA', value: 20 },
+      { label: 'PELIGRO', value: 40 }
+    ],
+    fossils: [
+      { name: 'ESQUELETO COMPLETO', code: 'AMNH 7224', location: 'Ghost Ranch, Nuevo México', image: '/dinos/fossil_3.webp' },
+      { name: 'CRÁNEO INTACTO', code: 'NMMNH P-42200', location: 'Ghost Ranch, Nuevo México', image: '/dinos/fossil_1.webp' }
+    ],
+    features: [
+      { title: 'HUESOS HUECOS', description: 'Sus huesos eran huecos como los de las aves modernas, reduciendo su peso drásticamente.', icon: 'bone' },
+      { title: 'VISIÓN BINOCULAR', description: 'Sus grandes cuencas oculares apuntaban hacia el frente, otorgándole excelente visión tridimensional.', icon: 'scan-face' },
+      { title: 'VELOCISTA', description: 'Patas traseras alargadas perfectamente adaptadas para la carrera sostenida.', icon: 'wind' },
+      { title: 'CAZADOR DE GRUPO', description: 'Acumulaciones de fósiles indican un posible comportamiento gregario.', icon: 'users' }
+    ],
+    era: 'triasico',
+    habitat: 'desierto',
+    faqs: [
+      { question: '¿Cuándo vivió el Coelophysis?', answer: 'Vivió durante el período Triásico Tardío, hace aproximadamente entre 216 y 200 millones de años.' },
+      { question: '¿Por qué es famoso el Coelophysis?', answer: 'Es uno de los primeros dinosaurios mejor documentados gracias al asombroso yacimiento de Ghost Ranch, donde se encontraron cientos de esqueletos juntos.' }
+    ]
+  },
+  {
+    slug: 'carnotaurus',
+    name: 'CARNOTAURUS',
+    scientificName: 'Carnotaurus sastrei',
+    tagline: 'El toro carnívoro del sur. Un depredador del Cretácico Tardío reconocible por sus inusuales cuernos y un cráneo sumamente robusto.',
+    heroImage: '/dinos/carnotaurus.webp',
+    heroStats: {
+      period: 'Cretácico Tardío',
+      habitat: 'Estuarios y planicies',
+      diet: 'Carnívoro',
+      discovered: '1984'
+    },
+    sideStats: [
+      { label: 'NOMBRE SIGNIFICADO', value: '"Toro carnívoro"' },
+      { label: 'LONGITUD', value: '7.5 - 9 m' },
+      { label: 'ALTURA', value: '3 m' },
+      { label: 'PESO', value: '1.3 - 2 toneladas' },
+      { label: 'VELOCIDAD', value: 'Hasta 48 - 56 km/h' },
+      { label: 'EXPECTATIVA DE VIDA', value: '20 - 25 años' }
+    ],
+    content: {
+      subtitle: 'SOBRE EL CARNOTAURUS',
+      paragraphs: [
+        'El Carnotaurus es uno de los terópodos más peculiares jamás descubiertos, habitando la actual Patagonia argentina durante el Cretácico Tardío. Su característica más distintiva son los gruesos cuernos óseos ubicados justo por encima de sus ojos, que le valieron su nombre de "toro carnívoro". Estos cuernos probablemente se utilizaban en exhibiciones o combates rituales entre machos.',
+        'A nivel anatómico, el Carnotaurus presentaba una curiosa combinación: unas patas traseras excepcionalmente musculosas que lo convertían en uno de los grandes terópodos más veloces, contrastadas con unos brazos tan reducidos que eran incluso proporcionalmente más pequeños que los del T-Rex. Aunque forma parte de nuestra exhibición de zonas volcánicas como categoría narrativa, en realidad recorría llanuras y estuarios cálidos, siendo un depredador dominante de la región.'
+      ],
+      mapLocation: 'Patagonia, Sur de Argentina'
+    },
+    videoText: 'El Carnotaurus poseía impresionantes adaptaciones para la velocidad en línea recta, siendo capaz de alcanzar a las presas más veloces del entorno.',
+    attributeBars: [
+      { label: 'FUERZA', value: 75 },
+      { label: 'INTELIGENCIA', value: 65 },
+      { label: 'VELOCIDAD', value: 90 },
+      { label: 'AGILIDAD', value: 60 },
+      { label: 'DEFENSA', value: 50 },
+      { label: 'PELIGRO', value: 85 }
+    ],
+    fossils: [
+      { name: 'CRÁNEO Y CUERNOS', code: 'MACN-CH 894', location: 'Chubut, Argentina', image: '/dinos/fossil_1.webp' },
+      { name: 'IMPRESIÓN DE PIEL', code: 'MACN-CH 894', location: 'Chubut, Argentina', image: '/dinos/fossil_4.webp' }
+    ],
+    features: [
+      { title: 'CUERNOS ÓSEOS', description: 'Dos gruesos cuernos frontales, únicos entre los grandes terópodos conocidos.', icon: 'swords' },
+      { title: 'PIEL CON ESCUDOS', description: 'Conservamos impresiones fósiles que muestran su piel cubierta de escamas cónicas y bultos óseos.', icon: 'shield' },
+      { title: 'VELOCIDAD EXTREMA', description: 'Poderosas patas traseras ancladas a una cola muy rígida le permitían velocidades explosivas.', icon: 'wind' },
+      { title: 'BRAZOS VESTIGIALES', description: 'Brazos diminutos de cuatro dedos que prácticamente no tenían ninguna función.', icon: 'bone' }
+    ],
+    era: 'cretacico',
+    habitat: 'volcan',
+    faqs: [
+      { question: '¿Para qué usaba sus cuernos el Carnotaurus?', answer: 'Se cree que no eran armas para cazar, sino que se usaban para exhibición o para empujarse en combates rituales con otros Carnotaurus.' },
+      { question: '¿Vivía realmente cerca de volcanes?', answer: 'No hay evidencia científica concluyente de ello. En esta exhibición lo hemos asociado a esta categoría narrativa debido a su aspecto, pero se sabe que habitaba en estuarios y zonas de llanura.' }
     ]
   }
 ];

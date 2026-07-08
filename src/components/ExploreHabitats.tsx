@@ -24,7 +24,7 @@ const HABITATS = [
     subtitle: 'Bosques densos y exuberantes, hogar de depredadores feroces y gigantes herbívoros.',
     color: '#4ade80',
     icon: <Leaf size={20} color="#4ade80" />,
-    image: '/habitat_jungle.png',
+    image: '/habitat_jungle.webp',
     stats: [
       { label: 'VEGETACIÓN', value: 'Muy densa', icon: <Leaf size={14} color="#4ade80" /> },
       { label: 'CLIMA', value: 'Cálido y húmedo', icon: <CloudRain size={14} color="#4ade80" /> },
@@ -37,7 +37,7 @@ const HABITATS = [
     subtitle: 'Extensos mares que cubrían gran parte del planeta, dominio de reptiles marinos gigantes.',
     color: '#3b82f6',
     icon: <Waves size={20} color="#3b82f6" />,
-    image: '/habitat_ocean.png',
+    image: '/habitat_ocean.webp',
     stats: [
       { label: 'PROFUNDIDAD', value: 'Variable', icon: <Waves size={14} color="#3b82f6" /> },
       { label: 'CLIMA', value: 'Templado', icon: <Thermometer size={14} color="#3b82f6" /> },
@@ -50,7 +50,7 @@ const HABITATS = [
     subtitle: 'Tierras áridas y vastas, donde la supervivencia dependía de la resistencia y adaptación.',
     color: '#fbbf24',
     icon: <Sun size={20} color="#fbbf24" />,
-    image: '/habitat_desert.png',
+    image: '/habitat_desert.webp',
     stats: [
       { label: 'CLIMA', value: 'Seco y extremo', icon: <Sun size={14} color="#fbbf24" /> },
       { label: 'VEGETACIÓN', value: 'Escasa', icon: <TreePine size={14} color="#fbbf24" /> },
@@ -63,7 +63,7 @@ const HABITATS = [
     subtitle: 'Zonas de intensa actividad volcánica, suelos ricos en minerales y paisajes cambiantes.',
     color: '#ef4444',
     icon: <Mountain size={20} color="#ef4444" />,
-    image: '/habitat_volcano.png',
+    image: '/habitat_volcano.webp',
     stats: [
       { label: 'ACTIVIDAD', value: 'Alta', icon: <Mountain size={14} color="#ef4444" /> },
       { label: 'CLIMA', value: 'Extremo', icon: <ThermometerSun size={14} color="#ef4444" /> },

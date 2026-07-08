@@ -11,7 +11,7 @@ const ERAS = [
     subtitle: 'El comienzo de los dinosaurios',
     color: '#ff6a00',
     icon: <Mountain size={20} color="#ff6a00" />,
-    image: '/triassic.png',
+    image: '/triassic.webp',
     features: [
       { text: 'Primeros dinosaurios', icon: <PawPrint size={14} color="#ff6a00" /> },
       { text: 'Ambiente volcánico', icon: <Mountain size={14} color="#ff6a00" /> },
@@ -26,7 +26,7 @@ const ERAS = [
     subtitle: 'La era de los gigantes',
     color: '#4ade80',
     icon: <Leaf size={20} color="#4ade80" />,
-    image: '/jurassic.png',
+    image: '/jurassic.webp',
     features: [
       { text: 'Dinosaurios colosales', icon: <PawPrint size={14} color="#4ade80" /> },
       { text: 'Primeras aves', icon: <Feather size={14} color="#4ade80" /> },
@@ -41,7 +41,7 @@ const ERAS = [
     subtitle: 'El dominio y la extinción',
     color: '#fbbf24',
     icon: <PawPrint size={20} color="#fbbf24" />,
-    image: '/cretaceous.png',
+    image: '/cretaceous.webp',
     features: [
       { text: 'Grandes depredadores', icon: <Skull size={14} color="#fbbf24" /> },
       { text: 'Dinosaurios con cuernos y armaduras', icon: <Shield size={14} color="#fbbf24" /> },

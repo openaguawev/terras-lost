@@ -14,9 +14,9 @@ export default function Home() {
       <SEO url="https://www.dinorex.org" />
       <Suspense fallback={<div style={{ height: '100vh', background: '#070504' }} />}>
         <Hero />
-        <FeaturedDinosaurs />
-        <ExploreEras />
-        <ExploreHabitats />
+        <div id="dinosaurios"><FeaturedDinosaurs /></div>
+        <div id="eras"><ExploreEras /></div>
+        <div id="habitats"><ExploreHabitats /></div>
         <EarthHistory />
         <CallToAction />
       </Suspense>

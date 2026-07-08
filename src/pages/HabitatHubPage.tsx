@@ -22,7 +22,7 @@ const HABITAT_DATA: Record<string, {
     subtitle: 'Bosques densos y exuberantes',
     description: 'Las selvas prehistóricas del Mesozoico eran mundos húmedos y cálidos que albergaban una densidad colosal de flora, helechos gigantescos y grandes coníferas. Este entorno densamente arbolado proveía abundante follaje para alimentar a gigantescos herbívoros y proporcionaba las mejores áreas de caza y sigilo para los depredadores terrestres más veloces.',
     color: '#4ade80',
-    image: '/habitat_jungle.png',
+    image: '/habitat_jungle.webp',
     icon: Leaf
   },
   'oceano': {
@@ -30,7 +30,7 @@ const HABITAT_DATA: Record<string, {
     subtitle: 'Extensos mares prehistóricos',
     description: 'Gran parte del planeta estaba cubierto por mares interiores y extensos océanos tropicales que albergaban una rica cadena alimenticia. En estas aguas cálidas y profundas, dominaban gigantescos reptiles marinos y peces voladores que libraban batallas por la supervivencia lejos de las costas terrestres.',
     color: '#3b82f6',
-    image: '/habitat_ocean.png',
+    image: '/habitat_ocean.webp',
     icon: Waves
   },
   'desierto': {
@@ -38,7 +38,7 @@ const HABITAT_DATA: Record<string, {
     subtitle: 'Tierras áridas y vastas',
     description: 'Los desiertos del Mesozoico presentaban condiciones climáticas extremas con escasa vegetación y prolongados períodos de sequía. En este entorno inhóspito, solo los dinosaurios más resistentes, ágiles y con adaptaciones corporales específicas lograban sobrevivir, confiando en su astucia y resistencia física.',
     color: '#fbbf24',
-    image: '/habitat_desert.png',
+    image: '/habitat_desert.webp',
     icon: Sun
   },
   'volcan': {
@@ -46,7 +46,7 @@ const HABITAT_DATA: Record<string, {
     subtitle: 'Zonas de intensa actividad geológica',
     description: 'Los paisajes volcánicos presentaban suelos ricos en ceniza y actividad hidrotermal constante. Con una atmósfera densa en gases y temperaturas extremas, estas tierras inestables eran cruzadas temporalmente por especies migratorias resistentes que se adaptaban a las dinámicas geológicas de un planeta en constante transformación.',
     color: '#ef4444',
-    image: '/habitat_volcano.png',
+    image: '/habitat_volcano.webp',
     icon: Mountain
   }
 };
@@ -118,25 +118,36 @@ export default function HabitatHubPage() {
   const HabitatIcon = habitatInfo.icon;
 
   // Generate CollectionPage Schema
-  const schema = {
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "name": `${habitatInfo.title} — DinoRex`,
-    "description": habitatInfo.description,
-    "url": `https://www.dinorex.org/habitats/${habitatKey}`,
-    "about": {
-      "@type": "Thing",
-      "name": `Hábitat ${habitatInfo.title}`
+  const schema = [
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": `${habitatInfo.title} — DinoRex`,
+      "description": habitatInfo.description,
+      "url": `https://www.dinorex.org/habitats/${habitatKey}`,
+      "about": {
+        "@type": "Thing",
+        "name": `Hábitat ${habitatInfo.title}`
+      },
+      "mainEntity": {
+        "@type": "ItemList",
+        "itemListElement": filteredDinos.map((dino, index) => ({
+          "@type": "ListItem",
+          "position": index + 1,
+          "url": `https://www.dinorex.org/criaturas/${dino.slug}`
+        }))
+      }
     },
-    "mainEntity": {
-      "@type": "ItemList",
-      "itemListElement": filteredDinos.map((dino, index) => ({
-        "@type": "ListItem",
-        "position": index + 1,
-        "url": `https://www.dinorex.org/criaturas/${dino.slug}`
-      }))
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.dinorex.org/" },
+        { "@type": "ListItem", "position": 2, "name": "Hábitats", "item": "https://www.dinorex.org/#habitats" },
+        { "@type": "ListItem", "position": 3, "name": habitatInfo.title, "item": `https://www.dinorex.org/habitats/${habitatKey}` }
+      ]
     }
-  };
+  ];
 
   return (
     <div className="hab-hub-container">
@@ -176,7 +187,8 @@ export default function HabitatHubPage() {
         {filteredDinos.length > 0 ? (
           <div ref={gridRef} className="hab-hub-grid">
             {filteredDinos.map(dino => (
-              <Link to={`/criaturas/${dino.slug}`} key={dino.slug} className="hab-dino-card" style={{ backgroundImage: `url(${dino.heroImage})` }}>
+              <Link to={`/criaturas/${dino.slug}`} key={dino.slug} className="hab-dino-card">
+                <img src={dino.heroImage} alt={dino.name} loading="lazy" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 0 }} />
                 <div className="hab-dino-card-overlay"></div>
                 <div className="hab-dino-card-content">
                   <span className="hab-dino-diet" style={{ 

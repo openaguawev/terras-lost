@@ -8,11 +8,7 @@ import {
   Skull, 
   Globe, 
   Clock, 
-  Leaf,
-  Users,
-  Camera,
-  Play,
-  MessageCircle
+  Leaf
 } from 'lucide-react';
 import BlurText from './BlurText';
 import './CallToAction.css';
@@ -20,7 +16,7 @@ import './CallToAction.css';
 export default function CallToAction() {
   return (
     <>
-      <section className="cta-section" style={{ backgroundImage: 'url(/cta_background.png)' }}>
+      <section className="cta-section" style={{ backgroundImage: 'url(/cta_background.webp)' }}>
         <div className="cta-overlay"></div>
         <div className="cta-content">
           <motion.div 
@@ -161,7 +157,7 @@ export default function CallToAction() {
           <div className="footer-left">
             <div className="footer-logo">
               <div className="footer-logo-icon" style={{ padding: 0, border: 'none', background: 'transparent' }}>
-                <img src="/logo.png" alt="Dinorex Logo" width={50} height={50} style={{ width: '50px', height: '50px', borderRadius: '50%' }} />
+                <img src="/logo.webp" alt="Dinorex Logo" width={50} height={50} style={{ width: '50px', height: '50px', borderRadius: '50%' }} />
               </div>
               <div className="footer-logo-text">
                 <h2>DINOREX</h2>
@@ -174,45 +170,14 @@ export default function CallToAction() {
             <div className="footer-column">
               <h4>EXPLORAR</h4>
               <ul>
-                <li>Dinosaurios</li>
-                <li>Hábitats</li>
-                <li>Eras</li>
-              </ul>
-            </div>
-            <div className="footer-column">
-              <h4>APRENDER</h4>
-              <ul>
-                <li>Historia</li>
-                <li>Fósiles</li>
-                <li>Evolución</li>
-              </ul>
-            </div>
-            <div className="footer-column">
-              <h4>RECURSOS</h4>
-              <ul>
-                <li>Guías</li>
-                <li>Documentales</li>
-                <li>Artículos</li>
-              </ul>
-            </div>
-            <div className="footer-column">
-              <h4>NOSOTROS</h4>
-              <ul>
-                <li>Quiénes somos</li>
-                <li>Contacto</li>
-                <li>Prensa</li>
+                <li><a href="/#dinosaurios" style={{ color: 'inherit', textDecoration: 'none' }}>Dinosaurios</a></li>
+                <li><a href="/#habitats" style={{ color: 'inherit', textDecoration: 'none' }}>Hábitats</a></li>
+                <li><a href="/#eras" style={{ color: 'inherit', textDecoration: 'none' }}>Eras</a></li>
               </ul>
             </div>
           </div>
           
           <div className="footer-right">
-            <h4>SÍGUENOS</h4>
-            <div className="footer-social">
-              <a href="#"><Users size={18} /></a>
-              <a href="#"><Camera size={18} /></a>
-              <a href="#"><Play size={18} /></a>
-              <a href="#"><MessageCircle size={18} /></a>
-            </div>
             <p className="footer-copyright">© 2024 Dinorex. Todos los derechos reservados.</p>
           </div>
         </div>
