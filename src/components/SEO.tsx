@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { Helmet } from 'react-helmet-async'
 
 interface SEOProps {
@@ -17,11 +18,20 @@ export default function SEO({
   url = 'https://www.dinorex.org',
   customSchema,
 }: SEOProps) {
+  useEffect(() => {
+    document.title = title
+  }, [title])
+
+  useEffect(() => {
+    const meta = document.querySelector('meta[name="description"]')
+    if (meta) {
+      meta.setAttribute('content', description)
+    }
+  }, [description])
+
   return (
     <Helmet>
       {/* Primary */}
-      <title>{title}</title>
-      <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <meta name="robots" content="index, follow" />
       <meta name="language" content="Spanish" />
