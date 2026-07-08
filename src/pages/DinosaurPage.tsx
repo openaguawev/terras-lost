@@ -41,6 +41,8 @@ const MAP_COORDS: Record<string, { top: string; left: string }> = {
   'argentinosaurus': { top: '78%', left: '33%' },
   'stegosaurus': { top: '33%', left: '21%' },
   'ankylosaurus': { top: '32%', left: '22%' },
+  'coelophysis': { top: '32%', left: '22%' },
+  'carnotaurus': { top: '78%', left: '33%' },
 };
 
 export default function DinosaurPage() {
