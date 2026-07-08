@@ -31,6 +31,18 @@ const IconMap: Record<string, React.ElementType> = {
   'footprints': Footprints,
 };
 
+const MAP_COORDS: Record<string, { top: string; left: string }> = {
+  'tyrannosaurus-rex': { top: '32%', left: '22%' },
+  'velociraptor': { top: '35%', left: '76%' },
+  'triceratops': { top: '32%', left: '24%' },
+  'spinosaurus': { top: '46%', left: '55%' },
+  'brachiosaurus': { top: '33%', left: '21%' },
+  'pteranodon': { top: '34%', left: '23%' },
+  'argentinosaurus': { top: '78%', left: '33%' },
+  'stegosaurus': { top: '33%', left: '21%' },
+  'ankylosaurus': { top: '32%', left: '22%' },
+};
+
 export default function DinosaurPage() {
   const { slug } = useParams();
   const dino = getDinosaurBySlug(slug || '');
@@ -207,7 +219,21 @@ export default function DinosaurPage() {
             
             <div className="dp-map-box">
               <h4 className="dp-map-title">DISTRIBUCIÓN GEOGRÁFICA</h4>
-              <img src="/dinos/map_dark.png" alt="Map" className="dp-map-img" width={400} height={200} />
+              <div className="dp-map-container">
+                <img src="/dinos/map_dark.png" alt="Map" className="dp-map-img" width={400} height={200} />
+                {MAP_COORDS[dino.slug] && (
+                  <div 
+                    className="dp-map-marker"
+                    style={{
+                      top: MAP_COORDS[dino.slug].top,
+                      left: MAP_COORDS[dino.slug].left
+                    }}
+                  >
+                    <div className="dp-map-marker-pulse"></div>
+                    <div className="dp-map-marker-dot"></div>
+                  </div>
+                )}
+              </div>
               <div className="dp-map-location">
                 <MapPin size={14} color="#C9A84C" /> {dino.content.mapLocation}
               </div>
