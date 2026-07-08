@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
   ChevronRight, 
@@ -165,14 +166,13 @@ export default function ExploreHabitats() {
                 ))}
               </motion.div>
               
-              <motion.button 
+              <Link 
+                to={`/habitats/${habitat.id === 'jungle' ? 'jungla' : habitat.id === 'ocean' ? 'oceano' : habitat.id === 'desert' ? 'desierto' : 'volcan'}`}
                 className="habitat-button" 
-                style={{ borderColor: `${habitat.color}40` }}
-                whileHover={{ backgroundColor: `${habitat.color}20`, scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
+                style={{ borderColor: `${habitat.color}40`, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}
               >
                 EXPLORAR HÁBITAT <ChevronRight size={16} color={habitat.color} />
-              </motion.button>
+              </Link>
             </div>
           </motion.div>
         ))}
@@ -220,13 +220,13 @@ export default function ExploreHabitats() {
         </div>
         
         <div className="banner-right">
-          <motion.button 
+          <Link 
+            to="/habitats/jungla"
             className="banner-button"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+            style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}
           >
             EXPLORA TODOS LOS HÁBITATS <ChevronRight size={16} color="#fbbf24" />
-          </motion.button>
+          </Link>
           <span className="banner-btn-hint">Sumérgete en cada entorno prehistórico</span>
         </div>
       </motion.div>

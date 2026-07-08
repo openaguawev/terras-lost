@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ChevronRight, Mountain, Flame, PawPrint, Leaf, Feather, TreePine, Dna, Skull, Shield, Globe } from 'lucide-react';
 import './ExploreEras.css';
@@ -151,14 +152,13 @@ export default function ExploreEras() {
                 ))}
               </motion.ul>
               
-              <motion.button 
+              <Link 
+                to={`/eras/${era.id === 'triassic' ? 'triasico' : era.id === 'jurassic' ? 'jurasico' : 'cretacico'}`}
                 className="era-button" 
-                style={{ borderColor: `${era.color}60` }}
-                whileHover={{ backgroundColor: `${era.color}30`, scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                style={{ borderColor: `${era.color}60`, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}
               >
                 EXPLORAR ERA <ChevronRight size={16} color={era.color} />
-              </motion.button>
+              </Link>
             </div>
           </motion.div>
         ))}

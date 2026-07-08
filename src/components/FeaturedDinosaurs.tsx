@@ -80,8 +80,8 @@ const DINO_DATA = [
     period: 'Cretácico Superior',
     danger: 3,
     category: 'voladores',
-    slug: 'pterodactilo',
-    altText: 'Pterodactylus primer vertebrado volador del Jurásico'
+    slug: 'pteranodon',
+    altText: 'Pteranodon reptil volador del Cretácico'
   },
   {
     id: '07',
@@ -95,6 +95,32 @@ const DINO_DATA = [
     category: 'herbivoros',
     slug: 'stegosaurus',
     altText: 'Stegosaurus dinosaurio acorazado del Jurásico'
+  },
+  {
+    id: '08',
+    name: 'ARGENTINOSAURUS',
+    scientific: 'ARGENTINOSAURUS HUINCULENSIS',
+    image: '/dinos/argentinosaurus_spotlight.png',
+    diet: 'Herbívoro',
+    length: '30-35 m',
+    period: 'Cretácico Superior',
+    danger: 2,
+    category: 'herbivoros',
+    slug: 'argentinosaurus',
+    altText: 'Argentinosaurus el dinosaurio herbívoro terrestre más grande conocido'
+  },
+  {
+    id: '09',
+    name: 'ANKYLOSAURUS',
+    scientific: 'ANKYLOSAURUS MAGNIVENTRIS',
+    image: '/dinos/ankylosaurus_spotlight.png',
+    diet: 'Herbívoro',
+    length: '6-8 m',
+    period: 'Cretácico Superior',
+    danger: 4,
+    category: 'herbivoros',
+    slug: 'ankylosaurus',
+    altText: 'Ankylosaurus el dinosaurio herbívoro acorazado con maza en la cola'
   }
 ];
 

@@ -6,6 +6,7 @@ interface SEOProps {
   keywords?: string
   image?: string
   url?: string
+  customSchema?: Record<string, any> | Record<string, any>[]
 }
 
 export default function SEO({
@@ -14,6 +15,7 @@ export default function SEO({
   keywords = 'dinosaurios, tyrannosaurus rex, velociraptor, brachiosaurus, dinosaurios carnivoros, dinosaurios herbivoros, criaturas prehistoricas, animales extintos',
   image = 'https://www.dinorex.org/og-image.jpg',
   url = 'https://www.dinorex.org',
+  customSchema,
 }: SEOProps) {
   return (
     <Helmet>
@@ -41,21 +43,36 @@ export default function SEO({
       <meta name="twitter:image" content={image} />
 
       {/* Schema.org */}
-      <script type="application/ld+json">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "WebSite",
-          "name": "DinoRex",
-          "url": "https://www.dinorex.org",
-          "description": description,
-          "inLanguage": "es",
-          "potentialAction": {
-            "@type": "SearchAction",
-            "target": "https://www.dinorex.org/buscar?q={search_term_string}",
-            "query-input": "required name=search_term_string"
-          }
-        })}
-      </script>
+      {customSchema ? (
+        Array.isArray(customSchema) ? (
+          customSchema.map((schema, idx) => (
+            <script key={idx} type="application/ld+json">
+              {JSON.stringify(schema)}
+            </script>
+          ))
+        ) : (
+          <script type="application/ld+json">
+            {JSON.stringify(customSchema)}
+          </script>
+        )
+      ) : (
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "DinoRex",
+            "url": "https://www.dinorex.org",
+            "description": description,
+            "inLanguage": "es",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://www.dinorex.org/buscar?q={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          })}
+        </script>
+      )}
     </Helmet>
   )
 }
+

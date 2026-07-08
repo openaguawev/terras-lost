@@ -1,13 +1,13 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   ChevronLeft, Box, Bone, MapPin, Play, ChevronRight,
   Skull, Eye, Wind, TrendingUp, Users, Radio, Brain, Swords, Scissors, Shield,
-  Droplets, Radar, Fish, Thermometer, Heart, MoveUp, Feather, Footprints
+  Droplets, Radar, Fish, Thermometer, Heart, MoveUp, Feather, Footprints, HelpCircle
 } from 'lucide-react';
 import { getDinosaurBySlug } from '../data/dinosaurs';
+import SEO from '../components/SEO';
 import './DinosaurPage.css';
 
 const IconMap: Record<string, React.ElementType> = {
@@ -34,6 +34,11 @@ const IconMap: Record<string, React.ElementType> = {
 export default function DinosaurPage() {
   const { slug } = useParams();
   const dino = getDinosaurBySlug(slug || '');
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
+
+  const toggleFaq = (index: number) => {
+    setOpenFaq(openFaq === index ? null : index);
+  };
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -48,14 +53,56 @@ export default function DinosaurPage() {
     );
   }
 
-  const TABS = ['DESCRIPCIÓN', 'CARACTERÍSTICAS', 'COMPORTAMIENTO', 'FÓSILES', 'CURIOSIDADES'];
+  const TABS = ['DESCRIPCIÓN', 'CARACTERÍSTICAS', 'COMPORTAMIENTO', 'FÓSILES', 'CURIOSIDADES', 'FAQ'];
 
   return (
     <div className="dino-page-container">
-      <Helmet>
-        <title>{dino.name} — DinoRex</title>
-        <meta name="description" content={dino.tagline} />
-      </Helmet>
+      <SEO
+        title={`${dino.name} — DinoRex`}
+        description={dino.tagline}
+        url={`https://www.dinorex.org/criaturas/${dino.slug}`}
+        image={dino.heroImage.startsWith('http') ? dino.heroImage : `https://www.dinorex.org${dino.heroImage}`}
+        customSchema={[
+          {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": `https://www.dinorex.org/criaturas/${dino.slug}`
+            },
+            "headline": `${dino.name} — DinoRex`,
+            "description": dino.tagline,
+            "image": dino.heroImage.startsWith('http') ? dino.heroImage : `https://www.dinorex.org${dino.heroImage}`,
+            "author": {
+              "@type": "Organization",
+              "name": "DinoRex",
+              "url": "https://www.dinorex.org"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "DinoRex",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.dinorex.org/logo.png"
+              }
+            },
+            "datePublished": "2026-01-01T00:00:00Z",
+            "dateModified": "2026-07-08T00:00:00Z"
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": dino.faqs.map(faq => ({
+              "@type": "Question",
+              "name": faq.question,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.answer
+              }
+            }))
+          }
+        ]}
+      />
 
       {/* HEADER / NAV (Simple back button for now, assuming main nav is in App/Layout) */}
       <nav style={{ position: 'absolute', top: 0, left: 0, right: 0, padding: '30px 60px', zIndex: 100 }}>
@@ -130,7 +177,7 @@ export default function DinosaurPage() {
           {TABS.map(tab => (
             <a 
               key={tab} 
-              href={`#${tab.toLowerCase()}`}
+              href={`#${tab.toLowerCase() === 'faq' ? 'faq' : tab.toLowerCase()}`}
               className="dp-tab"
               style={{ textDecoration: 'none' }}
             >
@@ -139,6 +186,7 @@ export default function DinosaurPage() {
               {tab === 'COMPORTAMIENTO' && <Play size={16} />}
               {tab === 'FÓSILES' && <MapPin size={16} />}
               {tab === 'CURIOSIDADES' && <Eye size={16} />}
+              {tab === 'FAQ' && <HelpCircle size={16} />}
               {tab}
             </a>
           ))}
@@ -224,6 +272,39 @@ export default function DinosaurPage() {
             );
           })}
         </div>
+
+        {/* FAQ SECTION */}
+        <div className="dp-faq-section" id="faq">
+          <h3 className="dp-section-title" style={{ textAlign: 'center', marginBottom: '40px' }}>PREGUNTAS FRECUENTES</h3>
+          <div className="dp-faq-list">
+            {dino.faqs.map((faq, idx) => (
+              <div 
+                key={idx} 
+                className={`dp-faq-item ${openFaq === idx ? 'active' : ''}`}
+                onClick={() => toggleFaq(idx)}
+              >
+                <div className="dp-faq-question">
+                  <h4>{faq.question}</h4>
+                  <span className="dp-faq-icon">{openFaq === idx ? '−' : '+'}</span>
+                </div>
+                <AnimatePresence initial={false}>
+                  {openFaq === idx && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: 'auto', opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.25, ease: 'easeInOut' }}
+                      className="dp-faq-answer"
+                    >
+                      <p>{faq.answer}</p>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            ))}
+          </div>
+        </div>
+
 
         {/* FOOTER CTA */}
         <div className="dp-cta-banner">

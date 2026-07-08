@@ -1,4 +1,5 @@
 import { lazy, Suspense } from 'react'
+import SEO from '../components/SEO'
 
 const Hero = lazy(() => import('../components/Hero'))
 const FeaturedDinosaurs = lazy(() => import('../components/FeaturedDinosaurs'))
@@ -10,6 +11,7 @@ const CallToAction = lazy(() => import('../components/CallToAction'))
 export default function Home() {
   return (
     <div id="main-content">
+      <SEO url="https://www.dinorex.org" />
       <Suspense fallback={<div style={{ height: '100vh', background: '#070504' }} />}>
         <Hero />
         <FeaturedDinosaurs />
@@ -21,3 +23,4 @@ export default function Home() {
     </div>
   )
 }
+
