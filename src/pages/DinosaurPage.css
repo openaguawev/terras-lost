@@ -1,6 +1,6 @@
 /* CSS Reset for Page Specific */
 .dino-page-container {
-  background: #070504;
+  background: #140f0c;
   color: #ffffff;
   font-family: 'Inter', sans-serif;
   min-height: 100vh;
@@ -27,14 +27,14 @@
   height: 100%;
   object-fit: cover;
   object-position: right center;
-  filter: brightness(0.65) contrast(1.1);
+  filter: brightness(0.85) contrast(1.05);
 }
 
 .dp-hero-gradient {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to right, rgba(7,5,4,0.95) 0%, rgba(7,5,4,0.4) 50%, rgba(7,5,4,0.8) 100%),
-              linear-gradient(to top, rgba(7,5,4,1) 0%, transparent 30%);
+  background: linear-gradient(to right, rgba(20,15,12,0.75) 0%, rgba(20,15,12,0.2) 50%, rgba(20,15,12,0.65) 100%),
+              linear-gradient(to top, rgba(20,15,12,0.8) 0%, transparent 30%);
   z-index: 1;
 }
 

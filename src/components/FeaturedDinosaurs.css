@@ -1,7 +1,7 @@
 .featured-dinos-section {
-  background-color: #0a0a0a;
+  background-color: #100d0b;
   background-image: 
-    linear-gradient(to bottom, #000000 0%, rgba(10,10,10,0.85) 15%, rgba(10,10,10,0.85) 100%), 
+    linear-gradient(to bottom, #100d0b 0%, rgba(20,17,15,0.7) 15%, rgba(20,17,15,0.7) 100%), 
     url('/dinos/jungle_bg.png');
   background-size: cover;
   background-position: center top;
@@ -155,7 +155,7 @@
 .dino-card-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.2) 100%);
+  background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.1) 100%);
   z-index: 1;
   transition: opacity 0.3s;
 }

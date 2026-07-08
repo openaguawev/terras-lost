@@ -1,5 +1,5 @@
 .hab-hub-container {
-  background: #070504;
+  background: #140f0c;
   color: #ffffff;
   font-family: 'Inter', sans-serif;
   min-height: 100vh;
@@ -48,7 +48,7 @@
 .hab-header-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(7,5,4,0.4) 0%, rgba(7,5,4,0.95) 85%, rgba(7,5,4,1) 100%);
+  background: linear-gradient(to bottom, rgba(20,15,12,0.3) 0%, rgba(20,15,12,0.75) 85%, rgba(20,15,12,0.85) 100%);
   z-index: 1;
 }
 
@@ -158,7 +158,7 @@
 .hab-dino-card-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.6) 45%, rgba(0,0,0,0.2) 100%);
+  background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.45) 45%, rgba(0,0,0,0.15) 100%);
   z-index: 1;
   transition: opacity 0.3s;
 }
