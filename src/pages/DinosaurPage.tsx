@@ -43,6 +43,8 @@ const MAP_COORDS: Record<string, { top: string; left: string }> = {
   'ankylosaurus': { top: '32%', left: '22%' },
   'coelophysis': { top: '32%', left: '22%' },
   'carnotaurus': { top: '78%', left: '33%' },
+  'parasaurolophus': { top: '32%', left: '22%' },
+  'allosaurus': { top: '32%', left: '22%' },
 };
 
 export default function DinosaurPage() {

@@ -4,125 +4,36 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Volume2, ChevronRight, Leaf, Beef, Droplets, Wind, ScanFace, CheckCircle, Bone, Globe2, Dna } from 'lucide-react';
 import './FeaturedDinosaurs.css';
 
-const DINO_DATA = [
-  {
-    id: '01',
-    name: 'T-REX',
-    scientific: 'TIRANOSAURUS REX',
-    image: '/dinos/trex_1779606889463.webp',
-    diet: 'Carnívoro',
-    length: '12-13 m',
-    period: 'Cretácico Superior',
-    danger: 5,
-    category: 'carnivoros',
-    slug: 'tyrannosaurus-rex',
-    altText: 'Tyrannosaurus Rex dinosaurio carnívoro más grande del Cretácico'
-  },
-  {
-    id: '02',
-    name: 'VELOCIRAPTOR',
-    scientific: 'VELOCIRAPTOR MONGOLIENSIS',
-    image: '/dinos/velociraptor_1779606904540.webp',
-    diet: 'Carnívoro',
-    length: '1.8-2.4 m',
-    period: 'Cretácico Superior',
-    danger: 4,
-    category: 'carnivoros',
-    slug: 'velociraptor',
-    altText: 'Velociraptor dinosaurio cazador inteligente del Cretácico'
-  },
-  {
-    id: '03',
-    name: 'TRICERATOPS',
-    scientific: 'TRICERATOPS HORRIDUS',
-    image: '/dinos/triceratops_1779606918531.webp',
-    diet: 'Herbívoro',
-    length: '8-9 m',
-    period: 'Cretácico Superior',
-    danger: 3,
-    category: 'herbivoros',
-    slug: 'triceratops',
-    altText: 'Triceratops dinosaurio con cuernos del Cretácico'
-  },
-  {
-    id: '04',
-    name: 'SPINOSAURUS',
-    scientific: 'SPINOSAURUS AEGYPTIACUS',
-    image: '/dinos/spinosaurus_1779606934087.webp',
-    diet: 'Carnívoro',
-    length: '15-18 m',
-    period: 'Cretácico Inferior',
-    danger: 5,
-    category: 'acuaticos',
-    slug: 'spinosaurus',
-    altText: 'Spinosaurus el depredador semiacuático más grande'
-  },
-  {
-    id: '05',
-    name: 'BRACHIOSAURUS',
-    scientific: 'BRACHIOSAURUS ALTITHORAX',
-    image: '/dinos/brachiosaurus_1779606953114.webp',
-    diet: 'Herbívoro',
-    length: '22-26 m',
-    period: 'Jurásico Superior',
-    danger: 2,
-    category: 'herbivoros',
-    slug: 'brachiosaurus',
-    altText: 'Brachiosaurus dinosaurio de cuello largo del Jurásico'
-  },
-  {
-    id: '06',
-    name: 'PTERANODON',
-    scientific: 'PTERANODON LONGICEPS',
-    image: '/dinos/pteranodon_1779606968978.webp',
-    diet: 'Carnívoro',
-    length: '6-8 m',
-    period: 'Cretácico Superior',
-    danger: 3,
-    category: 'voladores',
-    slug: 'pteranodon',
-    altText: 'Pteranodon reptil volador del Cretácico'
-  },
-  {
-    id: '07',
-    name: 'STEGOSAURUS',
-    scientific: 'STEGOSAURUS STENOPS',
-    image: '/dinos/stegosaurus_1779606982968.webp',
-    diet: 'Herbívoro',
-    length: '7-9 m',
-    period: 'Jurásico Superior',
-    danger: 3,
-    category: 'herbivoros',
-    slug: 'stegosaurus',
-    altText: 'Stegosaurus dinosaurio acorazado del Jurásico'
-  },
-  {
-    id: '08',
-    name: 'ARGENTINOSAURUS',
-    scientific: 'ARGENTINOSAURUS HUINCULENSIS',
-    image: '/dinos/argentinosaurus_spotlight.webp',
-    diet: 'Herbívoro',
-    length: '30-35 m',
-    period: 'Cretácico Superior',
-    danger: 2,
-    category: 'herbivoros',
-    slug: 'argentinosaurus',
-    altText: 'Argentinosaurus el dinosaurio herbívoro terrestre más grande conocido'
-  },
-  {
-    id: '09',
-    name: 'ANKYLOSAURUS',
-    scientific: 'ANKYLOSAURUS MAGNIVENTRIS',
-    image: '/dinos/ankylosaurus_spotlight.webp',
-    diet: 'Herbívoro',
-    length: '6-8 m',
-    period: 'Cretácico Superior',
-    danger: 4,
-    category: 'herbivoros',
-    slug: 'ankylosaurus',
-    altText: 'Ankylosaurus el dinosaurio herbívoro acorazado con maza en la cola'
+import { dinosaurs } from '../data/dinosaurs';
+
+const DINO_DATA = dinosaurs.map((d, index) => {
+  const dangerBar = d.attributeBars.find(b => b.label === 'PELIGRO');
+  const dangerValue = dangerBar ? Math.ceil(dangerBar.value / 20) : 3;
+
+  let category = 'herbivoros';
+  if (d.heroStats.diet === 'Carnívoro') {
+    category = 'carnivoros';
   }
-];
+  // Casos especiales basados en el slug para mantener las categorías del diseño original
+  if (d.slug === 'spinosaurus') category = 'acuaticos';
+  if (d.slug === 'pteranodon') category = 'voladores';
+
+  const lengthStat = d.sideStats.find(s => s.label === 'LONGITUD');
+
+  return {
+    id: (index + 1).toString().padStart(2, '0'),
+    name: d.name,
+    scientific: d.scientificName.toUpperCase(),
+    image: d.heroImage,
+    diet: d.heroStats.diet,
+    length: lengthStat ? lengthStat.value : 'Desconocida',
+    period: d.heroStats.period,
+    danger: dangerValue,
+    category,
+    slug: d.slug,
+    altText: d.name + ' - ' + d.heroStats.period
+  };
+});
 
 const CATEGORIES = [
   { id: 'todos', label: 'TODOS', icon: <ScanFace size={16} /> },

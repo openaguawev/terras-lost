@@ -690,6 +690,114 @@ export const dinosaurs: DinosaurDetail[] = [
       { question: '¿Para qué usaba sus cuernos el Carnotaurus?', answer: 'Se cree que no eran armas para cazar, sino que se usaban para exhibición o para empujarse en combates rituales con otros Carnotaurus.' },
       { question: '¿Vivía realmente cerca de volcanes?', answer: 'No hay evidencia científica concluyente de ello. En esta exhibición lo hemos asociado a esta categoría narrativa debido a su aspecto, pero se sabe que habitaba en estuarios y zonas de llanura.' }
     ]
+  },
+  {
+    slug: 'parasaurolophus',
+    name: 'PARASAUROLOPHUS',
+    scientificName: 'Parasaurolophus walkeri',
+    tagline: 'El hadrosaurio de la cresta resonante. Un majestuoso herbívoro del Cretácico reconocible por su largo tubo óseo craneal, utilizado para comunicarse a grandes distancias.',
+    heroImage: '/dinos/parasaurolophus.webp',
+    heroStats: {
+      period: 'Cretácico Superior',
+      habitat: 'Llanuras y bosques',
+      diet: 'Herbívoro',
+      discovered: '1920'
+    },
+    sideStats: [
+      { label: 'NOMBRE SIGNIFICADO', value: '"Cercano al lagarto crestado"' },
+      { label: 'LONGITUD', value: '9.5 - 10 m' },
+      { label: 'ALTURA', value: '4 - 5 m' },
+      { label: 'PESO', value: '2.5 - 3 toneladas' },
+      { label: 'VELOCIDAD', value: 'Hasta 40 km/h' },
+      { label: 'EXPECTATIVA DE VIDA', value: '20 - 25 años' }
+    ],
+    content: {
+      subtitle: 'SOBRE EL PARASAUROLOPHUS',
+      paragraphs: [
+        'El Parasaurolophus es uno de los dinosaurios más inconfundibles gracias a su espectacular cresta tubular, que se proyectaba hacia atrás desde su cráneo. Esta estructura no solo servía como atractivo visual, sino que actuaba como una cámara de resonancia acústica, permitiéndole emitir sonidos profundos, similares a un trombón, para comunicarse con su manada a través de kilómetros de densos bosques.',
+        'Como hadrosaurio o dinosaurio "pico de pato", poseía un pico córneo sin dientes en la parte frontal y cientos de dientes trituradores en las mejillas, perfectos para masticar vegetación dura como agujas de pino y ramas. Caminaba habitualmente sobre cuatro patas para pastar pacíficamente, pero era capaz de erguirse y correr sobre dos patas para huir velozmente de depredadores como el T-Rex o el Albertosaurus.'
+      ],
+      mapLocation: 'Norteamérica, formaciones de Alberta y Nuevo México'
+    },
+    videoText: 'Los sonidos producidos por la cresta del Parasaurolophus podrían haber variado de tono según el tamaño y la edad del individuo.',
+    attributeBars: [
+      { label: 'FUERZA', value: 45 },
+      { label: 'INTELIGENCIA', value: 60 },
+      { label: 'VELOCIDAD', value: 55 },
+      { label: 'AGILIDAD', value: 40 },
+      { label: 'DEFENSA', value: 30 },
+      { label: 'PELIGRO', value: 20 }
+    ],
+    fossils: [
+      { name: 'ESQUELETO PARCIAL', code: 'ROM 768', location: 'Alberta, Canadá', image: '/dinos/fossil_3.webp' },
+      { name: 'CRÁNEO COMPLETO', code: 'NMMNH P-25100', location: 'Nuevo México, EE. UU.', image: '/dinos/fossil_1.webp' }
+    ],
+    features: [
+      { title: 'CRESTA RESONANTE', description: 'Una cámara acústica tubular conectada a sus conductos nasales para comunicación de largo alcance.', icon: 'bone' },
+      { title: 'PICO DE PATO', description: 'Mandíbula adaptada para arrancar vegetación gruesa y hojas de los árboles.', icon: 'leaf' },
+      { title: 'BÍPEDO FACULTATIVO', description: 'Podía correr en dos patas para aumentar su velocidad al huir de depredadores.', icon: 'footprints' },
+      { title: 'BATERÍAS DENTALES', description: 'Cientos de dientes compactados en sus mejillas para masticación continua.', icon: 'shield' }
+    ],
+    era: 'cretacico',
+    habitat: 'jungla',
+    faqs: [
+      { question: '¿Para qué servía su gran cresta?', answer: 'La teoría más aceptada es que funcionaba como una cámara de resonancia para emitir llamadas graves, además de un distintivo visual para reconocimiento entre individuos.' },
+      { question: '¿El Parasaurolophus era acuático?', answer: 'Durante mucho tiempo se creyó erróneamente que usaba su cresta como esnórquel, pero hoy se sabe que era un animal completamente terrestre adaptado a ecosistemas boscosos.' }
+    ]
+  },
+  {
+    slug: 'allosaurus',
+    name: 'ALLOSAURUS',
+    scientificName: 'Allosaurus fragilis',
+    tagline: 'El león del Jurásico. Un depredador ápice dominante, rápido y letal que aterrorizó las llanuras prehistóricas millones de años antes de la llegada del T-Rex.',
+    heroImage: '/dinos/allosaurus.webp',
+    heroStats: {
+      period: 'Jurásico Superior',
+      habitat: 'Llanuras semiáridas',
+      diet: 'Carnívoro',
+      discovered: '1877'
+    },
+    sideStats: [
+      { label: 'NOMBRE SIGNIFICADO', value: '"Lagarto diferente"' },
+      { label: 'LONGITUD', value: '8.5 - 9.5 m' },
+      { label: 'ALTURA', value: '3 m' },
+      { label: 'PESO', value: '1.5 - 2 toneladas' },
+      { label: 'VELOCIDAD', value: 'Hasta 35 km/h' },
+      { label: 'EXPECTATIVA DE VIDA', value: '25 - 28 años' }
+    ],
+    content: {
+      subtitle: 'SOBRE EL ALLOSAURUS',
+      paragraphs: [
+        'El Allosaurus reinó indiscutiblemente como el depredador dominante del período Jurásico Superior en América del Norte. Con un cuerpo más ligero y esbelto que el posterior T-Rex, el Allosaurus dependía de emboscadas y ataques rápidos para abatir enormes saurópodos o esquivar las mortíferas púas de los estegosaurios. Sus brazos, provistos de tres formidables garras, eran proporcionalmente más grandes y funcionales que los de muchos grandes terópodos, lo que le otorgaba una ventaja letal en el combate cuerpo a cuerpo.',
+        'Curiosamente, su fuerza de mordida era más débil de lo que su tamaño sugeriría. Sin embargo, su cráneo podía soportar inmensas presiones; los paleontólogos teorizan que usaba su mandíbula superior como un hacha, dejándola caer con tremenda fuerza muscular desde el cuello para infligir daños devastadores y desangrar a sus presas masivas.'
+      ],
+      mapLocation: 'Norteamérica, Formación Morrison (Estados Unidos)'
+    },
+    videoText: 'Su amplio rango de apertura mandibular le permitía asestar ataques con la mandíbula superior como si fuera un hacha dentada.',
+    attributeBars: [
+      { label: 'FUERZA', value: 80 },
+      { label: 'INTELIGENCIA', value: 65 },
+      { label: 'VELOCIDAD', value: 75 },
+      { label: 'AGILIDAD', value: 70 },
+      { label: 'DEFENSA', value: 50 },
+      { label: 'PELIGRO', value: 90 }
+    ],
+    fossils: [
+      { name: 'ESQUELETO "BIG AL"', code: 'MOR 693', location: 'Wyoming, EE. UU.', image: '/dinos/fossil_3.webp' },
+      { name: 'CRÁNEO INTACTO', code: 'UUVP', location: 'Utah, EE. UU.', image: '/dinos/fossil_1.webp' }
+    ],
+    features: [
+      { title: 'GARRAS TRIPLES', description: 'Manos grandes con tres garras afiladas en cada una, ideales para agarrar presas grandes.', icon: 'swords' },
+      { title: 'CRÁNEO LIGERO', description: 'Un cráneo con muchas cavidades para reducir su peso, permitiendo movimientos rápidos de cuello.', icon: 'skull' },
+      { title: 'ATAQUE DE HACHA', description: 'Fuertes músculos en el cuello que le permitían golpear con su mandíbula superior abierta de par en par.', icon: 'wind' },
+      { title: 'CAZADOR DE MANADA', description: 'Evidencia fósil sugiere posibles agrupamientos para acorralar a grandes saurópodos herbívoros.', icon: 'scan-face' }
+    ],
+    era: 'jurasico',
+    habitat: 'desierto',
+    faqs: [
+      { question: '¿Quién ganaría, un T-Rex o un Allosaurus?', answer: 'Estos animales nunca se encontraron; el Allosaurus vivió y se extinguió millones de años antes de que el T-Rex evolucionara. Además, el T-Rex era sustancialmente más grande y fuerte.' },
+      { question: '¿Por qué se llama lagarto diferente?', answer: 'El término "Allosaurus" se deriva de la extraña forma de sus vértebras cóncavas, que eran "diferentes" de cualquier otro dinosaurio conocido en el momento de su descubrimiento en 1877.' }
+    ]
   }
 ];
 

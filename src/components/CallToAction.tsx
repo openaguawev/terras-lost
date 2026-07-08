@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { 
   ChevronRight, 
   Compass, 
@@ -8,7 +9,11 @@ import {
   Skull, 
   Globe, 
   Clock, 
-  Leaf
+  Leaf,
+  Users,
+  Camera,
+  Play,
+  MessageCircle
 } from 'lucide-react';
 import BlurText from './BlurText';
 import './CallToAction.css';
@@ -170,14 +175,45 @@ export default function CallToAction() {
             <div className="footer-column">
               <h4>EXPLORAR</h4>
               <ul>
-                <li><a href="/#dinosaurios" style={{ color: 'inherit', textDecoration: 'none' }}>Dinosaurios</a></li>
-                <li><a href="/#habitats" style={{ color: 'inherit', textDecoration: 'none' }}>Hábitats</a></li>
-                <li><a href="/#eras" style={{ color: 'inherit', textDecoration: 'none' }}>Eras</a></li>
+                <li><Link to="/#dinosaurios" style={{ color: 'inherit', textDecoration: 'none' }}>Dinosaurios</Link></li>
+                <li><Link to="/#habitats" style={{ color: 'inherit', textDecoration: 'none' }}>Hábitats</Link></li>
+                <li><Link to="/#eras" style={{ color: 'inherit', textDecoration: 'none' }}>Eras</Link></li>
+              </ul>
+            </div>
+            <div className="footer-column">
+              <h4>APRENDER</h4>
+              <ul>
+                <li><Link to="/" style={{ color: 'inherit', textDecoration: 'none' }}>Historia</Link></li>
+                <li><Link to="/#dinosaurios" style={{ color: 'inherit', textDecoration: 'none' }}>Fósiles</Link></li>
+                <li><Link to="/" style={{ color: 'inherit', textDecoration: 'none' }}>Evolución</Link></li>
+              </ul>
+            </div>
+            <div className="footer-column">
+              <h4>RECURSOS</h4>
+              <ul>
+                <li><Link to="/" style={{ color: 'inherit', textDecoration: 'none' }}>Guías</Link></li>
+                <li><Link to="/" style={{ color: 'inherit', textDecoration: 'none' }}>Documentales</Link></li>
+                <li><Link to="/" style={{ color: 'inherit', textDecoration: 'none' }}>Artículos</Link></li>
+              </ul>
+            </div>
+            <div className="footer-column">
+              <h4>NOSOTROS</h4>
+              <ul>
+                <li><Link to="/" style={{ color: 'inherit', textDecoration: 'none' }}>Quiénes somos</Link></li>
+                <li><Link to="/" style={{ color: 'inherit', textDecoration: 'none' }}>Contacto</Link></li>
+                <li><Link to="/" style={{ color: 'inherit', textDecoration: 'none' }}>Prensa</Link></li>
               </ul>
             </div>
           </div>
           
           <div className="footer-right">
+            <h4>SÍGUENOS</h4>
+            <div className="footer-social">
+              <Link to="/"><Users size={18} /></Link>
+              <Link to="/"><Camera size={18} /></Link>
+              <Link to="/"><Play size={18} /></Link>
+              <Link to="/"><MessageCircle size={18} /></Link>
+            </div>
             <p className="footer-copyright">© 2024 Dinorex. Todos los derechos reservados.</p>
           </div>
         </div>
