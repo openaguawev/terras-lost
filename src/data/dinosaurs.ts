@@ -118,11 +118,11 @@ export const dinosaurs: DinosaurDetail[] = [
     content: {
       subtitle: 'EL COLOSO QUE SACUDIÓ LA PATAGONIA',
       paragraphs: [
-        'El Argentinosaurus huinculensis representa el cenit del gigantismo terrestre en la historia de nuestro planeta. Descubierto en 1987 por el poblador Guillermo Salgado en las inmediaciones de Plaza Huincul (provincia del Neuquén, Argentina) y descrito formalmente en 1993 por los legendarios paleontólogos argentinos José Bonaparte y Rodolfo Coria, este titanosaurio redefinió los límites biológicos conocidos sobre el peso y tamaño que un vertebrado puede alcanzar.',
+        'El Argentinosaurus huinculensis representa el cenit del gigantismo terrestre en la historia de nuestro planeta. El primer fósil fue reportado en 1987 por Guillermo Heredia, puestero de la estancia "Las Overas" en las inmediaciones de Plaza Huincul (provincia del Neuquén, Argentina), quien dio aviso a los investigadores. La posterior excavación y descripción científica formal fue realizada en 1993 por los célebres paleontólogos argentinos José Bonaparte y Rodolfo Coria en la revista Ameghiniana, redefiniendo los límites biológicos conocidos sobre el peso y tamaño de los vertebrados terrestres.',
         'Debido a su colosal masa corporal, estimada de forma conservadora entre 70 y 90 toneladas métricas (el equivalente al peso de más de una docena de elefantes adultos), el Argentinosaurus requería extremidades columnares extraordinariamente gruesas y rectas, actuando como auténticos pilares biomecánicos capaces de disipar la brutal presión gravitatoria a cada paso lento y medido.',
         'Sus dimensiones eran asombrosas: tan solo una de sus vértebras dorsales recuperadas (el ejemplar holotipo MCF-PVPH-1) supera los 1.59 metros de altura por 1.29 metros de ancho. Para aligerar esta monumental estructura sin comprometer su resistencia de carga, sus huesos contaban con complejas cavidades neumáticas internas intercomunicadas con sacos aéreos pulmonares, un diseño evolutivo similar al que poseen las aves modernas.',
         'Para sostener su descomunal masa metabólica, un Argentinosaurus adulto debía consumir toneladas de vegetación cada semana. Sus dientes en forma de lápiz estaban diseñados no para masticar, sino para deshojar incansablemente ramas enteras de gigantescas coníferas, cícadas y helechos del Cretácico, confiando la digestión a gigantescos estómagos con gastrolitos (piedras estomacales de molienda).',
-        'El debate paleontológico moderno suele contrastar al Argentinosaurus con su pariente patagónico posterior, el Patagotitan mayorum. Mientras que el Patagotitan ostenta el récord del esqueleto más completo jamás hallado (+84% de huesos recuperados) y mayor longitud total (~37 m), las vértebras del Argentinosaurus son sustancialmente más anchas y robustas, indicando que el coloso de Neuquén probablemente retiene el récord de la mayor masa y volumen corporal total.'
+        'El debate paleontológico moderno suele contrastar al Argentinosaurus con su pariente patagónico posterior, el Patagotitan mayorum. Es crucial separar dos conceptos: por un lado, Patagotitan es indiscutiblemente el titanosaurio gigante que poseemos más completo y mejor estudiado (+84% de huesos recuperados de múltiples ejemplares); por otro lado, cuál era físicamente más grande sigue siendo un debate científico abierto. Investigadores como Gregory S. Paul, Mickey Mortimer y análisis del equipo de SV-POW han demostrado que, al comparar huesos homólogos como el ancho de las vértebras dorsales y la sección de los fémures, Argentinosaurus es igual o mayor en masa corporal (70-90 t frente a las 44-77 t estimadas para Patagotitan según el método empleado).'
       ],
       mapLocation: 'Plaza Huincul, Neuquén, Argentina'
     },
@@ -151,8 +151,8 @@ export const dinosaurs: DinosaurDetail[] = [
     habitat: 'jungla',
     faqs: [
       { question: '¿Cuánto medía y pesaba el Argentinosaurus?', answer: 'El Argentinosaurus medía entre 30 y 35 metros de longitud total y alcanzaba un peso estimado entre 70 y 90 toneladas métricas, con una altura de hombros de unos 4.5 metros y hasta 18 metros con el cuello erguido.' },
-      { question: '¿Quién descubrió el Argentinosaurus y dónde?', answer: 'Fue descubierto en 1987 por el poblador Guillermo Salgado en su campo cerca de Plaza Huincul, provincia del Neuquén, Argentina. Fue extraído por el Museo Carmen Funes y descrito en 1993 por los paleontólogos José Bonaparte y Rodolfo Coria.' },
-      { question: '¿Quién fue más grande, Argentinosaurus o Patagotitan?', answer: 'Patagotitan mayorum es más largo (~37 m) y posee el registro fósil más completo (+84% del esqueleto). Sin embargo, las vértebras del Argentinosaurus son proporcionalmente más masivas y anchas, por lo que muchos paleontólogos estiman que Argentinosaurus pudo haber alcanzado un peso superior (hasta 90 toneladas frente a las 70-77 de Patagotitan).' },
+      { question: '¿Quién descubrió el Argentinosaurus y dónde?', answer: 'El hallazgo fue reportado en 1987 por Guillermo Heredia, puestero de la estancia "Las Overas" cerca de Plaza Huincul (provincia del Neuquén, Argentina), quien avisó a los especialistas. El fósil fue extraído por el Museo Carmen Funes y descrito científicamente en 1993 por los paleontólogos José Bonaparte y Rodolfo Coria en la revista Ameghiniana.' },
+      { question: '¿Quién fue más grande, Argentinosaurus o Patagotitan?', answer: 'Es un debate científico aún no resuelto. Patagotitan es el titanosaurio gigante más completo y mejor documentado (+84% del esqueleto recuperado). Sin embargo, al contrastar huesos homólogos (como el diámetro vertebral y el perímetro del fémur), paleontólogos como Gregory Paul y análisis de SV-POW destacan que Argentinosaurus presenta una estructura igual o más masiva, con estimados de peso de 70 a 90 toneladas frente al rango de 44 a 77 toneladas de Patagotitan.' },
       { question: '¿Qué comía el Argentinosaurus y cuánto al día?', answer: 'Era estrictamente herbívoro. Se estima que consumía entre 500 y 1.000 kilogramos de vegetación al día (coníferas, cícadas y palmeras primitivas), ingiriendo follaje sin masticar y procesándolo en su inmenso tracto digestivo con ayuda de gastrolitos.' },
       { question: '¿Tenía depredadores el Argentinosaurus?', answer: 'Un adulto sano era invulnerable a cualquier cazador solitario. No obstante, las crías y juveniles eran presa habitual de terópodos gigantescos contemporáneos como el Mapusaurus roseae, que según fósiles hallados en camas de huesos, cazaba en jaurías coordinadas.' },
       { question: '¿Dónde se exhiben los fósiles originales del Argentinosaurus?', answer: 'Los fósiles originales del holotipo se conservan y exhiben en el Museo Municipal Carmen Funes de Plaza Huincul (Neuquén, Argentina), donde también se encuentra una reconstrucción a escala real de su esqueleto completo.' }
@@ -225,7 +225,7 @@ export const dinosaurs: DinosaurDetail[] = [
     slug: 'patagotitan',
     name: 'PATAGOTITAN',
     scientificName: 'Patagotitan mayorum',
-    tagline: 'El titán de la Patagonia. El dinosaurio más grande del que se tiene evidencia fósil confirmada, un colosal saurópodo de 37 metros y más de 70 toneladas hallado en Chubut, Argentina.',
+    tagline: 'El titán de la Patagonia. El titanosaurio gigante más completo jamás descubierto (+84% de esqueleto), con un rango de 31 a 37 metros de longitud y de 44 a 77 toneladas de masa corporal según el método de cálculo empleado.',
     heroImage: '/dinos/patagotitan.webp',
     heroStats: {
       period: 'Cretácico Medio (Albiense-Cenomaniense)',
@@ -235,24 +235,24 @@ export const dinosaurs: DinosaurDetail[] = [
     },
     sideStats: [
       { label: 'NOMBRE SIGNIFICADO', value: '"Titán de la Patagonia de la familia Mayo"' },
-      { label: 'LONGITUD', value: '37 m (121 pies)' },
+      { label: 'LONGITUD', value: '31 - 37 m (según estudio)' },
       { label: 'ALTURA', value: '8 m al hombro (~15 m erguido)' },
-      { label: 'PESO', value: '70 - 77 toneladas' },
+      { label: 'PESO', value: '44 - 77 t (según método 3D o alométrico)' },
       { label: 'VELOCIDAD', value: 'Hasta 12 - 15 km/h' },
       { label: 'EXPECTATIVA DE VIDA', value: '50 - 70 años' }
     ],
     content: {
-      subtitle: 'EL MAYOR GIGANTE TERRESTRE CONFIRMADO',
+      subtitle: 'EL TITANOSAURIO MÁS COMPLETO DEL MUNDO',
       paragraphs: [
-        'El Patagotitan mayorum representa el descubrimiento paleontológico más asombroso del siglo XXI en cuanto a gigantismo biológico. Descubierto en 2012 en la Estancia La Flecha, provincia del Chubut (Patagonia Argentina), y descrito formalmente en 2017 por José Luis Carballido, Diego Pol y colaboradores del Museo Egidio Feruglio (MEF), este titanosaurio deslumbró al mundo por su escala casi inverosímil.',
-        'A diferencia de otros saurópodos gigantes cuyos restos son sumamente escasos y fragmentarios, del Patagotitan se recuperaron más de 150 huesos pertenecientes al menos a seis individuos adultos jóvenes. Esto permitió a los científicos reconstruir más del 84% de su anatomía esquelética con precisión milimétrica, confirmando su estatus indiscutible como el animal terrestre más masivo y largo con fósiles verificables.',
-        'Con unos 37 metros de largo desde la cabeza hasta la punta de la cola y un peso estimado de entre 70 y 77 toneladas (equivalente a 14 elefantes africanos o más de 10 T-Rex adultos), sus extremidades delanteras y traseras eran auténticos pilares óseos diseñados para disipar toneladas de presión gravitatoria sobre el suelo húmedo de los valles fluviales del Cretácico.',
+        'El Patagotitan mayorum representa el descubrimiento paleontológico más asombroso del siglo XXI en cuanto a gigantismo biológico. Descubierto en 2012 en la Estancia La Flecha, provincia del Chubut (Patagonia Argentina), y descrito formalmente en 2017 por José Luis Carballido, Diego Pol y colaboradores del Museo Egidio Feruglio (MEF), este titanosaurio deslumbró al mundo por su escala colosal y su extraordinario estado de conservación.',
+        'A diferencia de otros saurópodos colosales cuyos restos son sumamente escasos y fragmentarios, del Patagotitan se recuperaron más de 150 huesos pertenecientes al menos a seis individuos adultos jóvenes en el mismo yacimiento. Esto permitió a los científicos reconstruir con certeza anatómica más del 84% de su estructura esquelética, convirtiéndolo en el titanosaurio gigante mejor documentado por la ciencia.',
+        'Las dimensiones estimadas para Patagotitan presentan rangos según el enfoque de estudio: su longitud total se sitúa entre 31 y 37 metros, mientras que su masa corporal oscila entre 44 y 77 toneladas métricas. Los modelos volumétricos tridimensionales (3D) sugieren valores en torno a 44-55 toneladas, mientras que las ecuaciones alométricas basadas en la circunferencia combinada del fémur y el húmero alcanzan de 70 a 77 toneladas.',
         'Para sostener un cuerpo tan monumental sin colapsar por su propio peso, la evolución dotó a las vértebras dorsales y cervicales del Patagotitan de intrincados sacos aéreos neumáticos similares a los de las aves actuales. Estas cavidades huecas aligeraban drásticamente su esqueleto sin restarle resistencia biomecánica, permitiéndole erguir un cuello de más de 12 metros de longitud para alimentarse en las copas de coníferas primitivas.',
         'El yacimiento donde fueron hallados los restos indica que estos animales murieron en tres momentos distintos pero en el mismo sitio, lo que sugiere que el Patagotitan tenía comportamientos gregarios y regresaba periódicamente a lagunas y oasis fluviales durante temporadas de sequía en la Patagonia prehistórica.'
       ],
       mapLocation: 'Chubut, Patagonia, Argentina'
     },
-    videoText: 'Observa la majestuosidad monumental del Patagotitan mayorum, el titanosaurio más grande confirmado de la historia.',
+    videoText: 'Observa la majestuosidad monumental del Patagotitan mayorum, el titanosaurio gigante más completo y estudiado de la historia.',
     attributeBars: [
       { label: 'TAMAÑO', value: 10 },
       { label: 'DEFENSA', value: 10 },
@@ -262,24 +262,24 @@ export const dinosaurs: DinosaurDetail[] = [
       { label: 'RESISTENCIA', value: 10 }
     ],
     fossils: [
-      { name: 'FÉMUR DE 2.4 METROS', code: 'MPEF-PV 3400/27', location: 'Trelew, Chubut, Argentina', image: '/dinos/fossil_2.webp' },
-      { name: 'VÉRTEBRA DORSAL GIGANTE', code: 'MPEF-PV 3400/2', location: 'Trelew, Chubut, Argentina', image: '/dinos/fossil_3.webp' },
-      { name: 'HÚMERO MASIVO', code: 'MPEF-PV 3400/18', location: 'Trelew, Chubut, Argentina', image: '/dinos/fossil_1.webp' },
+      { name: 'FÉMUR DE 2.4 METROS', code: 'MPEF-PV 3400/27 (serie del ejemplar holotipo)', location: 'Trelew, Chubut, Argentina', image: '/dinos/fossil_2.webp' },
+      { name: 'VÉRTEBRA DORSAL GIGANTE', code: 'MPEF-PV 3400/2 (serie del ejemplar holotipo)', location: 'Trelew, Chubut, Argentina', image: '/dinos/fossil_3.webp' },
+      { name: 'HÚMERO MASIVO', code: 'MPEF-PV 3400/18 (serie del ejemplar holotipo)', location: 'Trelew, Chubut, Argentina', image: '/dinos/fossil_1.webp' },
       { name: 'ESQUELETO COMPLETO MONTADO', code: 'MEF / AMNH Réplica', location: 'Museo Paleontológico Egidio Feruglio', image: '/dinos/fossil_4.webp' }
     ],
     features: [
-      { title: 'EL MAYOR CONFIRMADO', description: 'El titanosaurio más grande con más del 80% de su estructura esquelética verificada por la ciencia.', icon: 'move-up' },
+      { title: 'EL MÁS COMPLETO', description: 'El titanosaurio colosal con más del 84% de su estructura esquelética verificada por la ciencia.', icon: 'move-up' },
       { title: 'CUELLO DE 12 METROS', description: 'Un cuello colosal que le permitía pastar copas de árboles a alturas inalcanzables para otros herbívoros.', icon: 'move-up' },
       { title: 'HUESOS NEUMÁTICOS', description: 'Vértebras llenas de cámaras de aire conectadas a sacos pulmonares para reducir su masa.', icon: 'wind' },
-      { title: 'PILAR COLUMNARES', description: 'Patas cilíndricas macizas diseñadas biomecánicamente para soportar más de 70 toneladas de peso.', icon: 'shield' }
+      { title: 'PILARES COLUMNARES', description: 'Patas cilíndricas macizas diseñadas biomecánicamente para soportar entre 44 y 77 toneladas de masa.', icon: 'shield' }
     ],
     era: 'cretacico',
     habitat: 'jungla',
     faqs: [
-      { question: '¿Cuánto medía y pesaba el Patagotitan mayorum?', answer: 'El Patagotitan medía aproximadamente 37 metros de largo y pesaba entre 70 y 77 toneladas, con una altura de unos 8 metros hasta la cruz y cerca de 15 metros cuando levantaba el cuello.' },
-      { question: '¿Dónde y cuándo fue descubierto el Patagotitan?', answer: 'Fue descubierto en 2012 por el peón rural Aurelio Hernández en la Estancia La Flecha, cerca de Las Plumas en la provincia del Chubut, Argentina. Fue excavado por el MEF y descrito en 2017.' },
-      { question: '¿Quién era más grande: Argentinosaurus o Patagotitan?', answer: 'Patagotitan es el más largo y el más completo conocido (con más del 84% de huesos encontrados). Argentinosaurus pudo haber sido ligeramente más pesado (estimado hasta 80-90 t según algunos fémures y vértebras), pero sus restos son mucho más fragmentarios.' },
-      { question: '¿Qué comía el Patagotitan?', answer: 'Era estrictamente herbívoro. Consumía toneladas diarias de follaje de coníferas, cícadas, helechos arborescentes y plantas con flores primitivas que florecían en los ríos de la Patagonia.' }
+      { question: '¿Cuánto medía y pesaba el Patagotitan mayorum?', answer: 'Las estimaciones científicas sitúan su longitud entre 31 y 37 metros. En masa corporal, los métodos volumétricos 3D calculan entre 44 y 55 toneladas, mientras que las ecuaciones alométricas basadas en huesos largos arrojan entre 70 y 77 toneladas.' },
+      { question: '¿Dónde y cuándo fue descubierto el Patagotitan?', answer: 'El hallazgo fue reportado en 2012 por el peón rural Aurelio Hernández en la Estancia La Flecha (Chubut, Argentina). Tras exhaustivas excavaciones del MEF que recuperaron más de 150 fósiles (serie del holotipo MPEF-PV 3400), fue formalmente descrito en 2017.' },
+      { question: '¿Quién era más grande: Argentinosaurus o Patagotitan?', answer: 'Es un debate científico abierto. Patagotitan es el titanosaurio gigante con el esqueleto más completo y estudiado (+84%). No obstante, al comparar huesos homólogos directos (ancho vertebral y fémur), especialistas como Gregory Paul y SV-POW destacan que Argentinosaurus era igual o más masivo (70-90 t frente a 44-77 t de Patagotitan).' },
+      { question: '¿Qué comía el Patagotitan?', answer: 'Era estrictamente herbívoro. Consumía cientos de kilogramos diarios de follaje de coníferas, cícadas, helechos arborescentes y plantas con flores primitivas que florecían en los ríos de la Patagonia.' }
     ]
   },
   {

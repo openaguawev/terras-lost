@@ -21,7 +21,7 @@ const FAQS = [
   },
   {
     question: '¿Quién fue más grande: Argentinosaurus o Patagotitan?',
-    answer: 'Patagotitan mayorum es el dinosaurio más largo (~37 metros) y cuenta con el esqueleto más completo jamás verificado por la ciencia (+84% recuperado de 6 individuos). Argentinosaurus huinculensis, aunque conocido por fósiles más fragmentarios, poseía vértebras dorsales aún más anchas y robustas, por lo que muchos paleontólogos calculan que pudo haber alcanzado una masa corporal superior (entre 70 y 90 toneladas frente a las 70-77 de Patagotitan).'
+    answer: 'Es un debate científico abierto. Es fundamental separar dos aspectos: Patagotitan mayorum es el titanosaurio gigante con el esqueleto más completo y mejor estudiado (+84% recuperado a partir de al menos 6 individuos en Chubut, con longitud estimada de 31 a 37 m). Sin embargo, al contrastar huesos homólogos directos como el diámetro vertebral y el perímetro del fémur, investigadores como Gregory Paul y análisis de SV-POW destacan que Argentinosaurus era igual o más masivo (con estimaciones de 70 a 90 toneladas frente al rango de 44 a 77 toneladas de Patagotitan, según el método volumétrico o alométrico empleado).'
   }
 ];
 
@@ -49,8 +49,8 @@ export default function ArgentineDinosaursHubPage() {
     },
     {
       data: patagotitan,
-      badge: 'EL MÁS GRANDE CONFIRMADO',
-      tagline: 'El titán de 37 metros descubierto en Chubut, con más del 84% de su esqueleto recuperado y confirmado por la ciencia moderna.'
+      badge: 'EL MÁS COMPLETO DEL MUNDO',
+      tagline: 'El coloso de Chubut (31-37 m y 44-77 t), con más del 84% de su anatomía esquelética recuperada a partir de al menos 6 ejemplares.'
     },
     {
       data: carnotaurus,
@@ -140,12 +140,12 @@ export default function ArgentineDinosaursHubPage() {
 
           <div className="arg-stats-row">
             <div className="arg-stat-box">
-              <div className="arg-stat-num">+37 m</div>
-              <div className="arg-stat-lbl">LONGITUD MÁXIMA REGISTRADA</div>
+              <div className="arg-stat-num">31 - 37 m</div>
+              <div className="arg-stat-lbl">RANGO DE LONGITUD MÁXIMA</div>
             </div>
             <div className="arg-stat-box">
-              <div className="arg-stat-num">90 t</div>
-              <div className="arg-stat-lbl">PESO MÁXIMO ESTIMADO</div>
+              <div className="arg-stat-num">44 - 90 t</div>
+              <div className="arg-stat-lbl">RANGO DE MASA CORPORAL</div>
             </div>
             <div className="arg-stat-box">
               <div className="arg-stat-num">150 Ma</div>
@@ -242,17 +242,17 @@ export default function ArgentineDinosaursHubPage() {
               <tr>
                 <td><strong>Longitud Total</strong></td>
                 <td>30 - 35 metros</td>
-                <td><strong>37 metros</strong> (Líder confirmado en longitud)</td>
+                <td>31 - 37 metros (según reconstrucción y método)</td>
               </tr>
               <tr>
                 <td><strong>Masa Corporal Estimada</strong></td>
-                <td><strong>70 - 90 toneladas</strong> (Vértebras más anchas y voluminosas)</td>
-                <td>70 - 77 toneladas (Masa confirmada con múltiples fémures)</td>
+                <td><strong>70 - 90 toneladas</strong> (Vértebras más anchas y robustas)</td>
+                <td><strong>44 - 77 toneladas</strong> (44-55 t volumétrico 3D; 70-77 t alométrico)</td>
               </tr>
               <tr>
                 <td><strong>Completitud del Esqueleto</strong></td>
                 <td>~10 - 15% (Vértebras dorsales gigantes, sacro, costillas, fémur parcial)</td>
-                <td><strong>+84%</strong> (+150 huesos fósiles pertenecientes a 6 individuos)</td>
+                <td><strong>+84%</strong> (+150 huesos fósiles de la serie del holotipo MPEF-PV 3400)</td>
               </tr>
               <tr>
                 <td><strong>Altura de los Hombros</strong></td>
@@ -262,15 +262,15 @@ export default function ArgentineDinosaursHubPage() {
               <tr>
                 <td><strong>Dimensión de Vértebras</strong></td>
                 <td>Holotipo MCF-PVPH-1: <strong>1.59 m de altura</strong> por 1.29 m de ancho</td>
-                <td>Holotipo MPEF-PV 3400: ~1.40 m de altura</td>
+                <td>Serie del holotipo MPEF-PV 3400: ~1.40 m de altura máxima</td>
               </tr>
               <tr>
                 <td><strong>Veredicto Paleontológico</strong></td>
                 <td>
-                  <strong>Probable campeón en peso:</strong> El enorme ancho de sus vértebras sugiere que tenía una caja torácica y volumen muscular aún más masivo.
+                  <strong>Debate abierto (Mayor en huesos homólogos):</strong> El ancho superior de sus vértebras y fémur indican que Argentinosaurus era igual o más masivo.
                 </td>
                 <td>
-                  <strong>Campeón indiscutido en verificación:</strong> Es el mayor animal terrestre del que poseemos prácticamente todo el esqueleto para medir con certeza.
+                  <strong>El titanosaurio más completo y documentado:</strong> Su extraordinario +84% de esqueleto recuperado permite estudiar su anatomía con máximo rigor científico.
                 </td>
               </tr>
             </tbody>

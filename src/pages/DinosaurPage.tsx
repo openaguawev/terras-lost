@@ -298,29 +298,29 @@ export default function DinosaurPage() {
             </h3>
             <p style={{ color: 'rgba(255, 255, 255, 0.82)', lineHeight: '1.6', fontSize: '15px', maxWidth: '850px', marginBottom: '24px' }}>
               Tanto el <strong>Argentinosaurus</strong> (Neuquén) como el <strong>Patagotitan</strong> (Chubut) representan el punto más alto del gigantismo biológico en la Tierra. 
-              El <strong>Patagotitan</strong> ostenta el récord indiscutido del dinosaurio más grande con esqueleto confirmado (más del 84% de huesos recuperados y ~37 m de longitud). 
-              Sin embargo, el <strong>Argentinosaurus</strong> poseía vértebras dorsales más anchas y masivas, por lo que muchos paleontólogos estiman que pudo haber alcanzado un peso superior (hasta 90 toneladas frente a las 70-77 t de Patagotitan).
+              Es fundamental distinguir dos conceptos: por un lado, <strong>Patagotitan</strong> es el titanosaurio gigante con el esqueleto más completo y mejor estudiado (+84% recuperado de al menos seis individuos). 
+              Por otro lado, determinar cuál de los dos era físicamente más grande es un <em>debate científico abierto</em>: investigadores como Gregory Paul y análisis del equipo de SV-POW señalan que al cotejar huesos homólogos (como el diámetro de las vértebras dorsales y la robustez del fémur), el <strong>Argentinosaurus</strong> resulta igual o más masivo (estimado en 70-90 t frente a las 44-77 t de Patagotitan según el método volumétrico o alométrico empleado).
             </p>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '16px', marginBottom: '24px' }}>
               <div style={{ background: 'rgba(0,0,0,0.4)', padding: '16px', borderRadius: '10px', border: '1px solid rgba(255,255,255,0.08)' }}>
-                <div style={{ color: '#C9A84C', fontSize: '12px', fontWeight: 600, letterSpacing: '1px' }}>LONGITUD TOTAL</div>
+                <div style={{ color: '#C9A84C', fontSize: '12px', fontWeight: 600, letterSpacing: '1px' }}>LONGITUD ESTIMADA</div>
                 <div style={{ color: '#fff', fontSize: '15px', marginTop: '6px' }}>
                   <strong>Argentinosaurus:</strong> 30 - 35 m<br/>
-                  <strong>Patagotitan:</strong> 37 m (Líder)
+                  <strong>Patagotitan:</strong> 31 - 37 m
                 </div>
               </div>
               <div style={{ background: 'rgba(0,0,0,0.4)', padding: '16px', borderRadius: '10px', border: '1px solid rgba(255,255,255,0.08)' }}>
-                <div style={{ color: '#C9A84C', fontSize: '12px', fontWeight: 600, letterSpacing: '1px' }}>MASA ESTIMADA</div>
+                <div style={{ color: '#C9A84C', fontSize: '12px', fontWeight: 600, letterSpacing: '1px' }}>MASA CORPORAL</div>
                 <div style={{ color: '#fff', fontSize: '15px', marginTop: '6px' }}>
-                  <strong>Argentinosaurus:</strong> 70 - 90 t (Mayor volumen)<br/>
-                  <strong>Patagotitan:</strong> 70 - 77 t
+                  <strong>Argentinosaurus:</strong> 70 - 90 t<br/>
+                  <strong>Patagotitan:</strong> 44 - 77 t (según método)
                 </div>
               </div>
               <div style={{ background: 'rgba(0,0,0,0.4)', padding: '16px', borderRadius: '10px', border: '1px solid rgba(255,255,255,0.08)' }}>
                 <div style={{ color: '#C9A84C', fontSize: '12px', fontWeight: 600, letterSpacing: '1px' }}>REGISTRO FÓSIL</div>
                 <div style={{ color: '#fff', fontSize: '15px', marginTop: '6px' }}>
                   <strong>Argentinosaurus:</strong> ~10-15% (Fragmentario)<br/>
-                  <strong>Patagotitan:</strong> +84% (Confirmado)
+                  <strong>Patagotitan:</strong> +84% (Más completo)
                 </div>
               </div>
             </div>
