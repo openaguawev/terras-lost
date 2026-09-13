@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
-import { Search, Mouse, Compass } from 'lucide-react'
+import { Search, ChevronDown, Compass } from 'lucide-react'
 
 export default function Hero() {
   const parallaxRef = useRef<HTMLDivElement>(null)
@@ -202,7 +202,7 @@ export default function Hero() {
         }}
       >
         <span style={{ fontFamily: 'Inter, sans-serif', fontWeight: 600, fontSize: 9, letterSpacing: 2, color: 'rgba(255,255,255,0.5)' }}>DESLIZA PARA EXPLORAR</span>
-        <Mouse size={16} color="rgba(255,255,255,0.5)" />
+        <ChevronDown size={18} color="rgba(255,255,255,0.6)" />
       </div>
     </section>
   )
