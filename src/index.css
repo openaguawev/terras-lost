@@ -91,3 +91,32 @@ body {
   }
 }
 
+/* Hero CSS Interactions & Animations */
+.hero-nav-link:hover {
+  color: #e6c875 !important;
+  transform: scale(1.05);
+}
+
+.hero-search-wrapper:hover {
+  color: #e6c875 !important;
+  transform: scale(1.15) rotate(5deg);
+}
+
+.hero-cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 35px rgba(230,200,117,0.45) !important;
+}
+
+.hero-scroll-indicator {
+  animation: heroBounce 2s infinite ease-in-out;
+}
+
+@keyframes heroBounce {
+  0%, 100% {
+    transform: translate(-50%, 0);
+  }
+  50% {
+    transform: translate(-50%, 8px);
+  }
+}
+
