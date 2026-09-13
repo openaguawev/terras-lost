@@ -14,7 +14,7 @@ export default function Home() {
       <div id="dinosaurios"><FeaturedDinosaurs /></div>
       <div id="eras"><ExploreEras /></div>
       <div id="habitats"><ExploreHabitats /></div>
-      <EarthHistory />
+      <div id="historia"><EarthHistory /></div>
       <CallToAction />
     </div>
   )

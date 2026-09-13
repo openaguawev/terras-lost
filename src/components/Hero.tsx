@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
-import { Search, Mouse } from 'lucide-react'
+import { Search, Mouse, Compass } from 'lucide-react'
 
 export default function Hero() {
   const parallaxRef = useRef<HTMLDivElement>(null)
@@ -187,8 +187,12 @@ export default function Hero() {
             }}
             onMouseEnter={e => e.currentTarget.style.transform = 'translateY(-2px)'}
             onMouseLeave={e => e.currentTarget.style.transform = 'translateY(0)'}
+            onClick={() => {
+              const el = document.getElementById('dinosaurios');
+              if (el) el.scrollIntoView({ behavior: 'smooth' });
+            }}
             >
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 4C8.686 4 6 6.686 6 10v4.536l-1.562 1.562A2 2 0 005 19.5V20h14v-.5a2 2 0 00-.586-1.414L16.85 16.526V10c0-3.314-2.686-6-6-6zM9 13h.01M15 13h.01M9 17h6" /></svg>
+              <Compass size={20} strokeWidth={2.2} />
               EXPLORAR DINOSAURIOS
             </button>
           </motion.div>
