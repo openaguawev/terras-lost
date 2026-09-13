@@ -6,7 +6,7 @@ interface SEOProps {
   keywords?: string
   image?: string
   url?: string
-  customSchema?: Record<string, any> | Record<string, any>[]
+  customSchema?: Record<string, unknown> | Record<string, unknown>[]
 }
 
 export default function SEO({
