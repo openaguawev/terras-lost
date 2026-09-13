@@ -84,7 +84,7 @@ body {
     padding: 5vh 20px 10vh 20px;
   }
   .hero-bg-img {
-    object-position: 80% center;
+    object-position: center center;
   }
   .hero-desktop-video {
     display: none !important;
