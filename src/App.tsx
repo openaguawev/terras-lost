@@ -1,26 +1,19 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { lazy, Suspense } from 'react'
+import { Routes, Route } from 'react-router-dom'
 import './index.css'
 
-const Home = lazy(() => import('./pages/Home'))
-const DinosaurPage = lazy(() => import('./pages/DinosaurPage'))
-const EraHubPage = lazy(() => import('./pages/EraHubPage'))
-const HabitatHubPage = lazy(() => import('./pages/HabitatHubPage'))
+import Home from './pages/Home'
+import DinosaurPage from './pages/DinosaurPage'
+import EraHubPage from './pages/EraHubPage'
+import HabitatHubPage from './pages/HabitatHubPage'
 
-function App() {
+export default function App() {
   return (
-    <BrowserRouter>
-      <Suspense fallback={<div style={{ background: '#070504', height: '100vh' }} />}>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/criaturas/:slug" element={<DinosaurPage />} />
-          <Route path="/eras/:era" element={<EraHubPage />} />
-          <Route path="/habitats/:habitat" element={<HabitatHubPage />} />
-        </Routes>
-      </Suspense>
-    </BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/criaturas/:slug" element={<DinosaurPage />} />
+      <Route path="/eras/:era" element={<EraHubPage />} />
+      <Route path="/habitats/:habitat" element={<HabitatHubPage />} />
+    </Routes>
   )
 }
-
-export default App
 
