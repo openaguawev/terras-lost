@@ -1,5 +1,4 @@
 import { useEffect } from 'react'
-import { Helmet } from 'react-helmet-async'
 
 interface SEOProps {
   title?: string
@@ -7,7 +6,7 @@ interface SEOProps {
   keywords?: string
   image?: string
   url?: string
-  customSchema?: Record<string, any> | Record<string, any>[]
+  customSchema?: Record<string, unknown> | Record<string, unknown>[]
 }
 
 export default function SEO({
@@ -30,8 +29,9 @@ export default function SEO({
   }, [description])
 
   return (
-    <Helmet>
-      {/* Primary */}
+    <>
+      <title>{title}</title>
+      <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <meta name="robots" content="index, follow" />
       <meta name="language" content="Spanish" />
@@ -56,28 +56,34 @@ export default function SEO({
       {customSchema ? (
         Array.isArray(customSchema) ? (
           customSchema.map((schema, idx) => (
-            <script key={idx} type="application/ld+json">
-              {JSON.stringify(schema)}
-            </script>
+            <script
+              key={idx}
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+            />
           ))
         ) : (
-          <script type="application/ld+json">
-            {JSON.stringify(customSchema)}
-          </script>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(customSchema) }}
+          />
         )
       ) : (
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "WebSite",
-            "name": "DinoRex",
-            "url": "https://www.dinorex.org",
-            "description": description,
-            "inLanguage": "es"
-          })}
-        </script>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "DinoRex",
+              "url": "https://www.dinorex.org",
+              "description": description,
+              "inLanguage": "es"
+            })
+          }}
+        />
       )}
-    </Helmet>
+    </>
   )
 }
 

@@ -96,6 +96,193 @@ export const dinosaurs: DinosaurDetail[] = [
     ]
   },
   {
+    slug: 'argentinosaurus',
+    name: 'ARGENTINOSAURUS',
+    scientificName: 'Argentinosaurus huinculensis',
+    tagline: 'El gigante de gigantes. El titanosaurio más colosal jamás estimado por la ciencia, rey indiscutible de la Patagonia durante el período Cretácico.',
+    heroImage: '/dinos/argentinosaurus_spotlight.webp',
+    heroStats: {
+      period: 'Cretácico Superior (Cenomaniense)',
+      habitat: 'Llanuras y bosques fluviales',
+      diet: 'Herbívoro',
+      discovered: '1987 (descrito 1993)'
+    },
+    sideStats: [
+      { label: 'NOMBRE SIGNIFICADO', value: '"Reptil de Argentina"' },
+      { label: 'LONGITUD', value: '30 - 35 m' },
+      { label: 'ALTURA', value: '15 - 18 m (erguido)' },
+      { label: 'PESO', value: '70 - 90 toneladas' },
+      { label: 'VELOCIDAD', value: 'Hasta 8 km/h' },
+      { label: 'EXPECTATIVA DE VIDA', value: '70 - 80 años' },
+    ],
+    content: {
+      subtitle: 'EL COLOSO QUE SACUDIÓ LA PATAGONIA',
+      paragraphs: [
+        'El Argentinosaurus huinculensis representa el cenit del gigantismo terrestre en la historia de nuestro planeta. El primer fósil fue reportado en 1987 por Guillermo Heredia, puestero de la estancia "Las Overas" en las inmediaciones de Plaza Huincul (provincia del Neuquén, Argentina), quien dio aviso a los investigadores. La posterior excavación y descripción científica formal fue realizada en 1993 por los célebres paleontólogos argentinos José Bonaparte y Rodolfo Coria en la revista Ameghiniana, redefiniendo los límites biológicos conocidos sobre el peso y tamaño de los vertebrados terrestres.',
+        'Debido a su colosal masa corporal, estimada de forma conservadora entre 70 y 90 toneladas métricas (el equivalente al peso de más de una docena de elefantes adultos), el Argentinosaurus requería extremidades columnares extraordinariamente gruesas y rectas, actuando como auténticos pilares biomecánicos capaces de disipar la brutal presión gravitatoria a cada paso lento y medido.',
+        'Sus dimensiones eran asombrosas: tan solo una de sus vértebras dorsales recuperadas (el ejemplar holotipo MCF-PVPH-1) supera los 1.59 metros de altura por 1.29 metros de ancho. Para aligerar esta monumental estructura sin comprometer su resistencia de carga, sus huesos contaban con complejas cavidades neumáticas internas intercomunicadas con sacos aéreos pulmonares, un diseño evolutivo similar al que poseen las aves modernas.',
+        'Para sostener su descomunal masa metabólica, un Argentinosaurus adulto debía consumir toneladas de vegetación cada semana. Sus dientes en forma de lápiz estaban diseñados no para masticar, sino para deshojar incansablemente ramas enteras de gigantescas coníferas, cícadas y helechos del Cretácico, confiando la digestión a gigantescos estómagos con gastrolitos (piedras estomacales de molienda).',
+        'El debate paleontológico moderno suele contrastar al Argentinosaurus con su pariente patagónico posterior, el Patagotitan mayorum. Es crucial separar dos conceptos: por un lado, Patagotitan es indiscutiblemente el titanosaurio gigante que poseemos más completo y mejor estudiado (+84% de huesos recuperados de múltiples ejemplares); por otro lado, cuál era físicamente más grande sigue siendo un debate científico abierto. Investigadores como Gregory S. Paul, Mickey Mortimer y análisis del equipo de SV-POW han demostrado que, al comparar huesos homólogos como el ancho de las vértebras dorsales y la sección de los fémures, Argentinosaurus es igual o mayor en masa corporal (70-90 t frente a las 44-77 t estimadas para Patagotitan según el método empleado).'
+      ],
+      mapLocation: 'Plaza Huincul, Neuquén, Argentina'
+    },
+    videoText: 'Visualiza las dimensiones colosales del Argentinosaurus en comparación con la fauna del Cretácico.',
+    attributeBars: [
+      { label: 'TAMAÑO', value: 10 },
+      { label: 'DEFENSA', value: 10 },
+      { label: 'VELOCIDAD', value: 1 },
+      { label: 'INTELIGENCIA', value: 3 },
+      { label: 'AGRESIVIDAD', value: 2 },
+      { label: 'RESISTENCIA', value: 10 },
+    ],
+    fossils: [
+      { name: 'VÉRTEBRA DORSAL GIGANTE', code: 'MCF-PVPH-1 (1.59 m)', location: 'Plaza Huincul, Neuquén, Argentina', image: '/dinos/fossil_3.webp' },
+      { name: 'FÉMUR COLOSAL', code: 'MCF-PVPH-2 (2.5 m)', location: 'Museo Carmen Funes, Neuquén', image: '/dinos/fossil_2.webp' },
+      { name: 'COSTILLAS MONUMENTALES', code: 'MCF-PVPH-3', location: 'Plaza Huincul, Argentina', image: '/dinos/fossil_4.webp' },
+      { name: 'FÍBULA ARTICULADA', code: 'MCF-PVPH-4 (1.55 m)', location: 'Patagonia, Argentina', image: '/dinos/fossil_1.webp' },
+    ],
+    features: [
+      { title: 'TAMAÑO TITÁNICO', description: 'El vertebrado terrestre más pesado conocido, con hasta 90 toneladas de masa corporal.', icon: 'move-up' },
+      { title: 'PATAS COLUMNARES', description: 'Extremidades cilíndricas macizas sin dedos articulados externos para máxima sustentación.', icon: 'shield' },
+      { title: 'VÉRTEBRAS NEUMÁTICAS', description: 'Huesos vertebrales de más de 1.5 metros perforados por cavidades de aire para aliviar peso.', icon: 'wind' },
+      { title: 'HERBÍVORO IMPARABLE', description: 'Inmune a los depredadores en su etapa adulta debido a su insuperable corpulencia.', icon: 'heart' },
+    ],
+    era: 'cretacico',
+    habitat: 'jungla',
+    faqs: [
+      { question: '¿Cuánto medía y pesaba el Argentinosaurus?', answer: 'El Argentinosaurus medía entre 30 y 35 metros de longitud total y alcanzaba un peso estimado entre 70 y 90 toneladas métricas, con una altura de hombros de unos 4.5 metros y hasta 18 metros con el cuello erguido.' },
+      { question: '¿Quién descubrió el Argentinosaurus y dónde?', answer: 'El hallazgo fue reportado en 1987 por Guillermo Heredia, puestero de la estancia "Las Overas" cerca de Plaza Huincul (provincia del Neuquén, Argentina), quien avisó a los especialistas. El fósil fue extraído por el Museo Carmen Funes y descrito científicamente en 1993 por los paleontólogos José Bonaparte y Rodolfo Coria en la revista Ameghiniana.' },
+      { question: '¿Quién fue más grande, Argentinosaurus o Patagotitan?', answer: 'Es un debate científico aún no resuelto. Patagotitan es el titanosaurio gigante más completo y mejor documentado (+84% del esqueleto recuperado). Sin embargo, al contrastar huesos homólogos (como el diámetro vertebral y el perímetro del fémur), paleontólogos como Gregory Paul y análisis de SV-POW destacan que Argentinosaurus presenta una estructura igual o más masiva, con estimados de peso de 70 a 90 toneladas frente al rango de 44 a 77 toneladas de Patagotitan.' },
+      { question: '¿Qué comía el Argentinosaurus y cuánto al día?', answer: 'Era estrictamente herbívoro. Se estima que consumía entre 500 y 1.000 kilogramos de vegetación al día (coníferas, cícadas y palmeras primitivas), ingiriendo follaje sin masticar y procesándolo en su inmenso tracto digestivo con ayuda de gastrolitos.' },
+      { question: '¿Tenía depredadores el Argentinosaurus?', answer: 'Un adulto sano era invulnerable a cualquier cazador solitario. No obstante, las crías y juveniles eran presa habitual de terópodos gigantescos contemporáneos como el Mapusaurus roseae, que según fósiles hallados en camas de huesos, cazaba en jaurías coordinadas.' },
+      { question: '¿Dónde se exhiben los fósiles originales del Argentinosaurus?', answer: 'Los fósiles originales del holotipo se conservan y exhiben en el Museo Municipal Carmen Funes de Plaza Huincul (Neuquén, Argentina), donde también se encuentra una reconstrucción a escala real de su esqueleto completo.' }
+    ]
+  },
+  {
+    slug: 'carnotaurus',
+    name: 'CARNOTAURUS',
+    scientificName: 'Carnotaurus sastrei',
+    tagline: 'El toro carnívoro del sur. El depredador ápice de la Patagonia Cretácica, famoso por sus dos cuernos frontales, piel escamosa fosilizada y velocidad supersónica.',
+    heroImage: '/dinos/carnotaurus.webp',
+    heroStats: {
+      period: 'Cretácico Tardío (Campaniense-Maastrichtiense)',
+      habitat: 'Planicies, estuarios y bosques costeros',
+      diet: 'Carnívoro',
+      discovered: '1984 (descrito 1985)'
+    },
+    sideStats: [
+      { label: 'NOMBRE SIGNIFICADO', value: '"Toro carnívoro de Sastre"' },
+      { label: 'LONGITUD', value: '7.5 - 9 m' },
+      { label: 'ALTURA', value: '3 - 3.5 m' },
+      { label: 'PESO', value: '1.5 - 2.1 toneladas' },
+      { label: 'VELOCIDAD', value: 'Hasta 48 - 56 km/h' },
+      { label: 'EXPECTATIVA DE VIDA', value: '20 - 25 años' }
+    ],
+    content: {
+      subtitle: 'EL DEMONIO VELOZ DE LA PATAGONIA',
+      paragraphs: [
+        'El Carnotaurus sastrei es uno de los dinosaurios carnívoros más singulares, fascinantes y anatómicamente extremos jamás desenterrados. Descubierto en 1984 por el eminente paleontólogo argentino José Bonaparte en la Estancia Pocho Sastre (provincia del Chubut, Formación La Colonia), el hallazgo de un esqueleto casi completo con impresiones directas de su piel revolucionó la comprensión científica de los terópodos del hemisferio sur.',
+        'La característica visual más impactante del Carnotaurus son sus dos prominentes cuernos óseos situados sobre los ojos en la parte superior de su cráneo corto y robusto. Ningún otro gran carnívoro conocido poseía estructuras similares; los estudios biomecánicos sugieren que no se utilizaban para embestir a presas con violencia letal, sino para exhibición sexual, intimidación territorial y combates rituales de empuje cabeza contra cabeza entre machos rivales.',
+        'En términos de locomoción, el Carnotaurus era probablemente el gran terópodo más veloz de todos los tiempos. Los análisis osteológicos de sus vértebras caudales demostraron que poseía un músculo caudofemoralis longus colosal (de hasta 150 kg por pierna) anclado entre su cola rígida y sus fémures. Esta adaptación le otorgaba una potencia de aceleración en línea recta asombrosa, permitiéndole esprintar a velocidades estimadas entre 48 y 56 km/h para cazar presas ágiles en llanuras abiertas.',
+        'En radical contraste con sus poderosas patas traseras, sus extremidades anteriores estaban reducidas a muñones vestigiales minúsculos, incluso proporcionalmente más pequeños que los del T-Rex. Sus brazos carecían de antebrazo funcional y poseían cuatro dedos inmóviles sin garras desarrolladas, lo que demuestra que su método de ataque dependía exclusivamente de su veloz carrera y su mordida rápida.',
+        'El fósil de Chubut es célebre mundialmente porque preservó impresiones tridimensionales intactas de casi toda su piel. A diferencia de muchos terópodos del norte que poseían protoplumas, el Carnotaurus estaba enteramente recubierto de escamas cónicas no imbricadas dispuestas en hileras longitudinales, con osteodermos o bultos óseos que le otorgaban una armadura dérmica semejante a la de los reptiles acorazados.'
+      ],
+      mapLocation: 'Chubut, Patagonia, Argentina'
+    },
+    videoText: 'El Carnotaurus poseía impresionantes adaptaciones para la velocidad en línea recta, siendo el cazador más temible del Cretácico argentino.',
+    attributeBars: [
+      { label: 'FUERZA', value: 8 },
+      { label: 'INTELIGENCIA', value: 7 },
+      { label: 'VELOCIDAD', value: 9 },
+      { label: 'AGILIDAD', value: 6 },
+      { label: 'DEFENSA', value: 5 },
+      { label: 'PELIGRO', value: 9 }
+    ],
+    fossils: [
+      { name: 'CRÁNEO CON CUERNOS INTACTO', code: 'MACN-CH 894', location: 'Museo Argentino de Ciencias Naturales (MACN), Buenos Aires', image: '/dinos/fossil_1.webp' },
+      { name: 'IMPRESIONES DE PIEL FÓSIL', code: 'MACN-CH 894', location: 'Chubut, Argentina', image: '/dinos/fossil_4.webp' },
+      { name: 'ESQUELETO ARTICULADO CASI COMPLETO', code: 'MACN-CH 894 (Holotipo)', location: 'MACN Bernardino Rivadavia', image: '/dinos/fossil_3.webp' },
+      { name: 'VÉRTEBRAS CAUDALES Y FÉMUR', code: 'MACN-CH 894', location: 'Buenos Aires, Argentina', image: '/dinos/fossil_2.webp' }
+    ],
+    features: [
+      { title: 'CUERNOS FRONTALES', description: 'Estructuras óseas únicas sobre los ojos usadas en exhibición y empujes rituales.', icon: 'swords' },
+      { title: 'PIEL FOSILIZADA', description: 'Impresiones reales de piel con escamas poligonales y tubérculos cónicos intactos.', icon: 'shield' },
+      { title: 'SPRINTER DEL CRETÁCICO', description: 'Músculo caudofemoralis hipertrofiado que le permitía esprints de hasta 56 km/h.', icon: 'wind' },
+      { title: 'BRAZOS VESTIGIALES', description: 'Brazos diminutos de cuatro dedos inmóviles sin función prensil.', icon: 'scissors' }
+    ],
+    era: 'cretacico',
+    habitat: 'volcan',
+    faqs: [
+      { question: '¿Para qué usaba sus cuernos el Carnotaurus?', answer: 'Los análisis biomecánicos indican que los cuernos estaban recubiertos por una funda de queratina y se utilizaban para exhibición visual frente a hembras o rivales, así como para forcejeos y empujes cabeza contra cabeza sin fracturarse el cráneo.' },
+      { question: '¿Qué tan rápido podía correr el Carnotaurus?', answer: 'Se estima que alcanzaba entre 48 y 56 km/h en línea recta. Sus vértebras caudales tenían costillas entrelazadas que creaban una cola muy rígida para albergar el gigantesco músculo caudofemoralis, el mayor propulsor de carrera entre los grandes terópodos.' },
+      { question: '¿El Carnotaurus tenía plumas?', answer: 'No. El ejemplar fósil de la Estancia Pocho Sastre preservó extraordinarias impresiones de piel de casi todo el cuerpo que muestran exclusivamente escamas córneas no superpuestas y protuberancias cónicas, sin rastro alguno de plumas.' },
+      { question: '¿Dónde y quién descubrió el Carnotaurus?', answer: 'Fue descubierto en 1984 por el célebre paleontólogo argentino José Bonaparte en la Formación La Colonia, provincia del Chubut, Argentina. Su nombre honra a Ángel Sastre, dueño del campo donde se encontró el espécimen.' },
+      { question: '¿Por qué tenía brazos tan pequeños?', answer: 'Sus brazos sufrieron una reducción evolutiva extrema incluso mayor que la del T-Rex. La evolución maximizó la musculatura de sus patas traseras y su cuello para la carrera y la captura rápida con sus mandíbulas, haciendo innecesario el uso de las extremidades anteriores.' },
+      { question: '¿Dónde se puede ver el esqueleto del Carnotaurus?', answer: 'El esqueleto original holotipo se exhibe en el Museo Argentino de Ciencias Naturales Bernardino Rivadavia (MACN) en Buenos Aires, y existen réplicas en los principales museos de historia natural del mundo.' }
+    ]
+  },
+  {
+    slug: 'patagotitan',
+    name: 'PATAGOTITAN',
+    scientificName: 'Patagotitan mayorum',
+    tagline: 'El titán de la Patagonia. El titanosaurio gigante más completo jamás descubierto (+84% de esqueleto), con un rango de 31 a 37 metros de longitud y de 44 a 77 toneladas de masa corporal según el método de cálculo empleado.',
+    heroImage: '/dinos/patagotitan.webp',
+    heroStats: {
+      period: 'Cretácico Medio (Albiense-Cenomaniense)',
+      habitat: 'Llanuras aluviales y bosques fluviales',
+      diet: 'Herbívoro',
+      discovered: '2014 (descrito 2017)'
+    },
+    sideStats: [
+      { label: 'NOMBRE SIGNIFICADO', value: '"Titán de la Patagonia de la familia Mayo"' },
+      { label: 'LONGITUD', value: '31 - 37 m (según estudio)' },
+      { label: 'ALTURA', value: '8 m al hombro (~15 m erguido)' },
+      { label: 'PESO', value: '44 - 77 t (según método 3D o alométrico)' },
+      { label: 'VELOCIDAD', value: 'Hasta 12 - 15 km/h' },
+      { label: 'EXPECTATIVA DE VIDA', value: '50 - 70 años' }
+    ],
+    content: {
+      subtitle: 'EL TITANOSAURIO MÁS COMPLETO DEL MUNDO',
+      paragraphs: [
+        'El Patagotitan mayorum representa el descubrimiento paleontológico más asombroso del siglo XXI en cuanto a gigantismo biológico. Descubierto en 2012 en la Estancia La Flecha, provincia del Chubut (Patagonia Argentina), y descrito formalmente en 2017 por José Luis Carballido, Diego Pol y colaboradores del Museo Egidio Feruglio (MEF), este titanosaurio deslumbró al mundo por su escala colosal y su extraordinario estado de conservación.',
+        'A diferencia de otros saurópodos colosales cuyos restos son sumamente escasos y fragmentarios, del Patagotitan se recuperaron más de 150 huesos pertenecientes al menos a seis individuos adultos jóvenes en el mismo yacimiento. Esto permitió a los científicos reconstruir con certeza anatómica más del 84% de su estructura esquelética, convirtiéndolo en el titanosaurio gigante mejor documentado por la ciencia.',
+        'Las dimensiones estimadas para Patagotitan presentan rangos según el enfoque de estudio: su longitud total se sitúa entre 31 y 37 metros, mientras que su masa corporal oscila entre 44 y 77 toneladas métricas. Los modelos volumétricos tridimensionales (3D) sugieren valores en torno a 44-55 toneladas, mientras que las ecuaciones alométricas basadas en la circunferencia combinada del fémur y el húmero alcanzan de 70 a 77 toneladas.',
+        'Para sostener un cuerpo tan monumental sin colapsar por su propio peso, la evolución dotó a las vértebras dorsales y cervicales del Patagotitan de intrincados sacos aéreos neumáticos similares a los de las aves actuales. Estas cavidades huecas aligeraban drásticamente su esqueleto sin restarle resistencia biomecánica, permitiéndole erguir un cuello de más de 12 metros de longitud para alimentarse en las copas de coníferas primitivas.',
+        'El yacimiento donde fueron hallados los restos indica que estos animales murieron en tres momentos distintos pero en el mismo sitio, lo que sugiere que el Patagotitan tenía comportamientos gregarios y regresaba periódicamente a lagunas y oasis fluviales durante temporadas de sequía en la Patagonia prehistórica.'
+      ],
+      mapLocation: 'Chubut, Patagonia, Argentina'
+    },
+    videoText: 'Observa la majestuosidad monumental del Patagotitan mayorum, el titanosaurio gigante más completo y estudiado de la historia.',
+    attributeBars: [
+      { label: 'TAMAÑO', value: 10 },
+      { label: 'DEFENSA', value: 10 },
+      { label: 'VELOCIDAD', value: 2 },
+      { label: 'INTELIGENCIA', value: 3 },
+      { label: 'AGRESIVIDAD', value: 1 },
+      { label: 'RESISTENCIA', value: 10 }
+    ],
+    fossils: [
+      { name: 'FÉMUR DE 2.4 METROS', code: 'MPEF-PV 3400/27 (serie del ejemplar holotipo)', location: 'Trelew, Chubut, Argentina', image: '/dinos/fossil_2.webp' },
+      { name: 'VÉRTEBRA DORSAL GIGANTE', code: 'MPEF-PV 3400/2 (serie del ejemplar holotipo)', location: 'Trelew, Chubut, Argentina', image: '/dinos/fossil_3.webp' },
+      { name: 'HÚMERO MASIVO', code: 'MPEF-PV 3400/18 (serie del ejemplar holotipo)', location: 'Trelew, Chubut, Argentina', image: '/dinos/fossil_1.webp' },
+      { name: 'ESQUELETO COMPLETO MONTADO', code: 'MEF / AMNH Réplica', location: 'Museo Paleontológico Egidio Feruglio', image: '/dinos/fossil_4.webp' }
+    ],
+    features: [
+      { title: 'EL MÁS COMPLETO', description: 'El titanosaurio colosal con más del 84% de su estructura esquelética verificada por la ciencia.', icon: 'move-up' },
+      { title: 'CUELLO DE 12 METROS', description: 'Un cuello colosal que le permitía pastar copas de árboles a alturas inalcanzables para otros herbívoros.', icon: 'move-up' },
+      { title: 'HUESOS NEUMÁTICOS', description: 'Vértebras llenas de cámaras de aire conectadas a sacos pulmonares para reducir su masa.', icon: 'wind' },
+      { title: 'PILARES COLUMNARES', description: 'Patas cilíndricas macizas diseñadas biomecánicamente para soportar entre 44 y 77 toneladas de masa.', icon: 'shield' }
+    ],
+    era: 'cretacico',
+    habitat: 'jungla',
+    faqs: [
+      { question: '¿Cuánto medía y pesaba el Patagotitan mayorum?', answer: 'Las estimaciones científicas sitúan su longitud entre 31 y 37 metros. En masa corporal, los métodos volumétricos 3D calculan entre 44 y 55 toneladas, mientras que las ecuaciones alométricas basadas en huesos largos arrojan entre 70 y 77 toneladas.' },
+      { question: '¿Dónde y cuándo fue descubierto el Patagotitan?', answer: 'El hallazgo fue reportado en 2012 por el peón rural Aurelio Hernández en la Estancia La Flecha (Chubut, Argentina). Tras exhaustivas excavaciones del MEF que recuperaron más de 150 fósiles (serie del holotipo MPEF-PV 3400), fue formalmente descrito en 2017.' },
+      { question: '¿Quién era más grande: Argentinosaurus o Patagotitan?', answer: 'Es un debate científico abierto. Patagotitan es el titanosaurio gigante con el esqueleto más completo y estudiado (+84%). No obstante, al comparar huesos homólogos directos (ancho vertebral y fémur), especialistas como Gregory Paul y SV-POW destacan que Argentinosaurus era igual o más masivo (70-90 t frente a 44-77 t de Patagotitan).' },
+      { question: '¿Qué comía el Patagotitan?', answer: 'Era estrictamente herbívoro. Consumía cientos de kilogramos diarios de follaje de coníferas, cícadas, helechos arborescentes y plantas con flores primitivas que florecían en los ríos de la Patagonia.' }
+    ]
+  },
+  {
     slug: 'velociraptor',
     name: 'VELOCIRAPTOR',
     scientificName: 'Velociraptor mongoliensis',
@@ -401,67 +588,6 @@ export const dinosaurs: DinosaurDetail[] = [
     ]
   },
   {
-    slug: 'argentinosaurus',
-    name: 'ARGENTINOSAURUS',
-    scientificName: 'Argentinosaurus huinculensis',
-    tagline: 'El gigante de gigantes. El dinosaurio más grande conocido por la ciencia, un titanosaurio colosal que habitó lo que hoy es Argentina durante el Cretácico Superior.',
-    heroImage: '/dinos/argentinosaurus_spotlight.webp',
-    heroStats: {
-      period: 'Cretácico Superior',
-      habitat: 'Llanuras y bosques fluviales',
-      diet: 'Herbívoro',
-      discovered: '1987'
-    },
-    sideStats: [
-      { label: 'NOMBRE SIGNIFICADO', value: '"Reptil de Argentina"' },
-      { label: 'LONGITUD', value: '30 - 35 m' },
-      { label: 'ALTURA', value: '15 - 20 m' },
-      { label: 'PESO', value: '70 - 90 toneladas' },
-      { label: 'VELOCIDAD', value: 'Hasta 8 km/h' },
-      { label: 'EXPECTATIVA DE VIDA', value: '70 - 80 años' },
-    ],
-    content: {
-      subtitle: 'EL TITÁN MÁS COLOSAL DE LA HISTORIA',
-      paragraphs: [
-        'El Argentinosaurus representa la cúspide del gigantismo terrestre. Este titanosaurio colosal habitó las tierras de la Patagonia hace aproximadamente 95 millones de años, asombrando a la comunidad científica por sus dimensiones descomunales.',
-        'Debido a su colosal peso, estimado entre 70 y 90 toneladas, el Argentinosaurus se desplazaba a velocidades muy lentas sobre potentes extremidades columnares especialmente estructuradas para soportar la constante presión de la gravedad.',
-        'Su alimentación consistía en cantidades astronómicas de vegetación. Se calcula que un individuo adulto necesitaba ingerir cientos de kilogramos de hojas y ramas al día para mantener activo su masivo metabolismo.',
-        'Sus vértebras eran tan grandes que una sola de ellas medía más de 1.5 metros de altura. Estas estructuras óseas poseían complejos sistemas de soporte neumático para aligerar el peso sin sacrificar resistencia estructural.',
-        'Los nidos y huevos fosilizados descubiertos en la región sugieren que, a pesar de su tamaño adulto, las crías nacían siendo extremadamente pequeñas y vulnerables, creciendo a un ritmo vertiginoso durante sus primeros años de vida.'
-      ],
-      mapLocation: 'Patagonia, Argentina'
-    },
-    videoText: 'Visualiza las dimensiones colosales del Argentinosaurus en comparación con la fauna del Cretácico.',
-    attributeBars: [
-      { label: 'TAMAÑO', value: 10 },
-      { label: 'DEFENSA', value: 9 },
-      { label: 'VELOCIDAD', value: 1 },
-      { label: 'INTELIGENCIA', value: 3 },
-      { label: 'AGRESIVIDAD', value: 2 },
-      { label: 'RESISTENCIA', value: 10 },
-    ],
-    fossils: [
-      { name: 'VÉRTEBRA DORSAL', code: 'MCF-PVPH-1', location: 'Plaza Huincul, Argentina', image: '/dinos/fossil_3.webp' },
-      { name: 'FÉMUR COMPLETO', code: 'MCF-PVPH-2', location: 'Neuquén, Argentina', image: '/dinos/fossil_2.webp' },
-      { name: 'COSTILLA GIGANTE', code: 'MCF-PVPH-3', location: 'Plaza Huincul, Argentina', image: '/dinos/fossil_4.webp' },
-      { name: 'FIBULA DETALLADA', code: 'MCF-PVPH-4', location: 'Patagonia, Argentina', image: '/dinos/fossil_1.webp' },
-    ],
-    features: [
-      { title: 'TAMAÑO TITÁNICO', description: 'El animal terrestre más grande conocido, un auténtico rascacielos de carne y hueso.', icon: 'move-up' },
-      { title: 'ESTRUCTURA DE COLUMNA', description: 'Extremidades gigantescas en forma de columna para soportar su inmenso peso corporal.', icon: 'shield' },
-      { title: 'SANGRE A PRESIÓN', description: 'Un sistema cardiovascular superpotente impulsado por un corazón masivo.', icon: 'heart' },
-      { title: 'MIGRACIÓN COLECTIVA', description: 'Se desplazaba en manadas monumentales moldeando el paisaje patagónico a su paso.', icon: 'users' },
-    ],
-    era: 'cretacico',
-    habitat: 'jungla',
-    faqs: [
-      { question: '¿Cuánto medía el Argentinosaurus?', answer: 'Medía entre 30 y 35 metros de longitud y se calcula que tenía un peso de 70 a 90 toneladas.' },
-      { question: '¿Qué comía el Argentinosaurus?', answer: 'Era herbívoro, alimentándose de hojas de coníferas, palmeras y otra vegetación del Cretácico.' },
-      { question: '¿Cuándo se extinguió el Argentinosaurus?', answer: 'Vivió hace unos 95 millones de años a mediados del período Cretácico.' },
-      { question: '¿Dónde se encontraron sus fósiles?', answer: 'Sus primeros y más importantes fósiles fueron desenterrados en la provincia del Neuquén, en la Patagonia Argentina.' }
-    ]
-  },
-  {
     slug: 'stegosaurus',
     name: 'STEGOSAURUS',
     scientificName: 'Stegosaurus stenops',
@@ -635,60 +761,6 @@ export const dinosaurs: DinosaurDetail[] = [
     faqs: [
       { question: '¿Cuándo vivió el Coelophysis?', answer: 'Vivió durante el período Triásico Tardío, hace aproximadamente entre 216 y 200 millones de años.' },
       { question: '¿Por qué es famoso el Coelophysis?', answer: 'Es uno de los primeros dinosaurios mejor documentados gracias al asombroso yacimiento de Ghost Ranch, donde se encontraron cientos de esqueletos juntos.' }
-    ]
-  },
-  {
-    slug: 'carnotaurus',
-    name: 'CARNOTAURUS',
-    scientificName: 'Carnotaurus sastrei',
-    tagline: 'El toro carnívoro del sur. Un depredador del Cretácico Tardío reconocible por sus inusuales cuernos y un cráneo sumamente robusto.',
-    heroImage: '/dinos/carnotaurus.webp',
-    heroStats: {
-      period: 'Cretácico Tardío',
-      habitat: 'Estuarios y planicies',
-      diet: 'Carnívoro',
-      discovered: '1984'
-    },
-    sideStats: [
-      { label: 'NOMBRE SIGNIFICADO', value: '"Toro carnívoro"' },
-      { label: 'LONGITUD', value: '7.5 - 9 m' },
-      { label: 'ALTURA', value: '3 m' },
-      { label: 'PESO', value: '1.3 - 2 toneladas' },
-      { label: 'VELOCIDAD', value: 'Hasta 48 - 56 km/h' },
-      { label: 'EXPECTATIVA DE VIDA', value: '20 - 25 años' }
-    ],
-    content: {
-      subtitle: 'SOBRE EL CARNOTAURUS',
-      paragraphs: [
-        'El Carnotaurus es uno de los terópodos más peculiares jamás descubiertos, habitando la actual Patagonia argentina durante el Cretácico Tardío. Su característica más distintiva son los gruesos cuernos óseos ubicados justo por encima de sus ojos, que le valieron su nombre de "toro carnívoro". Estos cuernos probablemente se utilizaban en exhibiciones o combates rituales entre machos.',
-        'A nivel anatómico, el Carnotaurus presentaba una curiosa combinación: unas patas traseras excepcionalmente musculosas que lo convertían en uno de los grandes terópodos más veloces, contrastadas con unos brazos tan reducidos que eran incluso proporcionalmente más pequeños que los del T-Rex. Aunque forma parte de nuestra exhibición de zonas volcánicas como categoría narrativa, en realidad recorría llanuras y estuarios cálidos, siendo un depredador dominante de la región.'
-      ],
-      mapLocation: 'Patagonia, Sur de Argentina'
-    },
-    videoText: 'El Carnotaurus poseía impresionantes adaptaciones para la velocidad en línea recta, siendo capaz de alcanzar a las presas más veloces del entorno.',
-    attributeBars: [
-      { label: 'FUERZA', value: 75 },
-      { label: 'INTELIGENCIA', value: 65 },
-      { label: 'VELOCIDAD', value: 90 },
-      { label: 'AGILIDAD', value: 60 },
-      { label: 'DEFENSA', value: 50 },
-      { label: 'PELIGRO', value: 85 }
-    ],
-    fossils: [
-      { name: 'CRÁNEO Y CUERNOS', code: 'MACN-CH 894', location: 'Chubut, Argentina', image: '/dinos/fossil_1.webp' },
-      { name: 'IMPRESIÓN DE PIEL', code: 'MACN-CH 894', location: 'Chubut, Argentina', image: '/dinos/fossil_4.webp' }
-    ],
-    features: [
-      { title: 'CUERNOS ÓSEOS', description: 'Dos gruesos cuernos frontales, únicos entre los grandes terópodos conocidos.', icon: 'swords' },
-      { title: 'PIEL CON ESCUDOS', description: 'Conservamos impresiones fósiles que muestran su piel cubierta de escamas cónicas y bultos óseos.', icon: 'shield' },
-      { title: 'VELOCIDAD EXTREMA', description: 'Poderosas patas traseras ancladas a una cola muy rígida le permitían velocidades explosivas.', icon: 'wind' },
-      { title: 'BRAZOS VESTIGIALES', description: 'Brazos diminutos de cuatro dedos que prácticamente no tenían ninguna función.', icon: 'bone' }
-    ],
-    era: 'cretacico',
-    habitat: 'volcan',
-    faqs: [
-      { question: '¿Para qué usaba sus cuernos el Carnotaurus?', answer: 'Se cree que no eran armas para cazar, sino que se usaban para exhibición o para empujarse en combates rituales con otros Carnotaurus.' },
-      { question: '¿Vivía realmente cerca de volcanes?', answer: 'No hay evidencia científica concluyente de ello. En esta exhibición lo hemos asociado a esta categoría narrativa debido a su aspecto, pero se sabe que habitaba en estuarios y zonas de llanura.' }
     ]
   },
   {

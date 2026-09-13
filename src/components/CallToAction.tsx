@@ -176,32 +176,33 @@ export default function CallToAction() {
               <h4>EXPLORAR</h4>
               <ul>
                 <li><Link to="/#dinosaurios" style={{ color: 'inherit', textDecoration: 'none' }}>Dinosaurios</Link></li>
+                <li><Link to="/dinosaurios-argentinos" style={{ color: 'inherit', textDecoration: 'none' }}>Dinos Argentinos</Link></li>
                 <li><Link to="/#habitats" style={{ color: 'inherit', textDecoration: 'none' }}>Hábitats</Link></li>
-                <li><Link to="/#eras" style={{ color: 'inherit', textDecoration: 'none' }}>Eras</Link></li>
+                <li><Link to="/#eras" style={{ color: 'inherit', textDecoration: 'none' }}>Eras Geológicas</Link></li>
               </ul>
             </div>
             <div className="footer-column">
               <h4>APRENDER</h4>
               <ul>
-                <li><Link to="/" style={{ color: 'inherit', textDecoration: 'none' }}>Historia</Link></li>
-                <li><Link to="/#dinosaurios" style={{ color: 'inherit', textDecoration: 'none' }}>Fósiles</Link></li>
-                <li><Link to="/" style={{ color: 'inherit', textDecoration: 'none' }}>Evolución</Link></li>
+                <li><Link to="/#historia" style={{ color: 'inherit', textDecoration: 'none' }}>Historia de la Tierra</Link></li>
+                <li><Link to="/#dinosaurios" style={{ color: 'inherit', textDecoration: 'none' }}>Registro Fósil</Link></li>
+                <li><Link to="/dinosaurios-argentinos" style={{ color: 'inherit', textDecoration: 'none' }}>Tierra de Gigantes</Link></li>
               </ul>
             </div>
             <div className="footer-column">
-              <h4>RECURSOS</h4>
+              <h4>ERAS</h4>
               <ul>
-                <li><Link to="/" style={{ color: 'inherit', textDecoration: 'none' }}>Guías</Link></li>
-                <li><Link to="/" style={{ color: 'inherit', textDecoration: 'none' }}>Documentales</Link></li>
-                <li><Link to="/" style={{ color: 'inherit', textDecoration: 'none' }}>Artículos</Link></li>
+                <li><Link to="/eras/triasico" style={{ color: 'inherit', textDecoration: 'none' }}>Período Triásico</Link></li>
+                <li><Link to="/eras/jurasico" style={{ color: 'inherit', textDecoration: 'none' }}>Período Jurásico</Link></li>
+                <li><Link to="/eras/cretacico" style={{ color: 'inherit', textDecoration: 'none' }}>Período Cretácico</Link></li>
               </ul>
             </div>
             <div className="footer-column">
-              <h4>NOSOTROS</h4>
+              <h4>DINOREX</h4>
               <ul>
-                <li><Link to="/" style={{ color: 'inherit', textDecoration: 'none' }}>Quiénes somos</Link></li>
-                <li><Link to="/" style={{ color: 'inherit', textDecoration: 'none' }}>Contacto</Link></li>
-                <li><Link to="/" style={{ color: 'inherit', textDecoration: 'none' }}>Prensa</Link></li>
+                <li><Link to="/" style={{ color: 'inherit', textDecoration: 'none' }}>Inicio</Link></li>
+                <li><a href="mailto:contacto@dinorex.org" style={{ color: 'inherit', textDecoration: 'none' }}>Contacto</a></li>
+                <li><Link to="/#main-content" style={{ color: 'inherit', textDecoration: 'none' }}>Sobre el Proyecto</Link></li>
               </ul>
             </div>
           </div>
@@ -214,7 +215,7 @@ export default function CallToAction() {
               <Link to="/"><Play size={18} /></Link>
               <Link to="/"><MessageCircle size={18} /></Link>
             </div>
-            <p className="footer-copyright">© 2024 Dinorex. Todos los derechos reservados.</p>
+            <p className="footer-copyright">© {new Date().getFullYear()} DinoRex. Todos los derechos reservados.</p>
           </div>
         </div>
       </footer>
