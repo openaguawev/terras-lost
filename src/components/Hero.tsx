@@ -1,17 +1,9 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
 import { Search, Mouse, Compass } from 'lucide-react'
 
 export default function Hero() {
   const parallaxRef = useRef<HTMLDivElement>(null)
-  const [isMobile, setIsMobile] = useState(false)
-
-  useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth < 768)
-    handleResize()
-    window.addEventListener('resize', handleResize)
-    return () => window.removeEventListener('resize', handleResize)
-  }, [])
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,20 +23,12 @@ export default function Hero() {
           <source media="(max-width: 768px)" srcSet="/hero-mobile.webp" type="image/webp" />
           <source media="(min-width: 769px)" srcSet="/hero.webp" type="image/webp" />
           <img
-            src="/hero.webp"
+            src="/hero-mobile.webp"
             alt="Mundo prehistórico de dinosaurios"
             fetchPriority="high"
             width={1280}
             height={720}
-            style={{
-              position: 'absolute',
-              inset: 0,
-              width: '100%',
-              height: '100%',
-              objectFit: 'cover',
-              objectPosition: isMobile ? '80% center' : 'center center',
-              filter: 'brightness(0.9) contrast(1.1) saturate(1.2)',
-            }}
+            className="hero-bg-img"
           />
         </picture>
         <video
@@ -52,18 +36,10 @@ export default function Hero() {
           muted
           loop
           playsInline
-          poster={isMobile ? '/hero-mobile.webp' : '/hero.webp'}
-          style={{
-            position: 'absolute',
-            inset: 0,
-            width: '100%',
-            height: '100%',
-            objectFit: 'cover',
-            objectPosition: isMobile ? '80% center' : 'center center',
-            filter: 'brightness(0.9) contrast(1.1) saturate(1.2)',
-          }}
+          className="hero-desktop-video"
+          aria-hidden="true"
         >
-          <source src="/hero-compressed.mp4" type="video/mp4" />
+          <source media="(min-width: 769px)" src="/hero-compressed.mp4" type="video/mp4" />
         </video>
       </div>
 
@@ -73,10 +49,7 @@ export default function Hero() {
       <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, transparent 20%)' }} />
 
       {/* NAVBAR */}
-      <nav style={{
-        position: 'relative', zIndex: 50, flexShrink: 0,
-        padding: isMobile ? '16px 20px' : '16px 60px', display: 'flex', alignItems: 'center', justifyContent: 'space-between'
-      }}>
+      <nav className="hero-nav">
         <motion.div 
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
@@ -90,7 +63,7 @@ export default function Hero() {
         </motion.div>
 
         <div style={{ display: 'flex', alignItems: 'center', gap: 32 }}>
-          <div style={{ display: isMobile ? 'none' : 'flex', alignItems: 'center', gap: 32 }}>
+          <div className="hero-nav-links">
             {[
               { label: 'INICIO', href: '/', active: true },
               { label: 'DINOSAURIOS ⌄', href: '/#dinosaurios' },
@@ -116,17 +89,13 @@ export default function Hero() {
             ))}
           </div>
           <motion.div initial={{ color: '#fff' }} whileHover={{ scale: 1.15, color: '#e6c875', rotate: 5 }} transition={{ type: 'spring', stiffness: 300 }}>
-            <Search size={18} color="currentColor" style={{ cursor: 'pointer', marginLeft: isMobile ? 0 : 16 }} />
+            <Search size={18} color="currentColor" className="hero-search-icon" />
           </motion.div>
         </div>
       </nav>
 
       {/* MAIN CONTENT (LEFT SIDE) */}
-      <div style={{
-        position: 'relative', zIndex: 10, flex: 1, display: 'flex', flexDirection: 'column', 
-        justifyContent: isMobile ? 'space-between' : 'center',
-        padding: isMobile ? '5vh 20px 10vh 20px' : '0 60px', maxWidth: 710
-      }}>
+      <div className="hero-main-content">
         <div>
           <motion.p initial={{ opacity: 0, letterSpacing: '0px' }} animate={{ opacity: 1, letterSpacing: '4px' }} transition={{ delay: 0.2, duration: 1.2, ease: "easeOut" }}
             style={{ fontFamily: 'Bebas Neue, sans-serif', fontSize: 16, color: '#e6c875', marginBottom: 12 }}>
