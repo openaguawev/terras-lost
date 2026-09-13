@@ -158,13 +158,15 @@ export default function EraHubPage() {
   }
 
   const filteredDinos = dinosaurs.filter(d => d.era === eraKey);
+  const formattedEraTitle = eraInfo.title.charAt(0) + eraInfo.title.slice(1).toLowerCase();
+  const pageTitle = `Período ${formattedEraTitle}: Clima, Ecosistemas y Dinosaurios — DinoRex`;
 
   // Generate CollectionPage Schema
   const schema = [
     {
       "@context": "https://schema.org",
       "@type": "CollectionPage",
-      "name": `${eraInfo.title} — DinoRex`,
+      "name": pageTitle,
       "description": eraInfo.description,
       "url": `https://www.dinorex.org/eras/${eraKey}`,
       "about": {
@@ -194,7 +196,7 @@ export default function EraHubPage() {
   return (
     <div className="era-hub-container">
       <SEO
-        title={`${eraInfo.title} — DinoRex`}
+        title={pageTitle}
         description={eraInfo.description}
         url={`https://www.dinorex.org/eras/${eraKey}`}
         image={`https://www.dinorex.org${eraInfo.image}`}

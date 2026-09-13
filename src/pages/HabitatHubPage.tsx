@@ -180,13 +180,15 @@ export default function HabitatHubPage() {
 
   const filteredDinos = dinosaurs.filter(d => d.habitat === habitatKey);
   const HabitatIcon = habitatInfo.icon;
+  const formattedHabitatTitle = habitatInfo.title.charAt(0) + habitatInfo.title.slice(1).toLowerCase();
+  const pageTitle = `Hábitat ${formattedHabitatTitle}: Entorno Prehistórico y Dinosaurios — DinoRex`;
 
   // Generate CollectionPage Schema
   const schema = [
     {
       "@context": "https://schema.org",
       "@type": "CollectionPage",
-      "name": `${habitatInfo.title} — DinoRex`,
+      "name": pageTitle,
       "description": habitatInfo.description,
       "url": `https://www.dinorex.org/habitats/${habitatKey}`,
       "about": {
@@ -216,7 +218,7 @@ export default function HabitatHubPage() {
   return (
     <div className="hab-hub-container">
       <SEO
-        title={`${habitatInfo.title} — DinoRex`}
+        title={pageTitle}
         description={habitatInfo.description}
         url={`https://www.dinorex.org/habitats/${habitatKey}`}
         image={`https://www.dinorex.org${habitatInfo.image}`}

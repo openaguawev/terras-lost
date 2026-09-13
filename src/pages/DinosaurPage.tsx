@@ -71,11 +71,12 @@ export default function DinosaurPage() {
   }
 
   const TABS = ['DESCRIPCIÓN', 'CARACTERÍSTICAS', 'COMPORTAMIENTO', 'FÓSILES', 'CURIOSIDADES', 'FAQ'];
+  const pageTitle = `${dino.name}: Ficha completa, tamaño y datos — DinoRex`;
 
   return (
     <div className="dino-page-container">
       <SEO
-        title={`${dino.name} — DinoRex`}
+        title={pageTitle}
         description={dino.tagline}
         keywords={`${dino.name.toLowerCase()}, dinosaurio, ${dino.scientificName.toLowerCase()}, ${dino.heroStats.period.toLowerCase()}, fósiles, prehistoria`}
         url={`https://www.dinorex.org/criaturas/${dino.slug}`}
@@ -88,7 +89,7 @@ export default function DinosaurPage() {
               "@type": "WebPage",
               "@id": `https://www.dinorex.org/criaturas/${dino.slug}`
             },
-            "headline": `${dino.name} — DinoRex`,
+            "headline": pageTitle,
             "description": dino.tagline,
             "image": dino.heroImage.startsWith('http') ? dino.heroImage : `https://www.dinorex.org${dino.heroImage}`,
             "author": {
