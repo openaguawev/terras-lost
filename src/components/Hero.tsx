@@ -25,14 +25,44 @@ export default function Hero() {
 
   return (
     <section style={{ minHeight: '100dvh', position: 'relative', overflow: 'hidden', background: '#000', display: 'flex', flexDirection: 'column' }}>
-      {/* BACKGROUND VIDEO */}
+      {/* BACKGROUND MEDIA & RESPONSIVE POSTER */}
       <div ref={parallaxRef} style={{ position: 'absolute', inset: 0, transform: 'scale(1.1)' }}>
-        <video autoPlay muted loop playsInline poster="/hero.webp" style={{
-          width: '100%', height: '100%', objectFit: 'cover',
-          objectPosition: isMobile ? '80% center' : 'center center',
-          filter: 'brightness(0.9) contrast(1.1) saturate(1.2)',
-        }}>
-          <source src="/hero-compressed.mp4" type="video/mp4" />
+        <picture>
+          <source media="(max-width: 768px)" srcSet="/hero-mobile.webp" type="image/webp" />
+          <source media="(min-width: 769px)" srcSet="/hero.webp" type="image/webp" />
+          <img
+            src="/hero.webp"
+            alt="Mundo prehistórico de dinosaurios"
+            fetchPriority="high"
+            width={1280}
+            height={720}
+            style={{
+              position: 'absolute',
+              inset: 0,
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
+              objectPosition: isMobile ? '80% center' : 'center center',
+              filter: 'brightness(0.9) contrast(1.1) saturate(1.2)',
+            }}
+          />
+        </picture>
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          poster={isMobile ? '/hero-mobile.webp' : '/hero.webp'}
+          style={{
+            position: 'absolute',
+            inset: 0,
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            objectPosition: isMobile ? '80% center' : 'center center',
+            filter: 'brightness(0.9) contrast(1.1) saturate(1.2)',
+          }}
+        >
           <source src="/hero-compressed.mp4" type="video/mp4" />
         </video>
       </div>
