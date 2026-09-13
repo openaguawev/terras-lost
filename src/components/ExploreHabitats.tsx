@@ -20,7 +20,7 @@ import './ExploreHabitats.css';
 const HABITATS = [
   {
     id: 'jungle',
-    title: 'SELVAS',
+    title: 'JUNGLA Y SELVAS',
     subtitle: 'Bosques densos y exuberantes, hogar de depredadores feroces y gigantes herbívoros.',
     color: '#4ade80',
     icon: <Leaf size={20} color="#4ade80" />,
@@ -33,7 +33,7 @@ const HABITATS = [
   },
   {
     id: 'ocean',
-    title: 'OCÉANOS',
+    title: 'OCÉANO Y MARES',
     subtitle: 'Extensos mares que cubrían gran parte del planeta, dominio de reptiles marinos gigantes.',
     color: '#3b82f6',
     icon: <Waves size={20} color="#3b82f6" />,
@@ -46,7 +46,7 @@ const HABITATS = [
   },
   {
     id: 'desert',
-    title: 'DESIERTOS',
+    title: 'DESIERTO',
     subtitle: 'Tierras áridas y vastas, donde la supervivencia dependía de la resistencia y adaptación.',
     color: '#fbbf24',
     icon: <Sun size={20} color="#fbbf24" />,
@@ -59,7 +59,7 @@ const HABITATS = [
   },
   {
     id: 'volcano',
-    title: 'VOLCANES',
+    title: 'VOLCÁN',
     subtitle: 'Zonas de intensa actividad volcánica, suelos ricos en minerales y paisajes cambiantes.',
     color: '#ef4444',
     icon: <Mountain size={20} color="#ef4444" />,

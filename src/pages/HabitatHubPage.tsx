@@ -16,6 +16,8 @@ interface HabitatEditorialSection {
 
 interface HabitatDetails {
   title: string;
+  seoTitle: string;
+  editorialHeading: string;
   subtitle: string;
   description: string;
   color: string;
@@ -26,7 +28,9 @@ interface HabitatDetails {
 
 const HABITAT_DATA: Record<string, HabitatDetails> = {
   'jungla': {
-    title: 'SELVAS',
+    title: 'JUNGLA Y SELVAS',
+    seoTitle: 'Hábitat Jungla y Selvas: Dinosaurios y Entorno — DinoRex',
+    editorialHeading: 'Ecología y Vida en la Jungla y Selvas',
     subtitle: 'Bosques densos y exuberantes',
     description: 'Las selvas prehistóricas del Mesozoico eran mundos húmedos y cálidos que albergaban una densidad colosal de flora, helechos gigantescos y grandes coníferas. Este entorno densamente arbolado proveía abundante follaje para alimentar a gigantescos herbívoros y proporcionaba las mejores áreas de caza y sigilo para los depredadores terrestres más veloces.',
     color: '#4ade80',
@@ -48,7 +52,9 @@ const HABITAT_DATA: Record<string, HabitatDetails> = {
     ]
   },
   'oceano': {
-    title: 'OCÉANOS',
+    title: 'OCÉANO Y MARES',
+    seoTitle: 'Hábitat Océano y Mares: Criaturas Prehistóricas — DinoRex',
+    editorialHeading: 'Ecología y Vida en el Océano Prehistórico',
     subtitle: 'Extensos mares prehistóricos',
     description: 'Gran parte del planeta estaba cubierto por mares interiores y extensos océanos tropicales que albergaban una rica cadena alimenticia. En estas aguas cálidas y profundas, dominaban gigantescos reptiles marinos y peces voladores que libraban batallas por la supervivencia lejos de las costas terrestres.',
     color: '#3b82f6',
@@ -70,7 +76,9 @@ const HABITAT_DATA: Record<string, HabitatDetails> = {
     ]
   },
   'desierto': {
-    title: 'DESIERTOS',
+    title: 'DESIERTO',
+    seoTitle: 'Hábitat Desierto: Entorno Prehistórico y Especies — DinoRex',
+    editorialHeading: 'Ecología y Vida en el Desierto Mesozoico',
     subtitle: 'Tierras áridas y vastas',
     description: 'Los desiertos del Mesozoico presentaban condiciones climáticas extremas con escasa vegetación y prolongados períodos de sequía. En este entorno inhóspito, solo los dinosaurios más resistentes, ágiles y con adaptaciones corporales específicas lograban sobrevivir, confiando en su astucia y resistencia física.',
     color: '#fbbf24',
@@ -92,7 +100,9 @@ const HABITAT_DATA: Record<string, HabitatDetails> = {
     ]
   },
   'volcan': {
-    title: 'VOLCANES',
+    title: 'VOLCÁN',
+    seoTitle: 'Hábitat Volcán: Tierras Ígneas y Dinosaurios — DinoRex',
+    editorialHeading: 'Ecología y Vida en Paisajes Volcánicos',
     subtitle: 'Zonas de intensa actividad geológica',
     description: 'Los paisajes volcánicos presentaban suelos ricos en ceniza y actividad hidrotermal constante. Con una atmósfera densa en gases y temperaturas extremas, estas tierras inestables eran cruzadas temporalmente por especies migratorias resistentes que se adaptaban a las dinámicas geológicas de un planeta en constante transformación.',
     color: '#ef4444',
@@ -180,8 +190,7 @@ export default function HabitatHubPage() {
 
   const filteredDinos = dinosaurs.filter(d => d.habitat === habitatKey);
   const HabitatIcon = habitatInfo.icon;
-  const formattedHabitatTitle = habitatInfo.title.charAt(0) + habitatInfo.title.slice(1).toLowerCase();
-  const pageTitle = `Hábitat ${formattedHabitatTitle}: Entorno Prehistórico y Dinosaurios — DinoRex`;
+  const pageTitle = habitatInfo.seoTitle;
 
   // Generate CollectionPage Schema
   const schema = [
@@ -250,7 +259,7 @@ export default function HabitatHubPage() {
             <span className="hab-editorial-tag" style={{ color: habitatInfo.color, borderColor: habitatInfo.color }}>
               GUÍA DEL ENTORNO
             </span>
-            <h2 className="hab-editorial-heading">Ecología y Vida en {habitatInfo.title}</h2>
+            <h2 className="hab-editorial-heading">{habitatInfo.editorialHeading}</h2>
           </div>
           <div className="hab-editorial-grid">
             {habitatInfo.sections.map((sec, idx) => (
