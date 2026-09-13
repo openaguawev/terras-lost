@@ -9,11 +9,7 @@ import {
   Skull, 
   Globe, 
   Clock, 
-  Leaf,
-  Users,
-  Camera,
-  Play,
-  MessageCircle
+  Leaf
 } from 'lucide-react';
 import BlurText from './BlurText';
 import './CallToAction.css';
@@ -208,13 +204,6 @@ export default function CallToAction() {
           </div>
           
           <div className="footer-right">
-            <h4>SÍGUENOS</h4>
-            <div className="footer-social">
-              <Link to="/"><Users size={18} /></Link>
-              <Link to="/"><Camera size={18} /></Link>
-              <Link to="/"><Play size={18} /></Link>
-              <Link to="/"><MessageCircle size={18} /></Link>
-            </div>
             <p className="footer-copyright">© {new Date().getFullYear()} DinoRex. Todos los derechos reservados.</p>
           </div>
         </div>
