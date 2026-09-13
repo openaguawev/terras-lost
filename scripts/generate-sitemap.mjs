@@ -10,6 +10,9 @@ async function generate() {
   // Add Home page
   sitemapStream.write({ url: '/', changefreq: 'daily', priority: 1.0 });
 
+  // Add Argentine Dinosaurs Hub
+  sitemapStream.write({ url: '/dinosaurios-argentinos', changefreq: 'weekly', priority: 0.9 });
+
   // Read dinosaurs file to extract slugs dynamically
   const filePath = path.resolve('src/data/dinosaurs.ts');
   const content = fs.readFileSync(filePath, 'utf-8');

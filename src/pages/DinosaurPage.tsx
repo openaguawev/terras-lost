@@ -45,6 +45,7 @@ const MAP_COORDS: Record<string, { top: string; left: string }> = {
   'carnotaurus': { top: '78%', left: '33%' },
   'parasaurolophus': { top: '32%', left: '22%' },
   'allosaurus': { top: '32%', left: '22%' },
+  'patagotitan': { top: '82%', left: '32%' },
 };
 
 export default function DinosaurPage() {
@@ -275,6 +276,81 @@ export default function DinosaurPage() {
             </div>
           </div>
         </div>
+
+        {/* BLOQUE COMPARATIVO: ARGENTINOSAURUS VS PATAGOTITAN */}
+        {(dino.slug === 'argentinosaurus' || dino.slug === 'patagotitan') && (
+          <div className="dp-versus-card" style={{
+            margin: '40px 0',
+            padding: '36px',
+            background: 'linear-gradient(135deg, rgba(201, 168, 76, 0.12) 0%, rgba(20, 16, 12, 0.9) 100%)',
+            border: '1px solid rgba(201, 168, 76, 0.35)',
+            borderRadius: '16px',
+            position: 'relative',
+            overflow: 'hidden'
+          }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '16px' }}>
+              <span style={{ fontFamily: 'Bebas Neue', fontSize: '14px', letterSpacing: '3px', color: '#C9A84C', padding: '4px 10px', background: 'rgba(201, 168, 76, 0.15)', borderRadius: '4px' }}>
+                DUELO DE TITANES PATAGÓNICOS
+              </span>
+            </div>
+            <h3 style={{ fontFamily: 'Bebas Neue', fontSize: 'clamp(24px, 4vw, 36px)', letterSpacing: '1.5px', color: '#fff', marginBottom: '14px' }}>
+              ARGENTINOSAURUS VS PATAGOTITAN: ¿CUÁL FUE MÁS GRANDE?
+            </h3>
+            <p style={{ color: 'rgba(255, 255, 255, 0.82)', lineHeight: '1.6', fontSize: '15px', maxWidth: '850px', marginBottom: '24px' }}>
+              Tanto el <strong>Argentinosaurus</strong> (Neuquén) como el <strong>Patagotitan</strong> (Chubut) representan el punto más alto del gigantismo biológico en la Tierra. 
+              El <strong>Patagotitan</strong> ostenta el récord indiscutido del dinosaurio más grande con esqueleto confirmado (más del 84% de huesos recuperados y ~37 m de longitud). 
+              Sin embargo, el <strong>Argentinosaurus</strong> poseía vértebras dorsales más anchas y masivas, por lo que muchos paleontólogos estiman que pudo haber alcanzado un peso superior (hasta 90 toneladas frente a las 70-77 t de Patagotitan).
+            </p>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '16px', marginBottom: '24px' }}>
+              <div style={{ background: 'rgba(0,0,0,0.4)', padding: '16px', borderRadius: '10px', border: '1px solid rgba(255,255,255,0.08)' }}>
+                <div style={{ color: '#C9A84C', fontSize: '12px', fontWeight: 600, letterSpacing: '1px' }}>LONGITUD TOTAL</div>
+                <div style={{ color: '#fff', fontSize: '15px', marginTop: '6px' }}>
+                  <strong>Argentinosaurus:</strong> 30 - 35 m<br/>
+                  <strong>Patagotitan:</strong> 37 m (Líder)
+                </div>
+              </div>
+              <div style={{ background: 'rgba(0,0,0,0.4)', padding: '16px', borderRadius: '10px', border: '1px solid rgba(255,255,255,0.08)' }}>
+                <div style={{ color: '#C9A84C', fontSize: '12px', fontWeight: 600, letterSpacing: '1px' }}>MASA ESTIMADA</div>
+                <div style={{ color: '#fff', fontSize: '15px', marginTop: '6px' }}>
+                  <strong>Argentinosaurus:</strong> 70 - 90 t (Mayor volumen)<br/>
+                  <strong>Patagotitan:</strong> 70 - 77 t
+                </div>
+              </div>
+              <div style={{ background: 'rgba(0,0,0,0.4)', padding: '16px', borderRadius: '10px', border: '1px solid rgba(255,255,255,0.08)' }}>
+                <div style={{ color: '#C9A84C', fontSize: '12px', fontWeight: 600, letterSpacing: '1px' }}>REGISTRO FÓSIL</div>
+                <div style={{ color: '#fff', fontSize: '15px', marginTop: '6px' }}>
+                  <strong>Argentinosaurus:</strong> ~10-15% (Fragmentario)<br/>
+                  <strong>Patagotitan:</strong> +84% (Confirmado)
+                </div>
+              </div>
+            </div>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '14px', alignItems: 'center' }}>
+              <Link 
+                to="/dinosaurios-argentinos" 
+                style={{
+                  display: 'inline-flex', alignItems: 'center', gap: '8px',
+                  background: '#C9A84C', color: '#000', padding: '12px 24px',
+                  borderRadius: '30px', fontWeight: 700, fontSize: '13px',
+                  textDecoration: 'none', letterSpacing: '1px'
+                }}
+              >
+                EXPLORAR HUB DINOSAURIOS DE ARGENTINA <ChevronRight size={15} />
+              </Link>
+              <Link
+                to={dino.slug === 'argentinosaurus' ? '/criaturas/patagotitan' : '/criaturas/argentinosaurus'}
+                style={{
+                  display: 'inline-flex', alignItems: 'center', gap: '8px',
+                  background: 'transparent', color: '#C9A84C', padding: '12px 20px',
+                  border: '1px solid rgba(201, 168, 76, 0.4)',
+                  borderRadius: '30px', fontWeight: 600, fontSize: '13px',
+                  textDecoration: 'none'
+                }}
+              >
+                {dino.slug === 'argentinosaurus' ? 'Ver Ficha de Patagotitan' : 'Ver Ficha de Argentinosaurus'} →
+              </Link>
+            </div>
+          </div>
+        )}
 
         {/* FÓSILES */}
         <div className="dp-fossils-header" id="fósiles">
