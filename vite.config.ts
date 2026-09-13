@@ -16,11 +16,11 @@ export default defineConfig(({ isSsrBuild }) => ({
               ) {
                 return 'vendor';
               }
-              if (
-                id.includes('node_modules/framer-motion/') ||
-                id.includes('node_modules/gsap/')
-              ) {
-                return 'animations';
+              if (id.includes('node_modules/framer-motion/')) {
+                return 'motion';
+              }
+              if (id.includes('node_modules/gsap/')) {
+                return 'gsap';
               }
             }
           }

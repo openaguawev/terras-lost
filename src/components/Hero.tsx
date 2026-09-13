@@ -1,11 +1,16 @@
-import { useEffect, useRef } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
 import { Search, Mouse, Compass } from 'lucide-react'
 
 export default function Hero() {
   const parallaxRef = useRef<HTMLDivElement>(null)
+  const [isDesktop, setIsDesktop] = useState(false)
 
   useEffect(() => {
+    if (typeof window !== 'undefined' && window.innerWidth > 768) {
+      setIsDesktop(true)
+    }
+
     const handleScroll = () => {
       if (parallaxRef.current) {
         parallaxRef.current.style.transform = `translateY(${window.scrollY * 0.3}px)`
@@ -31,16 +36,18 @@ export default function Hero() {
             className="hero-bg-img"
           />
         </picture>
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="hero-desktop-video"
-          aria-hidden="true"
-        >
-          <source media="(min-width: 769px)" src="/hero-compressed.mp4" type="video/mp4" />
-        </video>
+        {isDesktop && (
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="hero-desktop-video"
+            aria-hidden="true"
+          >
+            <source src="/hero-compressed.mp4" type="video/mp4" />
+          </video>
+        )}
       </div>
 
       {/* SUBTLE OVERLAYS */}
