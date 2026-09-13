@@ -165,6 +165,9 @@ export default function CallToAction() {
                 <p>EXPLORA. APRENDE. DESCUBRE LA VIDA.</p>
               </div>
             </div>
+            <p style={{ color: '#737373', fontSize: '0.8rem', lineHeight: '1.6', marginTop: '1rem', maxWidth: '320px' }}>
+              Plataforma de divulgación paleontológica dedicada a explorar las criaturas prehistóricas, sus fósiles y los ecosistemas que dominaron la Tierra.
+            </p>
           </div>
           
           <div className="footer-links-grid">
@@ -198,7 +201,7 @@ export default function CallToAction() {
               <ul>
                 <li><Link to="/" style={{ color: 'inherit', textDecoration: 'none' }}>Inicio</Link></li>
                 <li><a href="mailto:contacto@dinorex.org" style={{ color: 'inherit', textDecoration: 'none' }}>Contacto</a></li>
-                <li><Link to="/#main-content" style={{ color: 'inherit', textDecoration: 'none' }}>Sobre el Proyecto</Link></li>
+                <li><a href="#top" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }} style={{ color: 'inherit', textDecoration: 'none' }}>Volver arriba</a></li>
               </ul>
             </div>
           </div>
