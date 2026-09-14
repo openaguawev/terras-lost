@@ -138,8 +138,8 @@ export const dinosaurs: DinosaurDetail[] = [
     fossils: [
       { name: 'VÉRTEBRA DORSAL GIGANTE', code: 'MCF-PVPH-1 (1.59 m)', location: 'Plaza Huincul, Neuquén, Argentina', image: '/dinos/fossil_3.webp' },
       { name: 'FÉMUR COLOSAL', code: 'MCF-PVPH-2 (2.5 m)', location: 'Museo Carmen Funes, Neuquén', image: '/dinos/fossil_2.webp' },
-      { name: 'COSTILLAS MONUMENTALES', code: 'MCF-PVPH-3', location: 'Plaza Huincul, Argentina', image: '/dinos/fossil_4.webp' },
-      { name: 'FÍBULA ARTICULADA', code: 'MCF-PVPH-4 (1.55 m)', location: 'Patagonia, Argentina', image: '/dinos/fossil_1.webp' },
+      { name: 'COSTILLAS MONUMENTALES', code: 'MCF-PVPH-3', location: 'Plaza Huincul, Argentina', image: '/dinos/fossil_sauropod_ribs.webp' },
+      { name: 'FÍBULA ARTICULADA', code: 'MCF-PVPH-4 (1.55 m)', location: 'Patagonia, Argentina', image: '/dinos/fossil_2.webp' },
     ],
     features: [
       { title: 'TAMAÑO TITÁNICO', description: 'El vertebrado terrestre más pesado conocido, con hasta 90 toneladas de masa corporal.', icon: 'move-up' },
@@ -199,8 +199,8 @@ export const dinosaurs: DinosaurDetail[] = [
       { label: 'PELIGRO', value: 9 }
     ],
     fossils: [
-      { name: 'CRÁNEO CON CUERNOS INTACTO', code: 'MACN-CH 894', location: 'Museo Argentino de Ciencias Naturales (MACN), Buenos Aires', image: '/dinos/fossil_1.webp' },
-      { name: 'IMPRESIONES DE PIEL FÓSIL', code: 'MACN-CH 894', location: 'Chubut, Argentina', image: '/dinos/fossil_4.webp' },
+      { name: 'CRÁNEO CON CUERNOS INTACTO', code: 'MACN-CH 894', location: 'Museo Argentino de Ciencias Naturales (MACN), Buenos Aires', image: '/dinos/fossil_carnotaurus_skull.webp' },
+      { name: 'IMPRESIONES DE PIEL FÓSIL', code: 'MACN-CH 894', location: 'Chubut, Argentina', image: '/dinos/fossil_carnotaurus_skin.webp' },
       { name: 'ESQUELETO ARTICULADO CASI COMPLETO', code: 'MACN-CH 894 (Holotipo)', location: 'MACN Bernardino Rivadavia', image: '/dinos/fossil_3.webp' },
       { name: 'VÉRTEBRAS CAUDALES Y FÉMUR', code: 'MACN-CH 894', location: 'Buenos Aires, Argentina', image: '/dinos/fossil_2.webp' }
     ],
@@ -264,8 +264,8 @@ export const dinosaurs: DinosaurDetail[] = [
     fossils: [
       { name: 'FÉMUR DE 2.4 METROS', code: 'MPEF-PV 3400/27 (serie del ejemplar holotipo)', location: 'Trelew, Chubut, Argentina', image: '/dinos/fossil_2.webp' },
       { name: 'VÉRTEBRA DORSAL GIGANTE', code: 'MPEF-PV 3400/2 (serie del ejemplar holotipo)', location: 'Trelew, Chubut, Argentina', image: '/dinos/fossil_3.webp' },
-      { name: 'HÚMERO MASIVO', code: 'MPEF-PV 3400/18 (serie del ejemplar holotipo)', location: 'Trelew, Chubut, Argentina', image: '/dinos/fossil_1.webp' },
-      { name: 'ESQUELETO COMPLETO MONTADO', code: 'MEF / AMNH Réplica', location: 'Museo Paleontológico Egidio Feruglio', image: '/dinos/fossil_4.webp' }
+      { name: 'HÚMERO MASIVO', code: 'MPEF-PV 3400/18 (serie del ejemplar holotipo)', location: 'Trelew, Chubut, Argentina', image: '/dinos/fossil_patagotitan_humerus.webp' },
+      { name: 'ESQUELETO COMPLETO MONTADO', code: 'MEF / AMNH Réplica', location: 'Museo Paleontológico Egidio Feruglio', image: '/dinos/fossil_patagotitan_skeleton.webp' }
     ],
     features: [
       { title: 'EL MÁS COMPLETO', description: 'El titanosaurio colosal con más del 84% de su estructura esquelética verificada por la ciencia.', icon: 'move-up' },
@@ -326,7 +326,7 @@ export const dinosaurs: DinosaurDetail[] = [
       { name: 'CRÁNEO COMPLETO', code: 'IVPP V 13332', location: 'Mongolia', image: '/dinos/fossil_1.webp' },
       { name: 'GARRA DE HOZ', code: 'Garra distintiva', location: 'Pie del depredador', image: '/dinos/fossil_4.webp' },
       { name: 'ESQUELETO ARTICULADO', code: 'IVPP V 14350', location: 'Mongolia', image: '/dinos/fossil_3.webp' },
-      { name: 'HUEVOS FÓSILES', code: 'Otogon Obo', location: 'Mongolia', image: '/dinos/fossil_2.webp' },
+      { name: 'HUEVOS FÓSILES', code: 'Otogon Obo', location: 'Mongolia', image: '/dinos/fossil_velociraptor_eggs.webp' },
     ],
     features: [
       { title: 'CAZA EN MANADA', description: 'Coordinaban ataques en grupo para cazar presas mucho más grandes.', icon: 'users' },
@@ -385,7 +385,7 @@ export const dinosaurs: DinosaurDetail[] = [
     ],
     fossils: [
       { name: 'CRÁNEO COMPLETO', code: 'NMMNH P-2089', location: 'Denver, EE. UU.', image: '/dinos/fossil_1.webp' },
-      { name: 'GOLA ÓSEA', code: 'NMMNH P-2089-FR', location: 'Denver, EE. UU.', image: '/dinos/fossil_3.webp' },
+      { name: 'GOLA ÓSEA', code: 'NMMNH P-2089-FR', location: 'Denver, EE. UU.', image: '/dinos/fossil_triceratops_frill.webp' },
       { name: 'CUERNO FRONTAL', code: 'NMMNH P-2089-H1', location: 'Denver, EE. UU.', image: '/dinos/fossil_4.webp' },
       { name: 'HUESO DE PATA', code: 'NMMNH P-2089-L1', location: 'Denver, EE. UU.', image: '/dinos/fossil_2.webp' },
     ],
@@ -509,7 +509,7 @@ export const dinosaurs: DinosaurDetail[] = [
       { name: 'CRÁNEO PARCIAL', code: 'FMNH P 25107', location: 'Colorado, EE. UU.', image: '/dinos/fossil_1.webp' },
       { name: 'VÉRTEBRAS CERVICALES', code: 'FMNH P 25107', location: 'Colorado, EE. UU.', image: '/dinos/fossil_3.webp' },
       { name: 'FÉMUR IZQUIERDO', code: 'FMNH P 25107', location: 'Colorado, EE. UU.', image: '/dinos/fossil_2.webp' },
-      { name: 'COSTILLAS GIGANTES', code: 'FMNH P 25107', location: 'Colorado, EE. UU.', image: '/dinos/fossil_4.webp' },
+      { name: 'COSTILLAS GIGANTES', code: 'FMNH P 25107', location: 'Colorado, EE. UU.', image: '/dinos/fossil_sauropod_ribs.webp' },
     ],
     features: [
       { title: 'CORAZÓN ENORME', description: 'Su corazón podía pesar más de 1 tonelada para bombear sangre a su cerebro.', icon: 'heart' },
@@ -629,7 +629,7 @@ export const dinosaurs: DinosaurDetail[] = [
     ],
     fossils: [
       { name: 'ESQUELETO COMPLETO', code: 'NHMUK PV R36730 (Sophie)', location: 'Londres, Reino Unido', image: '/dinos/fossil_3.webp' },
-      { name: 'PLACA EXCEPCIONAL', code: 'USNM 4934', location: 'Washington D.C., EE. UU.', image: '/dinos/fossil_1.webp' },
+      { name: 'PLACA EXCEPCIONAL', code: 'USNM 4934', location: 'Washington D.C., EE. UU.', image: '/dinos/fossil_stegosaurus_plate.webp' },
       { name: 'ESPINAS DE COLA', code: 'YPM 1853', location: 'Utah, EE. UU.', image: '/dinos/fossil_4.webp' },
       { name: 'MANDÍBULA CON DIENTES', code: 'USNM 4936', location: 'Colorado, EE. UU.', image: '/dinos/fossil_2.webp' },
     ],
