@@ -31,6 +31,7 @@ const DINO_DATA = dinosaurs.map((d, index) => {
     danger: dangerValue,
     category,
     slug: d.slug,
+    cardPosition: d.cardPosition || 'center',
     altText: d.name + ' - ' + d.heroStats.period
   };
 });
@@ -94,7 +95,7 @@ export default function FeaturedDinosaurs() {
               transition={{ duration: 0.3 }}
               className={`dino-card ${idx < 3 && activeCategory === 'todos' ? 'top-row' : 'bottom-row'}`}
             >
-              <img src={dino.image} alt={dino.altText} loading="lazy" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: dino.id === '04' ? '20% center' : 'center', zIndex: 0 }} />
+              <img src={dino.image} alt={dino.altText} loading="lazy" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: dino.cardPosition, zIndex: 0 }} />
               <div className="dino-card-overlay"></div>
               
               <div className="dino-card-top">

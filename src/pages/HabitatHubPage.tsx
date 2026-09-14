@@ -282,7 +282,7 @@ export default function HabitatHubPage() {
           <div ref={gridRef} className="hab-hub-grid">
             {filteredDinos.map(dino => (
               <Link to={`/criaturas/${dino.slug}`} key={dino.slug} className="hab-dino-card">
-                <img src={dino.heroImage} alt={dino.name} loading="lazy" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 0 }} />
+                <img src={dino.heroImage} alt={dino.name} loading="lazy" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: dino.cardPosition || 'center', zIndex: 0 }} />
                 <div className="hab-dino-card-overlay"></div>
                 <div className="hab-dino-card-content">
                   <span className="hab-dino-diet" style={{ 

@@ -34,9 +34,16 @@
   object-position: right center;
 }
 
+.dp-hero-bg-sauropod img {
+  object-position: right 15%;
+}
+
 @media (max-width: 768px) {
   .dp-hero-bg-trex img {
     object-position: right center;
+  }
+  .dp-hero-bg-sauropod img {
+    object-position: center 15%;
   }
 }
 

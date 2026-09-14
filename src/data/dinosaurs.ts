@@ -4,6 +4,7 @@ export interface DinosaurDetail {
   scientificName: string;
   tagline: string;
   heroImage: string;
+  cardPosition?: string;
   heroStats: {
     period: string;
     habitat: string;
@@ -227,6 +228,7 @@ export const dinosaurs: DinosaurDetail[] = [
     scientificName: 'Patagotitan mayorum',
     tagline: 'El titán de la Patagonia. El titanosaurio gigante más completo jamás descubierto (+84% de esqueleto), con un rango de 31 a 37 metros de longitud y de 44 a 77 toneladas de masa corporal según el método de cálculo empleado.',
     heroImage: '/dinos/patagotitan.webp',
+    cardPosition: 'center',
     heroStats: {
       period: 'Cretácico Medio (Albiense-Cenomaniense)',
       habitat: 'Llanuras aluviales y bosques fluviales',
@@ -471,6 +473,7 @@ export const dinosaurs: DinosaurDetail[] = [
     scientificName: 'Brachiosaurus altithorax',
     tagline: 'Uno de los dinosaurios más grandes que jamás haya caminado sobre la Tierra. Su largo cuello y postura erguida le permitían alcanzar la vegetación más alta, convirtiéndolo en un gigante amable de la era Jurásica.',
     heroImage: '/dinos/brachiosaurus_1779606953114.webp',
+    cardPosition: '60% center',
     heroStats: {
       period: 'Jurásico Superior',
       habitat: 'Llanuras and bosques',
@@ -593,6 +596,7 @@ export const dinosaurs: DinosaurDetail[] = [
     scientificName: 'Stegosaurus stenops',
     tagline: 'El acorazado de placas. Un herbívoro icónico del período Jurásico, famoso por las placas óseas alineadas en su lomo y su cola espinosa lista para la defensa.',
     heroImage: '/dinos/stegosaurus_1779606982968.webp',
+    cardPosition: '42% center',
     heroStats: {
       period: 'Jurásico Superior',
       habitat: 'Llanuras y bosques abiertos',
@@ -654,6 +658,7 @@ export const dinosaurs: DinosaurDetail[] = [
     scientificName: 'Ankylosaurus magniventris',
     tagline: 'El tanque prehistórico. Un dinosaurio herbívoro acorazado con una gruesa armadura de placas óseas y una maza pesada en su cola capaz de fracturar los huesos de los depredadores más grandes.',
     heroImage: '/dinos/ankylosaurus_spotlight.webp',
+    cardPosition: '35% center',
     heroStats: {
       period: 'Cretácico Tardío',
       habitat: 'Bosques y llanuras costeras',
@@ -715,6 +720,7 @@ export const dinosaurs: DinosaurDetail[] = [
     scientificName: 'Coelophysis bauri',
     tagline: 'Uno de los primeros dinosaurios cazadores. Un terópodo ágil y ligero del Triásico que se adaptó perfectamente a los duros desiertos prehistóricos.',
     heroImage: '/dinos/coelophysis.webp',
+    cardPosition: '38% center',
     heroStats: {
       period: 'Triásico Tardío',
       habitat: 'Desiertos y llanuras secas',
@@ -823,6 +829,7 @@ export const dinosaurs: DinosaurDetail[] = [
     scientificName: 'Allosaurus fragilis',
     tagline: 'El león del Jurásico. Un depredador ápice dominante, rápido y letal que aterrorizó las llanuras prehistóricas millones de años antes de la llegada del T-Rex.',
     heroImage: '/dinos/allosaurus.webp',
+    cardPosition: '62% center',
     heroStats: {
       period: 'Jurásico Superior',
       habitat: 'Llanuras semiáridas',
