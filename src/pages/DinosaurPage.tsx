@@ -72,6 +72,7 @@ export default function DinosaurPage() {
 
   const TABS = ['DESCRIPCIÓN', 'CARACTERÍSTICAS', 'COMPORTAMIENTO', 'FÓSILES', 'CURIOSIDADES', 'FAQ'];
   const pageTitle = `${dino.name}: Ficha completa, tamaño y datos — DinoRex`;
+  const isBrightHero = ['stegosaurus', 'triceratops', 'brachiosaurus'].includes(dino.slug);
 
   return (
     <div className="dino-page-container">
@@ -144,7 +145,7 @@ export default function DinosaurPage() {
         <div className="dp-hero-bg">
           <img src={dino.heroImage} alt={dino.name} width="1920" height="1080" style={{ width: '100%', height: '100%', objectFit: 'cover' }} fetchPriority="high" />
         </div>
-        <div className="dp-hero-gradient"></div>
+        <div className={`dp-hero-gradient ${isBrightHero ? 'dp-hero-gradient-heavy' : ''}`}></div>
         
         <div className="dp-hero-content">
           <div className="dp-hero-left">
