@@ -5,6 +5,7 @@ export interface DinosaurDetail {
   tagline: string;
   heroImage: string;
   cardPosition?: string;
+  heroPosition?: string;
   heroStats: {
     period: string;
     habitat: string;
@@ -42,6 +43,7 @@ export const dinosaurs: DinosaurDetail[] = [
     scientificName: 'Tyrannosaurus rex',
     tagline: 'El rey de los dinosaurios. Uno de los depredadores más temibles de todos los tiempos. Con una fuerza de mordida letal y un tamaño colosal, el T-Rex dominó la cadena alimenticia del Cretácico Tardío.',
     heroImage: '/dinos/trex_spotlight_full.webp',
+    heroPosition: '80% 5%',
     heroStats: {
       period: 'Cretácico Tardío',
       habitat: 'Bosques y valles',
@@ -102,6 +104,7 @@ export const dinosaurs: DinosaurDetail[] = [
     scientificName: 'Argentinosaurus huinculensis',
     tagline: 'El gigante de gigantes. El titanosaurio más colosal jamás estimado por la ciencia, rey indiscutible de la Patagonia durante el período Cretácico.',
     heroImage: '/dinos/argentinosaurus_spotlight.webp',
+    heroPosition: '70% 4%',
     heroStats: {
       period: 'Cretácico Superior (Cenomaniense)',
       habitat: 'Llanuras y bosques fluviales',
@@ -165,6 +168,7 @@ export const dinosaurs: DinosaurDetail[] = [
     scientificName: 'Carnotaurus sastrei',
     tagline: 'El toro carnívoro del sur. El depredador ápice de la Patagonia Cretácica, famoso por sus dos cuernos frontales, piel escamosa fosilizada y velocidad supersónica.',
     heroImage: '/dinos/carnotaurus.webp',
+    heroPosition: '45% 6%',
     heroStats: {
       period: 'Cretácico Tardío (Campaniense-Maastrichtiense)',
       habitat: 'Planicies, estuarios y bosques costeros',
@@ -229,6 +233,7 @@ export const dinosaurs: DinosaurDetail[] = [
     tagline: 'El titán de la Patagonia. El titanosaurio gigante más completo jamás descubierto (+84% de esqueleto), con un rango de 31 a 37 metros de longitud y de 44 a 77 toneladas de masa corporal según el método de cálculo empleado.',
     heroImage: '/dinos/patagotitan.webp',
     cardPosition: 'center',
+    heroPosition: '62% 4%',
     heroStats: {
       period: 'Cretácico Medio (Albiense-Cenomaniense)',
       habitat: 'Llanuras aluviales y bosques fluviales',
@@ -290,6 +295,7 @@ export const dinosaurs: DinosaurDetail[] = [
     scientificName: 'Velociraptor mongoliensis',
     tagline: 'Pequeño en tamaño, gigante en velocidad e inteligencia. El Velociraptor era un depredador ágil y estratégico, conocido por cazar en grupo y comunicarse con sofisticados sonidos y movimientos.',
     heroImage: '/dinos/velociraptor_1779606904540.webp',
+    heroPosition: '45% 12%',
     heroStats: {
       period: 'Cretácico Superior',
       habitat: 'Desiertos de Asia Central',
@@ -351,6 +357,7 @@ export const dinosaurs: DinosaurDetail[] = [
     scientificName: 'Triceratops horridus',
     tagline: 'Uno de los dinosaurios herbívoros más icónicos del Cretácico tardío. Su imponente gola ósea y sus tres cuernos lo convirtieron en una fortaleza viviente contra los depredadores.',
     heroImage: '/dinos/triceratops_1779606918531.webp',
+    heroPosition: '55% 8%',
     heroStats: {
       period: 'Cretácico Tardío',
       habitat: 'Llanuras y pantanos',
@@ -412,6 +419,7 @@ export const dinosaurs: DinosaurDetail[] = [
     scientificName: 'Spinosaurus aegyptiacus',
     tagline: 'El Spinosaurus fue uno de los dinosaurios carnívoros más grandes que jamás haya existido. A diferencia de otros terópodos, estaba perfectamente adaptado para la vida acuática, convirtiéndose en el rey de los ríos.',
     heroImage: '/dinos/spinosaurus_1779606934087.webp',
+    heroPosition: '58% 6%',
     heroStats: {
       period: 'Cretácico Superior',
       habitat: 'Ríos y deltas',
@@ -474,6 +482,7 @@ export const dinosaurs: DinosaurDetail[] = [
     tagline: 'Uno de los dinosaurios más grandes que jamás haya caminado sobre la Tierra. Su largo cuello y postura erguida le permitían alcanzar la vegetación más alta, convirtiéndolo en un gigante amable de la era Jurásica.',
     heroImage: '/dinos/brachiosaurus_1779606953114.webp',
     cardPosition: '60% center',
+    heroPosition: '70% 4%',
     heroStats: {
       period: 'Jurásico Superior',
       habitat: 'Llanuras and bosques',
@@ -535,6 +544,7 @@ export const dinosaurs: DinosaurDetail[] = [
     scientificName: 'Pteranodon longiceps',
     tagline: 'El Pteranodon fue uno de los reptiles voladores más grandes que jamás haya existido. Dominaba los cielos del Cretácico con su enorme envergadura y su increíble capacidad de vuelo sobre océanos y continentes.',
     heroImage: '/dinos/pteranodon_1779606968978.webp',
+    heroPosition: '55% 8%',
     heroStats: {
       period: 'Cretácico Superior',
       habitat: 'Costas y acantilados',
@@ -597,6 +607,7 @@ export const dinosaurs: DinosaurDetail[] = [
     tagline: 'El acorazado de placas. Un herbívoro icónico del período Jurásico, famoso por las placas óseas alineadas en su lomo y su cola espinosa lista para la defensa.',
     heroImage: '/dinos/stegosaurus_1779606982968.webp',
     cardPosition: '42% center',
+    heroPosition: '50% 10%',
     heroStats: {
       period: 'Jurásico Superior',
       habitat: 'Llanuras y bosques abiertos',
@@ -659,6 +670,7 @@ export const dinosaurs: DinosaurDetail[] = [
     tagline: 'El tanque prehistórico. Un dinosaurio herbívoro acorazado con una gruesa armadura de placas óseas y una maza pesada en su cola capaz de fracturar los huesos de los depredadores más grandes.',
     heroImage: '/dinos/ankylosaurus_spotlight.webp',
     cardPosition: '35% center',
+    heroPosition: '45% 20%',
     heroStats: {
       period: 'Cretácico Tardío',
       habitat: 'Bosques y llanuras costeras',
@@ -721,6 +733,7 @@ export const dinosaurs: DinosaurDetail[] = [
     tagline: 'Uno de los primeros dinosaurios cazadores. Un terópodo ágil y ligero del Triásico que se adaptó perfectamente a los duros desiertos prehistóricos.',
     heroImage: '/dinos/coelophysis.webp',
     cardPosition: '38% center',
+    heroPosition: '40% 10%',
     heroStats: {
       period: 'Triásico Tardío',
       habitat: 'Desiertos y llanuras secas',
@@ -775,6 +788,7 @@ export const dinosaurs: DinosaurDetail[] = [
     scientificName: 'Parasaurolophus walkeri',
     tagline: 'El hadrosaurio de la cresta resonante. Un majestuoso herbívoro del Cretácico reconocible por su largo tubo óseo craneal, utilizado para comunicarse a grandes distancias.',
     heroImage: '/dinos/parasaurolophus.webp',
+    heroPosition: '50% 6%',
     heroStats: {
       period: 'Cretácico Superior',
       habitat: 'Llanuras y bosques',
@@ -830,6 +844,7 @@ export const dinosaurs: DinosaurDetail[] = [
     tagline: 'El león del Jurásico. Un depredador ápice dominante, rápido y letal que aterrorizó las llanuras prehistóricas millones de años antes de la llegada del T-Rex.',
     heroImage: '/dinos/allosaurus.webp',
     cardPosition: '62% center',
+    heroPosition: '75% 8%',
     heroStats: {
       period: 'Jurásico Superior',
       habitat: 'Llanuras semiáridas',

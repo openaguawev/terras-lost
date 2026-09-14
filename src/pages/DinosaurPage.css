@@ -26,24 +26,13 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: right center;
+  object-position: var(--hero-pos, right 8%);
   filter: brightness(0.85) contrast(1.05);
 }
 
-.dp-hero-bg-trex img {
-  object-position: right center;
-}
-
-.dp-hero-bg-sauropod img {
-  object-position: right 15%;
-}
-
 @media (max-width: 768px) {
-  .dp-hero-bg-trex img {
-    object-position: right center;
-  }
-  .dp-hero-bg-sauropod img {
-    object-position: center 15%;
+  .dp-hero-bg img {
+    object-position: center 8% !important;
   }
 }
 
