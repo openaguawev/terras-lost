@@ -30,6 +30,16 @@
   filter: brightness(0.85) contrast(1.05);
 }
 
+.dp-hero-bg-trex img {
+  object-position: right 70%;
+}
+
+@media (max-width: 768px) {
+  .dp-hero-bg-trex img {
+    object-position: right center;
+  }
+}
+
 .dp-hero-gradient {
   position: absolute;
   inset: 0;

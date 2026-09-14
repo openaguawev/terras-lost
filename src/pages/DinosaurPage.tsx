@@ -142,7 +142,7 @@ export default function DinosaurPage() {
 
       {/* HERO SECTION */}
       <section className="dp-hero">
-        <div className="dp-hero-bg">
+        <div className={`dp-hero-bg ${dino.slug === 'tyrannosaurus-rex' ? 'dp-hero-bg-trex' : ''}`}>
           <img src={dino.heroImage} alt={dino.name} width="1920" height="1080" style={{ width: '100%', height: '100%', objectFit: 'cover' }} fetchPriority="high" />
         </div>
         <div className={`dp-hero-gradient ${isBrightHero ? 'dp-hero-gradient-heavy' : ''}`}></div>
