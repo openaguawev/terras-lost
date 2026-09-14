@@ -43,6 +43,14 @@ async function prerender() {
 
   console.log(`Prerendering ${routes.length} routes...`);
 
+  const assetFiles = fs.existsSync(path.join(distPath, 'assets'))
+    ? fs.readdirSync(path.join(distPath, 'assets'))
+    : [];
+  const dinoCss = assetFiles.find(f => f.startsWith('DinosaurPage-') && f.endsWith('.css'));
+  const eraCss = assetFiles.find(f => f.startsWith('EraHubPage-') && f.endsWith('.css'));
+  const habitatCss = assetFiles.find(f => f.startsWith('HabitatHubPage-') && f.endsWith('.css'));
+  const argentineCss = assetFiles.find(f => f.startsWith('ArgentineDinosaursHubPage-') && f.endsWith('.css'));
+
   let renderedCount = 0;
 
   for (const url of routes) {
@@ -76,8 +84,18 @@ async function prerender() {
         .replace(/<link[^>]*rel=["']canonical["'][^>]*\/?>/gi, '')
         .replace(/<script\b[^>]*type=["']application\/ld\+json["'][^>]*>[\s\S]*?<\/script>/gi, '');
 
+      // Match route-specific CSS chunk
+      let routeCss = null;
+      if (url.startsWith('/criaturas/')) routeCss = dinoCss;
+      else if (url.startsWith('/eras/')) routeCss = eraCss;
+      else if (url.startsWith('/habitats/')) routeCss = habitatCss;
+      else if (url === '/dinosaurios-argentinos') routeCss = argentineCss;
+
+      const routeCssTag = routeCss ? `<link rel="stylesheet" crossorigin href="/assets/${routeCss}">` : '';
+
       // Build head additions
       const headAdditions = [
+        routeCssTag,
         ...extraMetas,
         canonicalTag,
         ...schemaScripts

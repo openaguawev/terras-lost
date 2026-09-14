@@ -139,14 +139,20 @@
 }
 
 .dp-btn-primary {
-  background: #C9A84C;
-  color: #000;
-  border: none;
+  background: #C9A84C !important;
+  background-color: #C9A84C !important;
+  color: #000000 !important;
+  border: none !important;
+  opacity: 1 !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 }
 
 .dp-btn-primary:hover {
-  background: #e6c875;
+  background: #e6c875 !important;
+  background-color: #e6c875 !important;
+  color: #000000 !important;
   transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(201, 168, 76, 0.4);
 }
 
 .dp-btn-secondary {

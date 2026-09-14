@@ -148,7 +148,7 @@ export default function DinosaurPage() {
         
         <div className="dp-hero-content">
           <div className="dp-hero-left">
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
+            <motion.div initial={false} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
               <div className="dp-hero-eyebrow">
                 <Box size={16} /> EL REY DE LOS DINOSAURIOS
               </div>
@@ -176,7 +176,10 @@ export default function DinosaurPage() {
               </div>
 
               <div className="dp-hero-buttons">
-                <button className="dp-btn-primary">
+                <button 
+                  className="dp-btn-primary"
+                  style={{ backgroundColor: '#C9A84C', color: '#000000', opacity: 1, border: 'none' }}
+                >
                   <Bone size={20} /> VER ESQUELETO
                 </button>
               </div>
